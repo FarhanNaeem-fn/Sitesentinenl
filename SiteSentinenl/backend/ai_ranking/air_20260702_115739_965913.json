@@ -1,0 +1,260 @@
+{
+  "url": "https://www.daraz.pk",
+  "timestamp": "2026-07-02T11:57:35.224931",
+  "robots": {
+    "url": "https://www.daraz.pk/robots.txt",
+    "found": true,
+    "raw": "User-agent: *\nDisallow: /checkout/\nDisallow: /customer/\nDisallow: /cart/\nDisallow: /*index.scss\nDisallow: /*reqwest/index\nDisallow: /catalog/\nDisallow: /wangpu/\nDisallow: /shop/*.htm\nDisallow: /wow/gcp/daraz/megascenario/pk/12_12_2020/12-12-coming-soon/\nDisallow: /12-12-sale-2020/\nDisallow: /wow/gcp/daraz/megascenario/pk/12_12_2020/12-12-2020-Live/\nDisallow: /*from=\nDisallow: /wow/gcp/daraz/megascenario/pk/pakistanday2021/pakistan-day-sale-2021-coming-soon/\nDisallow: /wow/gcp/daraz/megascenario/pk/pakistanday2021/pakistan-day-sale-2021-live/\nDisallow: /wow/gcp/",
+    "crawler_access": {
+      "GPTBot": "allowed",
+      "ClaudeBot": "allowed",
+      "PerplexityBot": "allowed",
+      "Google-Extended": "allowed",
+      "CCBot": "allowed",
+      "Bytespider": "allowed",
+      "FacebookBot": "allowed",
+      "Applebot": "allowed",
+      "cohere-ai": "allowed",
+      "AI2Bot": "allowed",
+      "anthropic-ai": "allowed",
+      "omgili": "allowed",
+      "Googlebot": "allowed"
+    },
+    "rules_count": 1
+  },
+  "scores": {
+    "technical": 48,
+    "content": 0,
+    "trust": 18,
+    "structured_data": 0,
+    "overall": 19
+  },
+  "checks": {
+    "technical": [
+      {
+        "name": "HTTPS",
+        "passed": true,
+        "pts": 10,
+        "note": "Secure protocol required"
+      },
+      {
+        "name": "Canonical URL",
+        "passed": false,
+        "pts": 8,
+        "note": "Prevents duplicate content"
+      },
+      {
+        "name": "Not noindex",
+        "passed": true,
+        "pts": 7,
+        "note": "Indexing not blocked"
+      },
+      {
+        "name": "Title tag",
+        "passed": false,
+        "pts": 8,
+        "note": "Required for AI citation"
+      },
+      {
+        "name": "Load < 3s",
+        "passed": true,
+        "pts": 7,
+        "note": "Fast response for crawlers"
+      },
+      {
+        "name": "OG tags",
+        "passed": false,
+        "pts": 5,
+        "note": "Rich preview for AI"
+      },
+      {
+        "name": "Meta description",
+        "passed": false,
+        "pts": 5,
+        "note": "Snippet source for AI"
+      }
+    ],
+    "content": [
+      {
+        "name": "Word count 500+",
+        "passed": false,
+        "pts": 12,
+        "note": "Current: 0 words"
+      },
+      {
+        "name": "Word count 1500+",
+        "passed": false,
+        "pts": 8,
+        "note": "Comprehensive content preferred by AI"
+      },
+      {
+        "name": "H1 tag",
+        "passed": false,
+        "pts": 10,
+        "note": "Primary topic signal"
+      },
+      {
+        "name": "H2 headings",
+        "passed": false,
+        "pts": 8,
+        "note": "Content structure"
+      },
+      {
+        "name": "Meta description",
+        "passed": false,
+        "pts": 8,
+        "note": "AI snippet source"
+      },
+      {
+        "name": "Images with alt",
+        "passed": false,
+        "pts": 6,
+        "note": "Accessible content"
+      },
+      {
+        "name": "FAQ schema",
+        "passed": false,
+        "pts": 10,
+        "note": "High AI citation probability"
+      },
+      {
+        "name": "HowTo schema",
+        "passed": false,
+        "pts": 8,
+        "note": "Instructional content"
+      },
+      {
+        "name": "Article schema",
+        "passed": false,
+        "pts": 7,
+        "note": "Editorial credibility"
+      },
+      {
+        "name": "Lists or tables",
+        "passed": false,
+        "pts": 5,
+        "note": "Structured content"
+      },
+      {
+        "name": "Code examples",
+        "passed": false,
+        "pts": 5,
+        "note": "Technical depth"
+      }
+    ],
+    "trust": [
+      {
+        "name": "HTTPS",
+        "passed": true,
+        "pts": 12,
+        "note": "Trust signal"
+      },
+      {
+        "name": "Author metadata",
+        "passed": false,
+        "pts": 15,
+        "note": "E-E-A-T authorship"
+      },
+      {
+        "name": "Date published",
+        "passed": false,
+        "pts": 12,
+        "note": "Content freshness"
+      },
+      {
+        "name": "Breadcrumbs",
+        "passed": false,
+        "pts": 10,
+        "note": "Site structure clarity"
+      },
+      {
+        "name": "External links",
+        "passed": false,
+        "pts": 8,
+        "note": "Outbound authority refs"
+      },
+      {
+        "name": "OG site name",
+        "passed": false,
+        "pts": 8,
+        "note": "Brand identity"
+      }
+    ],
+    "structured_data": [
+      {
+        "name": "Any schema",
+        "passed": false,
+        "pts": 20,
+        "note": "Structured data present"
+      },
+      {
+        "name": "FAQPage",
+        "passed": false,
+        "pts": 20,
+        "note": "Q&A extraction by AI"
+      },
+      {
+        "name": "HowTo",
+        "passed": false,
+        "pts": 15,
+        "note": "Instructional schema"
+      },
+      {
+        "name": "Article/BlogPost",
+        "passed": false,
+        "pts": 15,
+        "note": "Editorial schema"
+      },
+      {
+        "name": "BreadcrumbList",
+        "passed": false,
+        "pts": 10,
+        "note": "Navigation schema"
+      },
+      {
+        "name": "Organization",
+        "passed": false,
+        "pts": 10,
+        "note": "Entity schema"
+      },
+      {
+        "name": "2+ schema types",
+        "passed": false,
+        "pts": 10,
+        "note": "Rich schema diversity"
+      }
+    ]
+  },
+  "page_data": {
+    "title": "",
+    "meta_description": "",
+    "h1_count": 0,
+    "h2_count": 0,
+    "h3_count": 0,
+    "word_count": 0,
+    "image_count": 0,
+    "images_with_alt": 0,
+    "links_count": 0,
+    "canonical": "",
+    "og_tags": {},
+    "schema_types": [],
+    "has_faq": false,
+    "has_howto": false,
+    "has_article": false,
+    "internal_links": 0,
+    "external_links": 0,
+    "code_blocks": 0,
+    "tables": 0,
+    "lists": 0,
+    "load_time_ms": 793,
+    "https": true,
+    "robots_meta": "",
+    "structured_data_count": 0,
+    "author": "",
+    "date_published": "",
+    "breadcrumb": false,
+    "error": null
+  },
+  "llm_analysis": null,
+  "audit_id": "air_20260702_115739_965913"
+}

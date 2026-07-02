@@ -1,0 +1,48 @@
+{
+  "status": 200,
+  "ms": 2862,
+  "checks": [
+    {
+      "name": "Page load <3s",
+      "ok": true,
+      "detail": "2862ms"
+    },
+    {
+      "name": "HTTP 200",
+      "ok": true,
+      "detail": "Status: 200"
+    },
+    {
+      "name": "No JS errors",
+      "ok": true,
+      "detail": "0 errors"
+    },
+    {
+      "name": "No broken images",
+      "ok": true,
+      "detail": "All clean"
+    },
+    {
+      "name": "Title tag",
+      "ok": false,
+      "detail": "Missing"
+    },
+    {
+      "name": "H1 heading",
+      "ok": false,
+      "detail": "Missing"
+    },
+    {
+      "name": "Viewport meta",
+      "ok": true,
+      "detail": "Found"
+    },
+    {
+      "name": "HTTPS cert",
+      "ok": true,
+      "detail": "HTTPS"
+    }
+  ],
+  "url": "https://www.daraz.pk",
+  "timestamp": "2026-07-02T11:57:28.790363"
+}

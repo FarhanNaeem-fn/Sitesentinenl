@@ -1,0 +1,1349 @@
+{
+  "url": "https://www.daraz.pk",
+  "viewport": "desktop",
+  "pages_scanned": 2,
+  "total_issues": 0,
+  "checks_passed": 0,
+  "checks_failed": 0,
+  "health_score": 85,
+  "details": {
+    "health_score": {
+      "test_cases": [
+        {
+          "ID": "DOM-SSL",
+          "Category": "Domain",
+          "Test Name": "Ssl",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "HTTPS enabled",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:19"
+        },
+        {
+          "ID": "DOM-RES",
+          "Category": "Domain",
+          "Test Name": "Response Time",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "343ms (target <2000ms)",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:19"
+        },
+        {
+          "ID": "DOM-ROB",
+          "Category": "Domain",
+          "Test Name": "Robots Txt",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "Found",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:19"
+        },
+        {
+          "ID": "DOM-SIT",
+          "Category": "Domain",
+          "Test Name": "Sitemap",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "Found",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:19"
+        },
+        {
+          "ID": "DOM-FAV",
+          "Category": "Domain",
+          "Test Name": "Favicon",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "Missing",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:19"
+        },
+        {
+          "ID": "DOM-MOB",
+          "Category": "Domain",
+          "Test Name": "Mobile Friendly",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "width=device-width,initial-scale=1,minimum-scale=1,maximum-s",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:19"
+        },
+        {
+          "ID": "DOM-PAG",
+          "Category": "Domain",
+          "Test Name": "Page Size",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "481KB (target <3000KB)",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:19"
+        }
+      ],
+      "passed": 6,
+      "failed": 1,
+      "total": 7
+    },
+    "seo": {
+      "test_cases": [
+        {
+          "ID": "SEO-01",
+          "Category": "SEO",
+          "Test Name": "Title tag present",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "Captcha Interception",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "SEO-03",
+          "Category": "SEO",
+          "Test Name": "Meta description present",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "Missing",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "SEO-05",
+          "Category": "SEO",
+          "Test Name": "Exactly one H1",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "Found 1 H1(s)",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "SEO-12",
+          "Category": "SEO",
+          "Test Name": "Viewport meta present",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "SEO-14",
+          "Category": "SEO",
+          "Test Name": "All images have alt",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "3/3 missing alt",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        }
+      ],
+      "passed": 3,
+      "failed": 2,
+      "total": 5
+    },
+    "accessibility": {
+      "test_cases": [
+        {
+          "ID": "A11Y-01",
+          "Category": "Accessibility",
+          "Test Name": "HTML lang attribute set",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "lang=''",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "A11Y-02",
+          "Category": "Accessibility",
+          "Test Name": "All images have alt text",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "3 missing alt",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "A11Y-03",
+          "Category": "Accessibility",
+          "Test Name": "All form fields labelled",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "8 unlabelled",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "A11Y-04",
+          "Category": "Accessibility",
+          "Test Name": "Skip navigation link",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        }
+      ],
+      "passed": 0,
+      "failed": 4,
+      "total": 4
+    },
+    "performance": {
+      "test_cases": [
+        {
+          "ID": "PERF-01",
+          "Category": "Performance",
+          "Test Name": "TTFB < 600ms",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "89ms",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "PERF-02",
+          "Category": "Performance",
+          "Test Name": "FCP < 1800ms",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "1964ms",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "PERF-04",
+          "Category": "Performance",
+          "Test Name": "Full page load < 4s",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "1934ms",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "PERF-05",
+          "Category": "Performance",
+          "Test Name": "Total page weight < 3MB",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "481KB",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        }
+      ],
+      "passed": 3,
+      "failed": 1,
+      "total": 4,
+      "metrics": {
+        "ttfb": 89,
+        "fcp": 1964,
+        "load": 1934,
+        "sizeKB": 481
+      }
+    },
+    "security": {
+      "test_cases": [
+        {
+          "ID": "SEC-01",
+          "Category": "Security",
+          "Test Name": "HTTPS enforced",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "SEC-02",
+          "Category": "Security",
+          "Test Name": "HSTS header present",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "SEC-03",
+          "Category": "Security",
+          "Test Name": "X-Content-Type-Options",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        },
+        {
+          "ID": "SEC-05",
+          "Category": "Security",
+          "Test Name": "Content-Security-Policy",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:15"
+        }
+      ],
+      "passed": 2,
+      "failed": 2,
+      "total": 4
+    },
+    "broken_links": {
+      "test_cases": [
+        {
+          "ID": "LINK-OK",
+          "Category": "Links",
+          "Test Name": "1 links verified",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:16"
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "total": 1
+    },
+    "console": {
+      "test_cases": [
+        {
+          "ID": "CON-01",
+          "Category": "Console Errors",
+          "Test Name": "No console errors",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:16"
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "total": 1
+    },
+    "responsive": {
+      "test_cases": [
+        {
+          "ID": "RESP-desktop",
+          "Category": "Responsive",
+          "Test Name": "No overflow on Desktop (1920\u00d71080) \u2014 Chrome",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:16"
+        },
+        {
+          "ID": "RESP-mac",
+          "Category": "Responsive",
+          "Test Name": "No overflow on MacBook Pro (1440\u00d7900) \u2014 Safari",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:17"
+        },
+        {
+          "ID": "RESP-laptop",
+          "Category": "Responsive",
+          "Test Name": "No overflow on Generic Laptop (1366\u00d7768)",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:17"
+        },
+        {
+          "ID": "RESP-mobile",
+          "Category": "Responsive",
+          "Test Name": "No overflow on iPhone 14 Pro (390\u00d7844)",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        }
+      ],
+      "passed": 3,
+      "failed": 1,
+      "total": 4
+    },
+    "keyboard_access": {
+      "test_cases": [
+        {
+          "ID": "KEY-01",
+          "Category": "Keyboard",
+          "Test Name": "Focusable elements present",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        },
+        {
+          "ID": "KEY-03",
+          "Category": "Keyboard",
+          "Test Name": "Skip link present",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        }
+      ],
+      "passed": 1,
+      "failed": 1,
+      "total": 2
+    },
+    "mixed_content": {
+      "test_cases": [
+        {
+          "ID": "MIXED-00",
+          "Category": "Security",
+          "Test Name": "No mixed content",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "total": 1
+    },
+    "content": {
+      "test_cases": [
+        {
+          "ID": "CONT-01",
+          "Category": "Content",
+          "Test Name": "Word count > 300",
+          "Result": "FAIL",
+          "Severity": "LOW",
+          "Detail": "22 words",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        },
+        {
+          "ID": "CONT-02",
+          "Category": "Content",
+          "Test Name": "No placeholder text",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        }
+      ],
+      "passed": 1,
+      "failed": 1,
+      "total": 2
+    },
+    "forms": {
+      "test_cases": [
+        {
+          "ID": "FORM-1-CSRF",
+          "Category": "Forms",
+          "Test Name": "Form 1 CSRF",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "total": 1
+    },
+    "typography": {
+      "test_cases": [
+        {
+          "ID": "TYPO-01",
+          "Category": "Typography",
+          "Test Name": "Base font size \u2265 14px",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "12px",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        }
+      ],
+      "passed": 0,
+      "failed": 1,
+      "total": 1
+    },
+    "html_quality": {
+      "test_cases": [
+        {
+          "ID": "HTML-01",
+          "Category": "HTML Quality",
+          "Test Name": "DOCTYPE declared",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        },
+        {
+          "ID": "HTML-02",
+          "Category": "HTML Quality",
+          "Test Name": "Charset UTF-8",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        },
+        {
+          "ID": "HTML-03",
+          "Category": "HTML Quality",
+          "Test Name": "Favicon present",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        }
+      ],
+      "passed": 2,
+      "failed": 1,
+      "total": 3
+    },
+    "images": {
+      "test_cases": [
+        {
+          "ID": "IMG-01",
+          "Category": "Images",
+          "Test Name": "All images have alt",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "3/3 images missing alt text",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "Add descriptive alt attributes to all <img> tags. Example: <img src='photo.jpg' alt='A clear description of the image'>",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18",
+          "missing_alt_images": [
+            "https://img.alicdn.com/tfs/TB1jjchwW61gK0jSZFlXXXDKFXa-166-52.png",
+            "https://laz-img-cdn.alicdn.com/tfs/TB1ZOeWA7voK1RjSZFDXXXY3pXa-400-400.png",
+            "data:image/png;base64,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"
+          ],
+          "page_url": "https://www.daraz.pk///_____tmd_____/punish?x5secdata=xfPc5s7GURg6qav03qtZaWoPt3xfvpCjXPcWDE5HwLiMn65BFhgTaueN9wcUA1sz_rh_VJAzSKlh8Vwzta6Q6XDNjNKvz39ggyouctzuKnBU9aH_kg7v6VrbYzcqtE_VFew0RDU3bQ9NYEqlCtIGvPsNgVrBYBIjO23I4yTaYMPbv3CkLrK3TcxVDaz3sbTRpU0Mumf8RFBzg992M7edxRpc2gx2hFvZOesmioVhveycW2Jb-mEudqVLtV16ytNbxfZvJzohhcE_35rq83_4hYFEWj4edNQYl4eaHrsWE_jCRjG81wM5c6rw7_nnTB1JQroGspSxhxbhZkzmt1UhSRdT3sFwQM6xncD-LXc64-P44kp7fOyf9y6TV4W7AWYXMDvkn_cpsr9U6G-3apEK-jJjltNGgd2kBo8iCZGGsIAodr6N5EPo0YJw89wigTS9zXllowGlhIsCNlD-OCBvz5mm3N4DiuuC_xZpzeepGfqmeh5uvNa5CUHr_izoLZnYgIEHprz-O05b1hNvBWDKhvNbijJoKFKAmZkN4tAsu-Lj8__bx__www.daraz.pk%2f&x5step=1"
+        }
+      ],
+      "passed": 0,
+      "failed": 3,
+      "total": 3,
+      "missing_alt_images": [
+        "https://img.alicdn.com/tfs/TB1jjchwW61gK0jSZFlXXXDKFXa-166-52.png",
+        "https://laz-img-cdn.alicdn.com/tfs/TB1ZOeWA7voK1RjSZFDXXXY3pXa-400-400.png",
+        "data:image/png;base64,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"
+      ]
+    },
+    "navigation": {
+      "test_cases": [
+        {
+          "ID": "NAV-01",
+          "Category": "Navigation",
+          "Test Name": "Nav landmark present",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        },
+        {
+          "ID": "NAV-04",
+          "Category": "Navigation",
+          "Test Name": "Footer landmark present",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "11:57:18"
+        }
+      ],
+      "passed": 0,
+      "failed": 2,
+      "total": 2
+    }
+  },
+  "domain_health": {
+    "domain": "www.daraz.pk",
+    "checks": {
+      "ssl": {
+        "ok": true,
+        "detail": "HTTPS enabled"
+      },
+      "response_time": {
+        "ok": true,
+        "detail": "343ms (target <2000ms)",
+        "ms": 343
+      },
+      "robots_txt": {
+        "ok": true,
+        "detail": "Found"
+      },
+      "sitemap": {
+        "ok": true,
+        "detail": "Found"
+      },
+      "favicon": {
+        "ok": false,
+        "detail": "Missing"
+      },
+      "mobile_friendly": {
+        "ok": true,
+        "detail": "width=device-width,initial-scale=1,minimum-scale=1,maximum-s"
+      },
+      "page_size": {
+        "ok": true,
+        "detail": "481KB (target <3000KB)",
+        "kb": 481
+      }
+    },
+    "score": 86
+  },
+  "timestamp": "2026-07-02T11:57:05.476775",
+  "all_test_cases": [
+    {
+      "ID": "SEO-01",
+      "Category": "SEO",
+      "Test Name": "Title tag present",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "Captcha Interception",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "SEO-03",
+      "Category": "SEO",
+      "Test Name": "Meta description present",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "Missing",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "SEO-05",
+      "Category": "SEO",
+      "Test Name": "Exactly one H1",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "Found 1 H1(s)",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "SEO-12",
+      "Category": "SEO",
+      "Test Name": "Viewport meta present",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "SEO-14",
+      "Category": "SEO",
+      "Test Name": "All images have alt",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "3/3 missing alt",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "A11Y-01",
+      "Category": "Accessibility",
+      "Test Name": "HTML lang attribute set",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "lang=''",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "A11Y-02",
+      "Category": "Accessibility",
+      "Test Name": "All images have alt text",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "3 missing alt",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "A11Y-03",
+      "Category": "Accessibility",
+      "Test Name": "All form fields labelled",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "8 unlabelled",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "A11Y-04",
+      "Category": "Accessibility",
+      "Test Name": "Skip navigation link",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "PERF-01",
+      "Category": "Performance",
+      "Test Name": "TTFB < 600ms",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "89ms",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "PERF-02",
+      "Category": "Performance",
+      "Test Name": "FCP < 1800ms",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "1964ms",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "PERF-04",
+      "Category": "Performance",
+      "Test Name": "Full page load < 4s",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "1934ms",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "PERF-05",
+      "Category": "Performance",
+      "Test Name": "Total page weight < 3MB",
+      "Result": "PASS",
+      "Severity": "MEDIUM",
+      "Detail": "481KB",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "SEC-01",
+      "Category": "Security",
+      "Test Name": "HTTPS enforced",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "SEC-02",
+      "Category": "Security",
+      "Test Name": "HSTS header present",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "SEC-03",
+      "Category": "Security",
+      "Test Name": "X-Content-Type-Options",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "SEC-05",
+      "Category": "Security",
+      "Test Name": "Content-Security-Policy",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:15"
+    },
+    {
+      "ID": "LINK-OK",
+      "Category": "Links",
+      "Test Name": "1 links verified",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:16"
+    },
+    {
+      "ID": "CON-01",
+      "Category": "Console Errors",
+      "Test Name": "No console errors",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:16"
+    },
+    {
+      "ID": "RESP-desktop",
+      "Category": "Responsive",
+      "Test Name": "No overflow on Desktop (1920\u00d71080) \u2014 Chrome",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:16"
+    },
+    {
+      "ID": "RESP-mac",
+      "Category": "Responsive",
+      "Test Name": "No overflow on MacBook Pro (1440\u00d7900) \u2014 Safari",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:17"
+    },
+    {
+      "ID": "RESP-laptop",
+      "Category": "Responsive",
+      "Test Name": "No overflow on Generic Laptop (1366\u00d7768)",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:17"
+    },
+    {
+      "ID": "RESP-mobile",
+      "Category": "Responsive",
+      "Test Name": "No overflow on iPhone 14 Pro (390\u00d7844)",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "KEY-01",
+      "Category": "Keyboard",
+      "Test Name": "Focusable elements present",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "KEY-03",
+      "Category": "Keyboard",
+      "Test Name": "Skip link present",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "MIXED-00",
+      "Category": "Security",
+      "Test Name": "No mixed content",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "CONT-01",
+      "Category": "Content",
+      "Test Name": "Word count > 300",
+      "Result": "FAIL",
+      "Severity": "LOW",
+      "Detail": "22 words",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "CONT-02",
+      "Category": "Content",
+      "Test Name": "No placeholder text",
+      "Result": "PASS",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "FORM-1-CSRF",
+      "Category": "Forms",
+      "Test Name": "Form 1 CSRF",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "TYPO-01",
+      "Category": "Typography",
+      "Test Name": "Base font size \u2265 14px",
+      "Result": "FAIL",
+      "Severity": "MEDIUM",
+      "Detail": "12px",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "HTML-01",
+      "Category": "HTML Quality",
+      "Test Name": "DOCTYPE declared",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "HTML-02",
+      "Category": "HTML Quality",
+      "Test Name": "Charset UTF-8",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "HTML-03",
+      "Category": "HTML Quality",
+      "Test Name": "Favicon present",
+      "Result": "FAIL",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "IMG-01",
+      "Category": "Images",
+      "Test Name": "All images have alt",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "3/3 images missing alt text",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "Add descriptive alt attributes to all <img> tags. Example: <img src='photo.jpg' alt='A clear description of the image'>",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18",
+      "missing_alt_images": [
+        "https://img.alicdn.com/tfs/TB1jjchwW61gK0jSZFlXXXDKFXa-166-52.png",
+        "https://laz-img-cdn.alicdn.com/tfs/TB1ZOeWA7voK1RjSZFDXXXY3pXa-400-400.png",
+        "data:image/png;base64,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"
+      ],
+      "page_url": "https://www.daraz.pk///_____tmd_____/punish?x5secdata=xfPc5s7GURg6qav03qtZaWoPt3xfvpCjXPcWDE5HwLiMn65BFhgTaueN9wcUA1sz_rh_VJAzSKlh8Vwzta6Q6XDNjNKvz39ggyouctzuKnBU9aH_kg7v6VrbYzcqtE_VFew0RDU3bQ9NYEqlCtIGvPsNgVrBYBIjO23I4yTaYMPbv3CkLrK3TcxVDaz3sbTRpU0Mumf8RFBzg992M7edxRpc2gx2hFvZOesmioVhveycW2Jb-mEudqVLtV16ytNbxfZvJzohhcE_35rq83_4hYFEWj4edNQYl4eaHrsWE_jCRjG81wM5c6rw7_nnTB1JQroGspSxhxbhZkzmt1UhSRdT3sFwQM6xncD-LXc64-P44kp7fOyf9y6TV4W7AWYXMDvkn_cpsr9U6G-3apEK-jJjltNGgd2kBo8iCZGGsIAodr6N5EPo0YJw89wigTS9zXllowGlhIsCNlD-OCBvz5mm3N4DiuuC_xZpzeepGfqmeh5uvNa5CUHr_izoLZnYgIEHprz-O05b1hNvBWDKhvNbijJoKFKAmZkN4tAsu-Lj8__bx__www.daraz.pk%2f&x5step=1"
+    },
+    {
+      "ID": "NAV-01",
+      "Category": "Navigation",
+      "Test Name": "Nav landmark present",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    },
+    {
+      "ID": "NAV-04",
+      "Category": "Navigation",
+      "Test Name": "Footer landmark present",
+      "Result": "FAIL",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "11:57:18"
+    }
+  ],
+  "health_meta": {
+    "score": 85,
+    "grade": "Good",
+    "color": "#1d4ed8",
+    "deductions": [
+      {
+        "category": "Performance",
+        "label": "High performance issues",
+        "points": 3.0,
+        "count": 1
+      },
+      {
+        "category": "Accessibility",
+        "label": "Critical a11y issues",
+        "points": 12.0,
+        "count": 3
+      }
+    ]
+  },
+  "image_issues": [
+    {
+      "page_name": "Captcha Interception",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.alicdn.com/tfs/TB1jjchwW61gK0jSZFlXXXDKFXa-166-52.png",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Captcha Interception",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://laz-img-cdn.alicdn.com/tfs/TB1ZOeWA7voK1RjSZFDXXXY3pXa-400-400.png",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Captcha Interception",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "data:image/png;base64,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",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    }
+  ],
+  "link_issues": [],
+  "pages_crawled": [
+    {
+      "url": "https://www.daraz.pk",
+      "page_name": "Captcha Interception"
+    },
+    {
+      "url": "https://www.daraz.pk//_____tmd_____/page/feedback",
+      "page_name": "Feedback"
+    }
+  ],
+  "total_images_checked": 3,
+  "total_links_checked": 2
+}

@@ -87,7 +87,12 @@ export async function cancelJob(id: string) {
 export const api = {
   health:       () => get<{status:string}>('/health'),
   listReports:  () => get<{reports:any[]}>('/reports'),
-  getReportUrl: (f: string) => `${BASE}/reports/${f}`,
+  getReportUrl: (f: string) => {
+    if (!f) return f
+    if (/^https?:\/\//i.test(f)) return f
+    const filename = f.replace(/^\/reports\//, '').replace(/^reports\//, '')
+    return `${BASE}/reports/${filename}`
+  },
 
   qaScan: (b:{url:string;viewport?:string;max_pages?:number;figma_url?:string;checks?:string[]}) =>
     post<{job_id:string}>('/scan/qa', b),

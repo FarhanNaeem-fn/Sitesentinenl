@@ -30,11 +30,14 @@ function ss_read(key: string): JobState | null {
     const raw = sessionStorage.getItem(`ss_job_${key}`)
     if (!raw) return null
     const s = JSON.parse(raw) as JobState
-    return (s.status === 'done' || s.status === 'error') ? s : null
+    return s.status === 'idle' ? null : s
   } catch { return null }
 }
 function ss_write(key: string, s: JobState) {
-  try { sessionStorage.setItem(`ss_job_${key}`, JSON.stringify(s)) } catch {}
+  try {
+    if (s.status !== 'idle') sessionStorage.setItem(`ss_job_${key}`, JSON.stringify(s))
+    else sessionStorage.removeItem(`ss_job_${key}`)
+  } catch {}
 }
 function ss_clear(key: string) {
   try { sessionStorage.removeItem(`ss_job_${key}`) } catch {}
@@ -52,13 +55,31 @@ function _set(key: string, updater: JobState | ((prev: JobState) => JobState)) {
   const prev = _states.get(key) ?? IDLE
   const next = typeof updater === 'function' ? updater(prev) : updater
   _states.set(key, next)
-  if (next.status === 'done' || next.status === 'error') ss_write(key, next)
+  if (next.status !== 'idle') ss_write(key, next)
   _listeners.get(key)?.forEach(fn => fn(next))
+}
+
+function _resumeJob(key: string) {
+  const state = _states.get(key)
+  if (!state || state.status !== 'running' || !state.jobId || _stops.has(key)) return
+
+  const stop = streamJob(
+    state.jobId,
+    (entry) => _set(key, s => ({ ...s, logs: [...s.logs, entry], progress: Math.min(s.progress + 0.4, 94) })),
+    (data)  => _set(key, s => ({ ...s, partial: data })),
+    (result) => _set(key, s => ({ ...s, status: 'done',  result,         progress: 100 })),
+    (err)   => _set(key, s => ({ ...s, status: 'error', error: err })),
+  )
+  _stops.set(key, stop)
 }
 
 // ── Public API ───────────────────────────────────────────────────────────────
 export function getState(key: string): JobState {
   return _get(key)
+}
+
+export function resumeJob(key: string) {
+  _resumeJob(key)
 }
 
 export function subscribe(key: string, fn: Listener): () => void {

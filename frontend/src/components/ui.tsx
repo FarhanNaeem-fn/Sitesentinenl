@@ -74,6 +74,95 @@ function _LogBtn({ active, color, onClick, children }: {
   )
 }
 
+export function ScanStatus({
+  title = 'Live Status',
+  status,
+  progress,
+  partial,
+  result,
+  accent = 'var(--pro-orange)',
+}: {
+  title?: string
+  status: 'idle' | 'running' | 'done' | 'error' | 'cancelled'
+  progress: number
+  partial?: any
+  result?: any
+  accent?: string
+}) {
+  const summaryLines: Array<{ label: string; value: string | number }> = []
+  const live = partial || result || {}
+
+  if (status === 'running') {
+    if (live.stage) summaryLines.push({ label: 'Current stage', value: live.stage })
+    if (typeof live.checked === 'number' && typeof live.checks_total === 'number') {
+      summaryLines.push({ label: 'Checks', value: `${live.checked}/${live.checks_total}` })
+    }
+    if (typeof live.pages_scanned === 'number') summaryLines.push({ label: 'Pages scanned', value: live.pages_scanned })
+    if (typeof live.total_issues === 'number') summaryLines.push({ label: 'Issues found', value: live.total_issues })
+    if (typeof live.health_score === 'number') summaryLines.push({ label: 'Health score', value: `${live.health_score}/100` })
+  }
+
+  if (status === 'done') {
+    if (typeof result?.health_score === 'number') summaryLines.push({ label: 'Health score', value: `${result.health_score}/100` })
+    if (typeof result?.pages_scanned === 'number') summaryLines.push({ label: 'Pages scanned', value: result.pages_scanned })
+    if (typeof result?.total_issues === 'number') summaryLines.push({ label: 'Issues found', value: result.total_issues })
+  }
+
+  if (status === 'error') {
+    if (result?.error) summaryLines.push({ label: 'Error', value: result.error })
+  }
+
+  return (
+    <div className="be-card overflow-hidden" style={{ border: `1px solid ${accent}22` }}>
+      <div style={{ height: 3, background: `linear-gradient(90deg,${accent},${accent}33,transparent)` }} />
+      <div className="p-4">
+        <div className="flex items-start justify-between gap-3 mb-3">
+          <div>
+            <p className="font-display font-700 text-[13px] text-white">{title}</p>
+            <p className="font-body text-[11px] text-[#8B949E] mt-1">
+              {status === 'idle' && 'Ready to run the scan and display incremental results.'}
+              {status === 'running' && 'Progressively rendering scan output as it arrives.'}
+              {status === 'done' && 'Scan complete — displaying the final result overview.'}
+              {status === 'error' && 'An error occurred while running the scan.'}
+              {status === 'cancelled' && 'Scan was cancelled.'}
+            </p>
+          </div>
+          <span className="font-mono font-700 text-[11px] py-1 px-2 rounded-full"
+                style={{ background: `${accent}15`, color: accent, border: `1px solid ${accent}33` }}>
+            {status === 'idle' ? 'Idle' : status === 'running' ? 'Running' : status === 'done' ? 'Done' : status === 'error' ? 'Error' : 'Cancelled'}
+          </span>
+        </div>
+
+        {status === 'running' && (
+          <div className="mb-4">
+            <div className="h-2 rounded-full overflow-hidden" style={{ background: '#161B22' }}>
+              <div style={{ width: `${Math.max(2, progress)}%`, height: 8, background: accent, transition: 'width 0.3s ease' }} />
+            </div>
+            <div className="mt-2 text-[11px] text-[#8B949E]">{Math.round(progress)}% complete</div>
+          </div>
+        )}
+
+        {(status === 'running' || status === 'done' || status === 'error') && summaryLines.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {summaryLines.map(line => (
+              <div key={line.label} className="rounded-xl border border-[#21262D] bg-[#0D1117] p-3">
+                <p className="text-[11px] text-[#8B949E] mb-1">{line.label}</p>
+                <p className="font-mono font-700 text-[13px] text-white">{line.value}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {status === 'running' && summaryLines.length === 0 && (
+          <div className="rounded-xl border border-[#21262D] bg-[#0D1117] p-4 text-[12px] text-[#8B949E]">
+            Collecting live scan data…
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
 export function LogTerminal({ logs, accent = 'var(--pro-orange)', title = 'Output' }:
   { logs: LogEntry[]; height?: string; accent?: string; title?: string }) {
 

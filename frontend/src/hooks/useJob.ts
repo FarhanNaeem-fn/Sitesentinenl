@@ -23,6 +23,8 @@ export function useJob(persistKey?: string) {
   useEffect(() => {
     // Re-read the global store — state may have changed while we were away
     setLocalState(store.getState(key))
+    // Resume any running scan from persisted session state
+    store.resumeJob(key)
     // Subscribe: future store updates will flow to local React state
     return store.subscribe(key, setLocalState)
   }, [key])

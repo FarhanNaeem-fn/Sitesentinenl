@@ -195,13 +195,13 @@ export function LoadTest() {
         <Card title="Load Test Report" accent={BLU}>
           <div className="flex flex-wrap gap-3">
             {result?.report_html && (
-              <GhostBtn onClick={() => window.open(result.report_html, '_blank')} label="View HTML Report" icon="👁️" />
+              <GhostBtn onClick={() => window.open(api.getReportUrl(result.report_html), '_blank')} label="View HTML Report" icon="👁️" />
             )}
             {result?.report_xlsx && (
-              <GhostBtn onClick={() => { const a=document.createElement('a');a.href=result.report_xlsx;a.download=result.report_xlsx.split('/').pop()??'load_report.xlsx';a.click() }} label="Download Excel" icon="📊" />
+              <GhostBtn onClick={() => { const a=document.createElement('a');a.href=api.getReportUrl(result.report_xlsx);a.download=result.report_xlsx.split('/').pop()??'load_report.xlsx';a.click() }} label="Download Excel" icon="📊" />
             )}
             {result?.report_json && (
-              <GhostBtn onClick={() => { const a=document.createElement('a');a.href=result.report_json;a.download=result.report_json.split('/').pop()??'load_report.json';a.click() }} label="Download JSON" icon="⬇️" />
+              <GhostBtn onClick={() => { const a=document.createElement('a');a.href=api.getReportUrl(result.report_json);a.download=result.report_json.split('/').pop()??'load_report.json';a.click() }} label="Download JSON" icon="⬇️" />
             )}
           </div>
         </Card>
@@ -247,8 +247,8 @@ export function Pagination() {
         </div>
       </Card>
       <div className="flex gap-2 flex-wrap"><RunButton onClick={run} disabled={!url||running} loading={running} label={running?'Testing…':'Run Pagination Test'} color={GRN}/><StopButton onClick={cancel} disabled={!running}/><GhostBtn onClick={reset} label="Clear"/>
-      {state.result?.report_html&&<GhostBtn onClick={()=>window.open(state.result.report_html,'_blank')} label="View HTML Report" icon="👁️"/>}
-      {state.result?.report_xlsx&&<GhostBtn onClick={()=>{const a=document.createElement('a');a.href=state.result.report_xlsx;a.download=state.result.report_xlsx.split('/').pop();a.click()}} label="Download Excel" icon="📊"/>}
+      {state.result?.report_html&&<GhostBtn onClick={()=>window.open(api.getReportUrl(state.result.report_html),'_blank')} label="View HTML Report" icon="👁️"/>}
+      {state.result?.report_xlsx&&<GhostBtn onClick={()=>{const a=document.createElement('a');a.href=api.getReportUrl(state.result.report_xlsx);a.download=state.result.report_xlsx.split('/').pop();a.click()}} label="Download Excel" icon="📊"/>}
       </div>
       <LogTerminal logs={state.logs} accent={GRN}/>
       {result?.pages?.length>0&&(
@@ -324,8 +324,8 @@ export function International(){
           <StopButton onClick={cancel} disabled={!running}/>
           <GhostBtn onClick={()=>setSel(REGIONS.map(r=>r.l))} label="All"/>
           <GhostBtn onClick={()=>setSel([])} label="None"/>
-          {state.result?.report_html&&<GhostBtn onClick={()=>window.open(state.result.report_html,'_blank')} label="View HTML Report" icon="👁️"/>}
-          {state.result?.report_xlsx&&<GhostBtn onClick={()=>{const a=document.createElement('a');a.href=state.result.report_xlsx;a.download=state.result.report_xlsx.split('/').pop();a.click()}} label="Download Excel" icon="📊"/>}
+          {state.result?.report_html&&<GhostBtn onClick={()=>window.open(api.getReportUrl(state.result.report_html),'_blank')} label="View HTML Report" icon="👁️"/>}
+          {state.result?.report_xlsx&&<GhostBtn onClick={()=>{const a=document.createElement('a');a.href=api.getReportUrl(state.result.report_xlsx);a.download=state.result.report_xlsx.split('/').pop();a.click()}} label="Download Excel" icon="📊"/>}
         </div>
       </Card>
       <LogTerminal logs={state.logs} accent={PUR}/>
@@ -629,12 +629,12 @@ export function UserBaseline(){
           <GhostBtn onClick={reset} label="Clear"/>
           {result&&<GhostBtn onClick={()=>dl(result)} label="Download" icon="↓"/>}
           {result?.report_html && (
-            <GhostBtn onClick={() => window.open(result.report_html, '_blank')} label="View Report" icon="👁️" />
+            <GhostBtn onClick={() => window.open(api.getReportUrl(result.report_html), '_blank')} label="View Report" icon="👁️" />
           )}
           {result?.report_json && (
             <GhostBtn onClick={() => {
               const a = document.createElement('a')
-              a.href = result.report_json
+              a.href = api.getReportUrl(result.report_json)
               a.download = result.report_json.split('/').pop() || 'baseline_report.json'
               a.click()
             }} label="Download JSON" icon="⬇️" />
@@ -782,9 +782,9 @@ export function Lighthouse(){
         <div className="flex gap-2 flex-wrap">
           <RunButton onClick={run} disabled={!url||running} loading={running} label={running?'Auditing…':'Run SuperLighthouse'} color={G} icon="◆"/>
           <StopButton onClick={cancel} disabled={!running}/><GhostBtn onClick={reset} label="Clear"/>
-          {result?.report_html&&<GhostBtn onClick={()=>window.open(result.report_html,'_blank')} label="HTML Report" icon="👁️"/>}
-          {result?.report_xlsx&&<GhostBtn onClick={()=>{const a=document.createElement('a');a.href=result.report_xlsx;a.download=result.report_xlsx.split('/').pop();a.click()}} label="Excel" icon="📊"/>}
-          {result?.report_json&&<GhostBtn onClick={()=>{const a=document.createElement('a');a.href=result.report_json;a.download=result.report_json.split('/').pop();a.click()}} label="JSON" icon="⬇️"/>}
+          {result?.report_html&&<GhostBtn onClick={()=>window.open(api.getReportUrl(result.report_html),'_blank')} label="HTML Report" icon="👁️"/>}
+          {result?.report_xlsx&&<GhostBtn onClick={()=>{const a=document.createElement('a');a.href=api.getReportUrl(result.report_xlsx);a.download=result.report_xlsx.split('/').pop();a.click()}} label="Excel" icon="📊"/>}
+          {result?.report_json&&<GhostBtn onClick={()=>{const a=document.createElement('a');a.href=api.getReportUrl(result.report_json);a.download=result.report_json.split('/').pop();a.click()}} label="JSON" icon="⬇️"/>}
         </div>
         {result?.simulated&&<p className="mt-2.5 text-[11px] px-3 py-2 rounded-lg" style={{color:G,background:'rgba(245,166,35,0.06)',border:'1px solid rgba(245,166,35,0.15)'}}>⚠ Simulation mode — add PSI_API_KEY in .env for real data</p>}
       </Card>
@@ -1145,8 +1145,8 @@ export function MobileTesting(){
         <RunButton onClick={run} disabled={running} loading={running} label={running?'Testing…':'Run Mobile Tests'} color={MOB_G} icon="📱"/>
         <StopButton onClick={cancel} disabled={!running}/><GhostBtn onClick={reset} label="Clear"/>
         {result&&<GhostBtn onClick={()=>dl(result)} label="Download JSON" icon="↓"/>}
-        {result?.report_html&&<GhostBtn onClick={()=>window.open(result.report_html,'_blank')} label="View HTML Report" icon="👁️"/>}
-        {result?.report_xlsx&&<GhostBtn onClick={()=>{const a=document.createElement('a');a.href=result.report_xlsx;a.download=result.report_xlsx.split('/').pop();a.click()}} label="Download Excel" icon="📊"/>}
+        {result?.report_html&&<GhostBtn onClick={()=>window.open(api.getReportUrl(result.report_html),'_blank')} label="View HTML Report" icon="👁️"/>}
+        {result?.report_xlsx&&<GhostBtn onClick={()=>{const a=document.createElement('a');a.href=api.getReportUrl(result.report_xlsx);a.download=result.report_xlsx.split('/').pop();a.click()}} label="Download Excel" icon="📊"/>}
       </div>
       <LogTerminal logs={state.logs} accent={MOB_G}/>
 
@@ -1259,12 +1259,12 @@ function BrowserTab(){
       accent={BLU}
       action={state.result?.report_html && (
         <div className="flex gap-2">
-          <GhostBtn onClick={() => window.open(state.result.report_html, '_blank')} label="View HTML" icon="👁️"/>
+          <GhostBtn onClick={() => window.open(api.getReportUrl(state.result.report_html), '_blank')} label="View HTML" icon="👁️"/>
           {state.result.report_json && (
             <GhostBtn 
               onClick={() => {
                 const a = document.createElement('a');
-                a.href = state.result.report_json;
+                a.href = api.getReportUrl(state.result.report_json);
                 a.download = state.result.report_json.split('/').pop();
                 a.click();
               }} 
@@ -1515,8 +1515,8 @@ export function AllScans(){
     setLoading(true)
     try{
       const r=await api.dashboardReport({format:fmt})
-      if(r.report_html) window.open(r.report_html,'_blank')
-      else if(r.report_csv) window.open(r.report_csv,'_blank')
+      if(r.report_html) window.open(api.getReportUrl(r.report_html), '_blank')
+      else if(r.report_csv) window.open(api.getReportUrl(r.report_csv), '_blank')
     }catch(e){alert('Failed to generate report: '+e)}
     setLoading(false)
   }

@@ -1,5 +1,5 @@
 // src/pages/QAScan.tsx
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { api, validateUrlFormat } from '../api/client'
 import { useJob } from '../hooks/useJob'
 import { usePersistedState } from '../hooks/usePersistedState'
@@ -33,15 +33,24 @@ export default function QAScan() {
   const [viewport,setVp]     = usePersistedState('qa_viewport', 'desktop')
   const [maxPg,   setMaxPg]  = usePersistedState('qa_maxpg', '5')
   const [checks,  setChecks] = usePersistedState('qa_checks', CHECKS.map(c => c.key))
-  const [showPreview,  setShowPreview]  = useState(false)
-  const [previewFor,   setPreviewFor]   = useState<string | null>(null)
+  const [showPreview,  setShowPreview]  = usePersistedState('qa_showPreview', false)
+  const [previewFor,   setPreviewFor]   = usePersistedState<string | null>('qa_preview_for', null)
   const [iframeLoaded, setIframeLoaded] = useState(false)
-  const [aiInsights,   setAiInsights]   = useState<string | null>(null)
+  const [aiInsights,   setAiInsights]   = usePersistedState<string | null>('qa_ai_insights', null)
   const [aiLoading,    setAiLoading]    = useState(false)
   const [urlErr,       setUrlErr]       = useState('')
+  const previewRef = useRef<HTMLIFrameElement | null>(null)
 
   const running = state.status === 'running'
   const result  = state.result
+
+  useEffect(() => {
+    if (showPreview && previewFor) {
+      setIframeLoaded(false)
+    }
+  }, [showPreview, previewFor])
+
+  const reportUrl = (href: string) => api.getReportUrl(href.replace(/^\/reports\//, ''))
 
   async function run() {
     let targetUrl = url.trim()
@@ -218,19 +227,27 @@ export default function QAScan() {
                   <div className="flex flex-wrap gap-2 pt-3 border-t border-[#30363D]">
                     {result.report_html && (
                       <GhostBtn
-                        onClick={() => window.open(result.report_html, '_blank')}
+                        onClick={() => window.open(reportUrl(result.report_html), '_blank')}
                         label="View HTML Report" icon="👁️"
                       />
                     )}
                     {result.report_xlsx && (
                       <GhostBtn
-                        onClick={() => { const a = document.createElement('a'); a.href = result.report_xlsx; a.download = result.report_xlsx.split('/').pop(); a.click() }}
+                        onClick={() => {
+                          const href = reportUrl(result.report_xlsx)
+                          const filename = href.split('/').pop() || 'report.xlsx'
+                          const a = document.createElement('a'); a.href = href; a.download = filename; a.click()
+                        }}
                         label="Download Excel" icon="📊"
                       />
                     )}
                     {result.report_json && (
                       <GhostBtn
-                        onClick={() => { const a = document.createElement('a'); a.href = result.report_json; a.download = result.report_json.split('/').pop(); a.click() }}
+                        onClick={() => {
+                          const href = reportUrl(result.report_json)
+                          const filename = href.split('/').pop() || 'report.json'
+                          const a = document.createElement('a'); a.href = href; a.download = filename; a.click()
+                        }}
                         label="Download JSON" icon="⬇️"
                       />
                     )}

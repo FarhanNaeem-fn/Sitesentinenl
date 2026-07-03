@@ -2,10 +2,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { api, validateUrlFormat } from '../api/client'
 import { useJob } from '../hooks/useJob'
-import { usePersistedState } from '../hooks/usePersistedState'
+import { usePersistedState, useScrollRestore } from '../hooks/usePersistedState'
 import {
   Card, LogTerminal, RunButton, StopButton, GhostBtn,
-  Input, Select, CheckPill, ScoreRing, CategoryRing,
+  Input, Select, CheckPill, ScoreRing, CategoryRing, ScanStatus,
 } from '../components/ui'
 
 const CHECKS = [
@@ -43,6 +43,13 @@ export default function QAScan() {
 
   const running = state.status === 'running'
   const result  = state.result
+  const partial = state.partial
+  // While running, fall back to the in-progress partial breakdown so category
+  // rings and counts fill in as each check completes instead of staying at
+  // 0/0 until the whole scan finishes.
+  const liveDetails = result?.details ?? partial?.details
+
+  useScrollRestore('qa_scan')
 
   useEffect(() => {
     if (showPreview && previewFor) {
@@ -152,7 +159,7 @@ export default function QAScan() {
             <h3 className="font-display font-800 text-[18px] text-white">Category Performance</h3>
             <div className="flex gap-3">
               <Badge label={`${result?.pages_scanned ?? 0} Pages`} type="info" />
-              <Badge label={`${result?.total_issues ?? 0} Issues`} type={result?.total_issues > 0 ? 'error' : 'success'} />
+              <Badge label={`${result?.total_issues ?? partial?.checks_failed ?? 0} Issues`} type={(result?.total_issues ?? partial?.checks_failed ?? 0) > 0 ? 'error' : 'success'} />
             </div>
           </div>
           <div className="flex flex-wrap gap-8 justify-between">
@@ -160,8 +167,8 @@ export default function QAScan() {
               <CategoryRing
                 key={c.key}
                 label={c.label}
-                count={result?.details?.[c.key]?.passed ?? 0}
-                total={(result?.details?.[c.key]?.passed ?? 0) + (result?.details?.[c.key]?.failed ?? 0)}
+                count={liveDetails?.[c.key]?.passed ?? 0}
+                total={(liveDetails?.[c.key]?.passed ?? 0) + (liveDetails?.[c.key]?.failed ?? 0)}
               />
             ))}
           </div>
@@ -274,6 +281,22 @@ export default function QAScan() {
                     </div>
                   )}
                 </Card>
+              )}
+            </>
+          ) : state.status !== 'idle' ? (
+            <>
+              <ScanStatus
+                title="QA Scan"
+                status={state.status}
+                progress={state.progress}
+                partial={partial}
+                result={result}
+                accent="#3B82F6"
+              />
+              {state.status === 'error' && (
+                <div className="flex justify-end">
+                  <RunButton onClick={run} label="Retry Scan" color="#3B82F6" icon="↻" />
+                </div>
               )}
             </>
           ) : (

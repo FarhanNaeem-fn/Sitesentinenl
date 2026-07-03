@@ -903,6 +903,14 @@ async def _run_qa_scan_impl(jid: str, req: QAScanRequest):
                 lv = "ok" if f==0 else "warn" if f<3 else "err"
                 jlog(jid, f"  {chk}: {p} passed / {f} failed", lv)
 
+                jobs[jid]["partial"] = {
+                    "current_check": chk, "checks_done": step_i+1, "checks_total": n,
+                    "checks_passed": tp, "checks_failed": tf,
+                    "details": {k: {"passed": sum(1 for t in v.get("test_cases",[]) if t["Result"]=="PASS"),
+                                    "failed": sum(1 for t in v.get("test_cases",[]) if t["Result"]=="FAIL")}
+                                for k, v in results["details"].items()},
+                }
+
             # Domain / site health
             if "health_score" in req.checks:
                 health = await _run_domain_health(jid, req.url, page)

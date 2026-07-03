@@ -316,6 +316,10 @@ async def _run_super_lighthouse_impl(jid: str, req: SuperLighthouseRequest):
     result["crux"] = crux_data
     jlog(jid, f"  Security: {security_data.get('score',0)}/100 | CrUX: {crux_data.get('score',0)}/100", "ok")
     jobs[jid]["progress"] = 20
+    jobs[jid]["partial"] = {
+        "phase":"security_crux","security_score":security_data.get("score",0),
+        "crux_score":crux_data.get("score",0),
+    }
 
     # ── Phase B: Multi-device PSI (sequential, PSI has quota) ────────────────
     jlog(jid, "Phase B — Running PSI for desktop + mobile…", "info")
@@ -329,6 +333,11 @@ async def _run_super_lighthouse_impl(jid: str, req: SuperLighthouseRequest):
                     "combined_perf": md_perf, "score": md_perf, "simulated": desktop_data.get("simulated",False)}
     result["multi_device"] = multi_device
     jobs[jid]["progress"] = 50
+    jobs[jid]["partial"] = {
+        "phase":"multi_device","security_score":security_data.get("score",0),
+        "crux_score":crux_data.get("score",0),"multi_device_score":md_perf,
+        "desktop_perf":desktop_data.get("perf",0),"mobile_perf":mobile_data.get("perf",0),
+    }
 
     # Competitor comparison
     if req.compare_url:
@@ -341,6 +350,11 @@ async def _run_super_lighthouse_impl(jid: str, req: SuperLighthouseRequest):
         except Exception as e:
             jlog(jid, f"  Competitor compare failed: {e}", "warn")
     jobs[jid]["progress"] = 60
+    jobs[jid]["partial"] = {
+        "phase":"compare" if req.compare_url else "multi_device",
+        "multi_device_score":md_perf,
+        "compare_desktop_perf":result.get("compare",{}).get("desktop",{}).get("perf") if req.compare_url else None,
+    }
 
     # ── Phase C: Playwright-based modules (single browser session) ────────────
     jlog(jid, "Phase C — Browser-based analysis (third-party, SPA, a11y, network)…", "info")
@@ -357,6 +371,13 @@ async def _run_super_lighthouse_impl(jid: str, req: SuperLighthouseRequest):
     except Exception as e:
         jlog(jid, f"  Playwright phase error: {e}", "warn")
     jobs[jid]["progress"] = 85
+    jobs[jid]["partial"] = {
+        "phase":"browser_analysis",
+        "third_party_domains":result.get("third_party",{}).get("unique_domains",0),
+        "spa_framework":result.get("spa",{}).get("framework"),
+        "accessibility_score":result.get("accessibility_deep",{}).get("score",0),
+        "network_kb":result.get("network",{}).get("total_kb",0),
+    }
 
     # ── Weighted scoring ──────────────────────────────────────────────────────
     module_scores: dict = {}
@@ -375,6 +396,7 @@ async def _run_super_lighthouse_impl(jid: str, req: SuperLighthouseRequest):
     result["grade"] = grade
     jlog(jid, f"✓ SuperLighthouse complete — Overall: {overall_score}/100 (Grade {grade})", "ok")
     jobs[jid]["progress"] = 95
+    jobs[jid]["partial"] = {"phase":"scoring","overall_score":overall_score,"grade":grade,"module_scores":module_scores}
 
     # ── Save + generate reports ────────────────────────────────────────────────
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")

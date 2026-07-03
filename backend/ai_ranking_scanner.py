@@ -313,6 +313,7 @@ async def _run_ai_ranking_impl(jid: str, req: AIRankingRequest):
         result["robots"] = {"found": False, "crawler_access": {}}
 
     jobs[jid]["progress"] = 20
+    jobs[jid]["partial"] = {"phase":"robots","robots_found":result["robots"].get("found", False)}
 
     # Phase 2: Playwright page data
     jlog(jid, "Phase 2 — Extracting on-page signals…", "info")
@@ -329,6 +330,10 @@ async def _run_ai_ranking_impl(jid: str, req: AIRankingRequest):
             page_data = {"error": str(e), "https": req.url.startswith("https://")}
 
     jobs[jid]["progress"] = 45
+    jobs[jid]["partial"] = {
+        "phase":"page_data","word_count":page_data.get("word_count",0),
+        "structured_data_count":page_data.get("structured_data_count",0),
+    }
 
     # Phase 3: Score all dimensions
     jlog(jid, "Phase 3 — Scoring dimensions…", "info")
@@ -362,6 +367,11 @@ async def _run_ai_ranking_impl(jid: str, req: AIRankingRequest):
     result["checks"] = checks_detail
     result["page_data"] = page_data
     jobs[jid]["progress"] = 65
+    jobs[jid]["partial"] = {
+        "phase":"scoring","technical_score":scores.get("technical"),
+        "content_score":scores.get("content"),"trust_score":scores.get("trust"),
+        "structured_data_score":scores.get("structured_data"),"overall_score":overall,
+    }
 
     # Phase 4: Competitors
     if "competitors" in req.checks and req.competitor_urls:
@@ -380,6 +390,12 @@ async def _run_ai_ranking_impl(jid: str, req: AIRankingRequest):
                 jlog(jid, f"  {comp_url}: overall={cs['overall']}", "ok")
             except Exception as e:
                 competitors.append({"url": comp_url, "scores": {}, "error": str(e)})
+            jobs[jid]["partial"] = {
+                "phase":"competitors","competitors_done":len(competitors),
+                "competitors_total":len(req.competitor_urls[:3]),
+                "last_competitor_url":comp_url,
+                "last_competitor_overall":competitors[-1]["scores"].get("overall") if competitors else None,
+            }
         result["competitors"] = competitors
     jobs[jid]["progress"] = 80
 
@@ -391,6 +407,7 @@ async def _run_ai_ranking_impl(jid: str, req: AIRankingRequest):
     else:
         result["llm_analysis"] = None
     jobs[jid]["progress"] = 90
+    jobs[jid]["partial"] = {"phase":"llm","overall_score":overall,"llm_done":result["llm_analysis"] is not None}
 
     # Save
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")

@@ -26,12 +26,9 @@ import type { ProxyRegion, _ProxyMeta } from './types'
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const BASE_URL: string =
-  import.meta.env.VITE_API_BASE_URL ||
-  (typeof window !== 'undefined' &&
-   (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-    ? '/api'
-     : 'https://sitesentinel-hkvtad10a-farhaan.vercel.app' )
+// Frontend and backend are always deployed as a single origin (see vercel.json's
+// /api/(.*) rewrite), so the API base is always relative.
+const BASE_URL: string = import.meta.env.VITE_API_BASE_URL || '/api'
 
 const DEFAULT_TIMEOUT_MS = Number(import.meta.env.VITE_PROXY_TIMEOUT_MS) || 30_000
 const MAX_RETRIES        = Number(import.meta.env.VITE_PROXY_MAX_RETRIES) || 3

@@ -186,9 +186,9 @@ async def provide_login(jid: str, creds: LoginCredentialsRequest):
     return {"ok": True}
 
 @router.get("/jobs/{jid}/stream")
-async def stream(jid:str):
+async def stream(jid:str, since:int=0):
     async def gen() -> AsyncGenerator[str,None]:
-        sent=0
+        sent=max(since,0)
         while True:
             j=jobs.get(jid)
             if not j: yield f"data:{json.dumps({'error':'not found'})}\n\n"; break

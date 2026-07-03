@@ -511,6 +511,12 @@ async def _run_pagination(jid: str, req: PaginationRequest):
             pages_r.append({"page":pg,"error":str(e)[:60],"status":"err"})
             jlog(jid,f"Page {pg}: ERROR — {e}","err")
         jobs[jid]["progress"]=int(pg/min(total_pages,15)*95)
+        jobs[jid]["partial"]={
+            "current_page":pg,"total_pages":min(total_pages,15),
+            "records_so_far":records,"duplicates_so_far":dupes,
+            "pages_checked":len(pages_r),
+            "last_status":pages_r[-1]["status"] if pages_r else None,
+        }
         await asyncio.sleep(.1)
 
     missing=max(0,req.total_records-records)
@@ -602,6 +608,12 @@ async def _run_intl_impl(jid: str, req: IntlRequest):
                                  "error":str(e)[:60],"status":"err"})
                 jlog(jid,f"  ERROR: {e}","err")
             jobs[jid]["progress"]=int((i+1)/len(req.locales)*95)
+            jobs[jid]["partial"]={
+                "current_locale":locale,"current_locale_name":meta["name"],
+                "locales_done":i+1,"locales_total":len(req.locales),
+                "pass_count":sum(1 for r in results if r.get("status")=="pass"),
+                "warn_or_err_count":sum(1 for r in results if r.get("status") in ("warn","err")),
+            }
             await asyncio.sleep(.2)
     jlog(jid,f"COMPLETE: {len(results)} regions","hdr")
     intl_res = {"results": results, "url": req.url}

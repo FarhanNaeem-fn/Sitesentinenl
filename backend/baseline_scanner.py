@@ -163,6 +163,11 @@ async def _run_user_baseline_impl(jid: str, req: UserBaselineRequest):
                 lv = "ok" if ok else "warn"
                 jlog(jid, f"  {'✓' if ok else '✗'} {chk_name}", lv)
                 jobs[jid]["progress"] = int((i/30)*45)
+                jobs[jid]["partial"] = {
+                    "phase":"normal","current_check":chk_name,
+                    "checks_done":i+1,"checks_total":30,
+                    "pass_count":normal_pass,"fail_count":(i+1)-normal_pass,
+                }
                 await asyncio.sleep(.05)
 
             normal_score = round(normal_pass/30*100)
@@ -184,6 +189,11 @@ async def _run_user_baseline_impl(jid: str, req: UserBaselineRequest):
                 lv = "ok" if score>=70 else "warn" if score>=50 else "err"
                 jlog(jid, f"  {mod_name}: {score}/100  —  {detail}", lv)
                 jobs[jid]["progress"] = 45+int((i/10)*45)
+                jobs[jid]["partial"] = {
+                    "phase":"ai","current_module":mod_name,
+                    "modules_done":i+1,"modules_total":10,
+                    "avg_score_so_far":round(sum(ai_scores)/len(ai_scores)) if ai_scores else 0,
+                }
                 await asyncio.sleep(.1)
 
             ai_score = round(sum(ai_scores)/len(ai_scores))

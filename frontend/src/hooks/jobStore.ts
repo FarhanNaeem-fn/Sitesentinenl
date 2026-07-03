@@ -69,6 +69,7 @@ function _resumeJob(key: string) {
     (data)  => _set(key, s => ({ ...s, partial: data })),
     (result) => _set(key, s => ({ ...s, status: 'done',  result,         progress: 100 })),
     (err)   => _set(key, s => ({ ...s, status: 'error', error: err })),
+    state.logs.length,
   )
   _stops.set(key, stop)
 }

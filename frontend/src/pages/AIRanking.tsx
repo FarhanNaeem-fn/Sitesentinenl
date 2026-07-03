@@ -8,7 +8,7 @@ import { api, validateUrlFormat } from '../api/client'
 import { useJob } from '../hooks/useJob'
 import { usePersistedState } from '../hooks/usePersistedState'
 import {
-  Card, KpiTile, LogTerminal, RunButton, StopButton, Input, Toggle, Badge, ScoreRing,
+  Card, KpiTile, LogTerminal, RunButton, StopButton, Input, Toggle, Badge, ScoreRing, ScanStatus,
 } from '../components/ui'
 
 /* ── colors ──────────────────────────────────────────────────────────────── */
@@ -117,11 +117,12 @@ export function AIRanking() {
   const [apiKey, setApiKey]       = usePersistedState('air_apikey', '')
   const [history, setHistory]     = useState<any[]>([])
   const [histLoaded, setHistLoaded] = useState(false)
-  const [activeTab, setActiveTab] = useState<'audit'|'history'>('audit')
+  const [activeTab, setActiveTab] = usePersistedState<'audit'|'history'>('air_active_tab','audit')
   const [urlErr, setUrlErr]       = useState('')
 
   const running = state.status === 'running'
   const result  = state.result as any
+  const partial = state.partial as any
 
   async function run() {
     let u = url.trim()
@@ -302,6 +303,15 @@ export function AIRanking() {
 
           {/* Log terminal */}
           <LogTerminal logs={state.logs} accent={PUR} title="AI Audit Output" />
+
+          {(state.status==='running'||state.status==='error'||state.status==='cancelled') && (
+            <>
+              <ScanStatus title="AI Ranking Audit" status={state.status} progress={state.progress} partial={partial} result={result} accent={PUR}/>
+              {state.status==='error' && (
+                <div className="flex justify-end"><RunButton onClick={run} label="Retry Audit" color={PUR} icon="↻"/></div>
+              )}
+            </>
+          )}
 
           {/* ─── RESULTS ────────────────────────────────────────────────── */}
           {result && (

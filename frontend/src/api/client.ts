@@ -1,8 +1,9 @@
 // src/api/client.ts  — v3.3 — all endpoints wired + Vercel fix + proxy API
 
-const BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-  ? '/api'
-  : 'https://sitesentinenl.vercel.app' 
+// Frontend and backend are always deployed as a single origin (see vercel.json's
+// /api/(.*) rewrite), so the API base is always relative. VITE_API_BASE_URL
+// remains as an explicit override for non-standard setups.
+const BASE = import.meta.env.VITE_API_BASE_URL || '/api'
 
 export interface LogEntry { ts: string; level: string; msg: string }
 
@@ -65,18 +66,34 @@ export function streamJob(
   onPartial: (data: any)       => void,
   onDone:    (result: any)     => void,
   onError:   (err: string)     => void,
+  since:     number = 0,
 ): () => void {
-  const es = new EventSource(`${BASE}/jobs/${jobId}/stream`)
+  const es = new EventSource(`${BASE}/jobs/${jobId}/stream?since=${since}`)
+  // Job failures are reported explicitly by the server as a message with an
+  // `error` field (see the "not found" / terminal-status branches in the
+  // backend's stream generator) — those are the only cases that should mark
+  // the job as errored. EventSource's onerror fires for ordinary transient
+  // connection drops (briefly true right after a hard page reload, network
+  // blips, etc.) as well as for the server closing the response after a
+  // clean 'done' — neither is an actual job failure, so onerror must not
+  // treat them as one. We just let the browser's built-in auto-reconnect
+  // keep retrying; `finished` stops it from doing anything once we've
+  // already resolved via an explicit message.
+  let finished = false
   es.onmessage = (e) => {
     try {
       const data = JSON.parse(e.data)
-      if (data.event === 'done')    { onDone(data.result ?? data); es.close() }
+      if (data.event === 'done')    { finished = true; onDone(data.result ?? data); es.close() }
       else if (data.event === 'partial') onPartial(data.data)
-      else if (data.error)          { onError(data.error); es.close() }
+      else if (data.error)          { finished = true; onError(data.error); es.close() }
       else                            onLog(data as LogEntry)
     } catch { /* ignore bad frames */ }
   }
-  es.onerror = () => { onError('Stream connection error'); es.close() }
+  es.onerror = () => {
+    if (finished) es.close()
+    // otherwise: no-op — let EventSource auto-reconnect and keep waiting
+    // for an explicit done/error message from the server.
+  }
   return () => es.close()
 }
 

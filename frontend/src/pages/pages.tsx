@@ -10,7 +10,7 @@ import { useJob } from '../hooks/useJob'
 import { usePersistedState } from '../hooks/usePersistedState'
 import {
   Card, KpiTile, LogTerminal, RunButton, StopButton, GhostBtn,
-  Input, Select, Gauge, ScoreRing, Toggle, CheckPill, Badge, UserGuideButton,
+  Input, Select, Gauge, ScoreRing, Toggle, CheckPill, Badge, UserGuideButton, ScanStatus,
 } from '../components/ui'
 import { UG_LOAD, UG_PAGINATION, UG_INTL, UG_LIGHTHOUSE, UG_MOBILE, UG_BASELINE } from '../config/userGuides'
 export { UnicornSuite } from './UnicornSuite'
@@ -107,6 +107,15 @@ export function LoadTest() {
         <KpiTile label="P95 Latency" value={liveP95?liveP95+'ms':'—'}        accent={G}/>
         <KpiTile label="Error Rate"  value={liveErr!=null?liveErr+'%':'—'}   accent={RED}/>
       </div>
+
+      {(state.status==='running'||state.status==='error'||state.status==='cancelled') && (
+        <>
+          <ScanStatus title="Load Test" status={state.status} progress={state.progress} partial={partial} result={result} accent={BLU}/>
+          {state.status==='error' && (
+            <div className="flex justify-end"><RunButton onClick={run} label="Retry Test" color={BLU} icon="↻"/></div>
+          )}
+        </>
+      )}
 
       {/* Strategy */}
       <Card title="Test Strategy" accent={BLU} action={<UserGuideButton config={UG_LOAD} color={BLU}/>}> 
@@ -219,7 +228,7 @@ export function Pagination() {
   const[total,setTotal]=usePersistedState('pag_total','500')
   const[pp,setPp]=usePersistedState('pag_pp','20')
   const[idf,setIdf]=usePersistedState('pag_idf','id')
-  const running=state.status==='running',result=state.result
+  const running=state.status==='running',result=state.result,partial=state.partial
   const [urlErr,setUrlErr]=useState('')
   async function run(){
     let targetUrl = url.trim()
@@ -233,11 +242,19 @@ export function Pagination() {
   return(
     <div className="p-5 flex flex-col gap-4">
       <div className="flex gap-3">
-        <KpiTile label="Pages Checked"   value={result?.pages_checked??0} accent={BLU}/>
-        <KpiTile label="Records Found"   value={result?.records_found??0} accent={GRN}/>
-        <KpiTile label="Duplicates"      value={result?.duplicates??0}    accent={RED}/>
+        <KpiTile label="Pages Checked"   value={result?.pages_checked ?? partial?.pages_checked ?? 0} accent={BLU}/>
+        <KpiTile label="Records Found"   value={result?.records_found ?? partial?.records_so_far ?? 0} accent={GRN}/>
+        <KpiTile label="Duplicates"      value={result?.duplicates ?? partial?.duplicates_so_far ?? 0}    accent={RED}/>
         <KpiTile label="Missing Records" value={result?.missing??0}       accent={G}/>
       </div>
+      {(state.status==='running'||state.status==='error'||state.status==='cancelled') && (
+        <>
+          <ScanStatus title="Pagination Test" status={state.status} progress={state.progress} partial={partial} result={result} accent={GRN}/>
+          {state.status==='error' && (
+            <div className="flex justify-end"><RunButton onClick={run} label="Retry Test" color={GRN} icon="↻"/></div>
+          )}
+        </>
+      )}
       <Card title="Pagination Configuration" accent={GRN} action={<UserGuideButton config={UG_PAGINATION} color={GRN}/>}>
         <Input label="API URL Pattern" value={url} onChange={setUrl} placeholder="https://api.example.com/items?page={page}&per_page={size}" className="mb-3" error={urlErr}/>
         <div className="grid grid-cols-3 gap-3">
@@ -292,7 +309,7 @@ export function International(){
   const{state,startJob,cancel,reset}=useJob('intl')
   const[url,setUrl]=usePersistedState('intl_url','')
   const[sel,setSel]=usePersistedState<string[]>('intl_sel',['en-GB','en-US','ar-AE'])
-  const running=state.status==='running',result=state.result
+  const running=state.status==='running',result=state.result,partial=state.partial
   const [urlErr,setUrlErr]=useState('')
   const tog=(l:string)=>setSel(s=>s.includes(l)?s.filter(x=>x!==l):[...s,l])
   async function run(){
@@ -305,6 +322,14 @@ export function International(){
     reset();const{job_id}=await api.international({url:targetUrl,locales:sel});startJob(job_id)}
   return(
     <div className="p-5 flex flex-col gap-4">
+      {(state.status==='running'||state.status==='error'||state.status==='cancelled') && (
+        <>
+          <ScanStatus title="International QA" status={state.status} progress={state.progress} partial={partial} result={result} accent={PUR}/>
+          {state.status==='error' && (
+            <div className="flex justify-end"><RunButton onClick={run} label="Retry Test" color={PUR} icon="↻"/></div>
+          )}
+        </>
+      )}
       <Card title="International & Localisation QA" accent={PUR} action={<UserGuideButton config={UG_INTL} color={PUR}/>}>
         <Input label="Target URL" value={url} onChange={setUrl} placeholder="https://example.com" type="url" className="mb-4" error={urlErr}/>
         <FieldLabel text={`Select Regions (${sel.length} of ${REGIONS.length})`}/>
@@ -584,7 +609,7 @@ export function UserBaseline(){
   const{state,startJob,cancel,reset}=useJob('user_baseline')
   const[url,setUrl]=usePersistedState('ub_url','')
   const[modes,setModes]=usePersistedState<string[]>('ub_modes',['normal','ai'])
-  const running=state.status==='running',result=state.result
+  const running=state.status==='running',result=state.result,partial=state.partial
   const [urlErr,setUrlErr]=useState('')
   async function run(){
     let targetUrl = url.trim()
@@ -597,6 +622,14 @@ export function UserBaseline(){
   const dl=(d:any)=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(d,null,2)],{type:'application/json'}));a.download=`baseline_${Date.now()}.json`;a.click()}
   return(
     <div className="p-5 flex flex-col gap-4">
+      {(state.status==='running'||state.status==='error'||state.status==='cancelled') && (
+        <>
+          <ScanStatus title="User Baseline" status={state.status} progress={state.progress} partial={partial} result={result} accent={PUR}/>
+          {state.status==='error' && (
+            <div className="flex justify-end"><RunButton onClick={run} label="Retry Test" color={PUR} icon="↻"/></div>
+          )}
+        </>
+      )}
       {result&&(
         <div className="grid grid-cols-3 gap-3">
           {([['Normal User Score',result.normal_score,PUR,'30 checks'],['AI Board Score',result.ai_score,BLU,'10 modules'],['Combined Score',result.combined_score,GRN,'Weighted avg']]).map(([lbl,sc,col,sub]: any[])=>(
@@ -714,8 +747,8 @@ export function Lighthouse(){
   const[compareUrl,setCompareUrl]=usePersistedState('slh_compare','')
   const[cats,setCats]=usePersistedState<string[]>('slh_cats',['performance','accessibility','best-practices','seo'])
   const[mods,setMods]=usePersistedState<string[]>('slh_mods',SL_MODULES.map(m=>m.id))
-  const[resTab,setResTab]=useState<string>('overview')
-  const running=state.status==='running',result=state.result
+  const[resTab,setResTab]=usePersistedState<string>('slh_res_tab','overview')
+  const running=state.status==='running',result=state.result,partial=state.partial
   const [urlErr,setUrlErr]=useState('')
 
   async function run(){
@@ -788,6 +821,15 @@ export function Lighthouse(){
         </div>
         {result?.simulated&&<p className="mt-2.5 text-[11px] px-3 py-2 rounded-lg" style={{color:G,background:'rgba(245,166,35,0.06)',border:'1px solid rgba(245,166,35,0.15)'}}>⚠ Simulation mode — add PSI_API_KEY in .env for real data</p>}
       </Card>
+
+      {(state.status==='running'||state.status==='error'||state.status==='cancelled') && (
+        <>
+          <ScanStatus title="SuperLighthouse" status={state.status} progress={state.progress} partial={partial} result={result} accent={G}/>
+          {state.status==='error' && (
+            <div className="flex justify-end"><RunButton onClick={run} label="Retry Audit" color={G} icon="↻"/></div>
+          )}
+        </>
+      )}
 
       {/* Result tabs */}
       {result&&(
@@ -1280,6 +1322,12 @@ function BrowserTab(){
       <div className="flex gap-2"><RunButton onClick={run} disabled={!url||state.status==='running'} loading={state.status==='running'} label="Run Checks" color={BLU}/><StopButton onClick={cancel} disabled={state.status!=='running'}/><GhostBtn onClick={reset} label="Clear"/></div>
     </Card>
     <LogTerminal logs={state.logs} accent={BLU}/>
+    {(state.status==='error'||state.status==='cancelled') && (
+      <>
+        <ScanStatus title="Browser Automation" status={state.status} progress={state.progress} partial={state.partial} result={state.result} accent={BLU}/>
+        {state.status==='error' && <div className="flex justify-end"><RunButton onClick={run} label="Retry" color={BLU} icon="↻"/></div>}
+      </>
+    )}
   </div>)
 }
 
@@ -1308,6 +1356,12 @@ function ApiTab(){
       <div className="flex gap-2"><RunButton onClick={run} disabled={!url||state.status==='running'} loading={state.status==='running'} label="Send Request" color={AMB}/><GhostBtn onClick={reset} label="Clear"/></div>
     </Card>
     <LogTerminal logs={state.logs} accent={AMB}/>
+    {(state.status==='error'||state.status==='cancelled') && (
+      <>
+        <ScanStatus title="API Test" status={state.status} progress={state.progress} partial={state.partial} result={state.result} accent={AMB}/>
+        {state.status==='error' && <div className="flex justify-end"><RunButton onClick={run} label="Retry" color={AMB} icon="↻"/></div>}
+      </>
+    )}
   </div>)
 }
 
@@ -1337,6 +1391,12 @@ function RegressionTab(){
       <div className="flex gap-2"><RunButton onClick={run} disabled={!base||!comp||state.status==='running'} loading={state.status==='running'} label="Run Regression" color={GRN}/><StopButton onClick={cancel} disabled={state.status!=='running'}/><GhostBtn onClick={reset} label="Clear"/></div>
     </Card>
     <LogTerminal logs={state.logs} accent={GRN}/>
+    {(state.status==='error'||state.status==='cancelled') && (
+      <>
+        <ScanStatus title="Regression Runner" status={state.status} progress={state.progress} partial={state.partial} result={state.result} accent={GRN}/>
+        {state.status==='error' && <div className="flex justify-end"><RunButton onClick={run} label="Retry" color={GRN} icon="↻"/></div>}
+      </>
+    )}
   </div>)
 }
 

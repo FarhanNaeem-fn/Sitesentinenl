@@ -1,0 +1,266 @@
+{
+  "url": "https://www.adgm.com",
+  "timestamp": "2026-07-01T13:10:31.367752",
+  "robots": {
+    "url": "https://www.adgm.com/robots.txt",
+    "found": true,
+    "raw": "User-agent: *\n\nAllow: /\nDisallow: /episerver\nDisallow: /util\nDisallow: /mediacentre/\nDisallow: /media-center/\nDisallow: /doing-business/\nDisallow: /adgm-academy/\nDisallow: /api/\n\n\nSitemap: https://www.adgm.com/sitemap.xml",
+    "crawler_access": {
+      "GPTBot": "allowed",
+      "ClaudeBot": "allowed",
+      "PerplexityBot": "allowed",
+      "Google-Extended": "allowed",
+      "CCBot": "allowed",
+      "Bytespider": "allowed",
+      "FacebookBot": "allowed",
+      "Applebot": "allowed",
+      "cohere-ai": "allowed",
+      "AI2Bot": "allowed",
+      "anthropic-ai": "allowed",
+      "omgili": "allowed",
+      "Googlebot": "allowed"
+    },
+    "rules_count": 1
+  },
+  "scores": {
+    "technical": 100,
+    "content": 56,
+    "trust": 31,
+    "structured_data": 0,
+    "overall": 62
+  },
+  "checks": {
+    "technical": [
+      {
+        "name": "HTTPS",
+        "passed": true,
+        "pts": 10,
+        "note": "Secure protocol required"
+      },
+      {
+        "name": "Canonical URL",
+        "passed": true,
+        "pts": 8,
+        "note": "Prevents duplicate content"
+      },
+      {
+        "name": "Not noindex",
+        "passed": true,
+        "pts": 7,
+        "note": "Indexing not blocked"
+      },
+      {
+        "name": "Title tag",
+        "passed": true,
+        "pts": 8,
+        "note": "Required for AI citation"
+      },
+      {
+        "name": "Load < 3s",
+        "passed": true,
+        "pts": 7,
+        "note": "Fast response for crawlers"
+      },
+      {
+        "name": "OG tags",
+        "passed": true,
+        "pts": 5,
+        "note": "Rich preview for AI"
+      },
+      {
+        "name": "Meta description",
+        "passed": true,
+        "pts": 5,
+        "note": "Snippet source for AI"
+      }
+    ],
+    "content": [
+      {
+        "name": "Word count 500+",
+        "passed": true,
+        "pts": 12,
+        "note": "Current: 940 words"
+      },
+      {
+        "name": "Word count 1500+",
+        "passed": false,
+        "pts": 8,
+        "note": "Comprehensive content preferred by AI"
+      },
+      {
+        "name": "H1 tag",
+        "passed": true,
+        "pts": 10,
+        "note": "Primary topic signal"
+      },
+      {
+        "name": "H2 headings",
+        "passed": true,
+        "pts": 8,
+        "note": "Content structure"
+      },
+      {
+        "name": "Meta description",
+        "passed": true,
+        "pts": 8,
+        "note": "AI snippet source"
+      },
+      {
+        "name": "Images with alt",
+        "passed": true,
+        "pts": 6,
+        "note": "Accessible content"
+      },
+      {
+        "name": "FAQ schema",
+        "passed": false,
+        "pts": 10,
+        "note": "High AI citation probability"
+      },
+      {
+        "name": "HowTo schema",
+        "passed": false,
+        "pts": 8,
+        "note": "Instructional content"
+      },
+      {
+        "name": "Article schema",
+        "passed": false,
+        "pts": 7,
+        "note": "Editorial credibility"
+      },
+      {
+        "name": "Lists or tables",
+        "passed": true,
+        "pts": 5,
+        "note": "Structured content"
+      },
+      {
+        "name": "Code examples",
+        "passed": false,
+        "pts": 5,
+        "note": "Technical depth"
+      }
+    ],
+    "trust": [
+      {
+        "name": "HTTPS",
+        "passed": true,
+        "pts": 12,
+        "note": "Trust signal"
+      },
+      {
+        "name": "Author metadata",
+        "passed": false,
+        "pts": 15,
+        "note": "E-E-A-T authorship"
+      },
+      {
+        "name": "Date published",
+        "passed": false,
+        "pts": 12,
+        "note": "Content freshness"
+      },
+      {
+        "name": "Breadcrumbs",
+        "passed": false,
+        "pts": 10,
+        "note": "Site structure clarity"
+      },
+      {
+        "name": "External links",
+        "passed": true,
+        "pts": 8,
+        "note": "Outbound authority refs"
+      },
+      {
+        "name": "OG site name",
+        "passed": false,
+        "pts": 8,
+        "note": "Brand identity"
+      }
+    ],
+    "structured_data": [
+      {
+        "name": "Any schema",
+        "passed": false,
+        "pts": 20,
+        "note": "Structured data present"
+      },
+      {
+        "name": "FAQPage",
+        "passed": false,
+        "pts": 20,
+        "note": "Q&A extraction by AI"
+      },
+      {
+        "name": "HowTo",
+        "passed": false,
+        "pts": 15,
+        "note": "Instructional schema"
+      },
+      {
+        "name": "Article/BlogPost",
+        "passed": false,
+        "pts": 15,
+        "note": "Editorial schema"
+      },
+      {
+        "name": "BreadcrumbList",
+        "passed": false,
+        "pts": 10,
+        "note": "Navigation schema"
+      },
+      {
+        "name": "Organization",
+        "passed": false,
+        "pts": 10,
+        "note": "Entity schema"
+      },
+      {
+        "name": "2+ schema types",
+        "passed": false,
+        "pts": 10,
+        "note": "Rich schema diversity"
+      }
+    ]
+  },
+  "page_data": {
+    "title": "Abu Dhabi's International Financial Centre | ADGM",
+    "meta_description": "ADGM, a leading, award-winning, International Financial Centre, operates across Al Maryah Island and Al Reem Island, making it one of the largest financial districts in the world.",
+    "h1_count": 2,
+    "h2_count": 5,
+    "h3_count": 40,
+    "word_count": 940,
+    "image_count": 28,
+    "images_with_alt": 26,
+    "links_count": 174,
+    "canonical": "https://www.adgm.com/",
+    "og_tags": {
+      "og:title": "Abu Dhabi's International Financial Centre | ADGM",
+      "og:url": "https://www.adgm.com",
+      "og:description": "ADGM, a leading, award-winning, International Financial Centre, operates across Al Maryah Island and Al Reem Island, making it one of the largest financial districts in the world.",
+      "og:type": "",
+      "og:image": "https://assets.adgm.com/images/assets/home_thumb_new.jpg/Zz1jZjVkYTdlYTZiNzAxMWVmOTEyZGYyZDU5MGUxZDU2OA=="
+    },
+    "schema_types": [],
+    "has_faq": false,
+    "has_howto": false,
+    "has_article": false,
+    "internal_links": 160,
+    "external_links": 14,
+    "code_blocks": 0,
+    "tables": 0,
+    "lists": 2,
+    "load_time_ms": 2056,
+    "https": true,
+    "robots_meta": "index, follow",
+    "structured_data_count": 0,
+    "author": "",
+    "date_published": "",
+    "breadcrumb": false,
+    "error": null
+  },
+  "llm_analysis": null,
+  "audit_id": "air_20260701_131037_0e5317"
+}

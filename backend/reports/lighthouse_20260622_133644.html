@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head>
+      <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Lighthouse Report — https://www.adgm.com</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',sans-serif;background:#0D1117;color:#C9D1D9;-webkit-font-smoothing:antialiased}
+  a{color:#58A6FF;text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:1100px;margin:0 auto;padding:32px 24px}
+  .banner{background:linear-gradient(135deg,#161B22 60%,#1C2128);border:1px solid #30363D;border-radius:20px;padding:32px 36px;margin-bottom:28px;display:flex;align-items:center;gap:32px}
+  .banner-logo{font-size:40px;flex-shrink:0}
+  .banner-title{font-size:26px;font-weight:800;color:#fff;margin:0 0 4px}
+  .banner-sub{font-size:13px;color:#8B949E;margin:0}
+  .score-ring-wrap{margin-left:auto;text-align:center;flex-shrink:0}
+  .score-val{font-size:48px;font-weight:900;line-height:1}
+  .score-lbl{font-size:11px;color:#8B949E;margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:28px}
+  .kpi{background:#161B22;border:1px solid #30363D;border-radius:14px;padding:20px;border-top-width:3px}
+  .kpi-val{font-size:28px;font-weight:800;color:#fff;line-height:1;margin-bottom:6px}
+  .kpi-lbl{font-size:11px;color:#8B949E;text-transform:uppercase;letter-spacing:.05em}
+  .kpi-sub{font-size:11px;color:#484F58;margin-top:3px}
+  .card{background:#161B22;border:1px solid #30363D;border-radius:16px;margin-bottom:24px;overflow:hidden}
+  .card-hdr{padding:16px 20px;border-bottom:1px solid #30363D;display:flex;align-items:center;gap:10px}
+  .card-hdr-icon{font-size:18px}
+  .card-hdr-title{font-size:14px;font-weight:700;color:#F0F6FC;letter-spacing:.02em}
+  .card-body{padding:20px}
+  table{width:100%;border-collapse:collapse}
+  th{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#484F58;font-weight:700;padding:10px 14px;text-align:left;border-bottom:1px solid #21262D;background:#0D1117}
+  td{font-size:12px;padding:10px 14px;border-bottom:1px solid #21262D;color:#8B949E;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:rgba(255,255,255,.02)}
+  .td-name{color:#E6EDF3;font-weight:600}
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:10px;font-weight:700;border:1px solid}
+  .badge-pass{color:#22C55E;background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3)}
+  .badge-fail{color:#EF4444;background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.3)}
+  .badge-warn{color:#F59E0B;background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.3)}
+  .badge-info{color:#3B82F6;background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.3)}
+  .badge-purple{color:#A855F7;background:rgba(168,85,247,.1);border-color:rgba(168,85,247,.3)}
+  .score-bar-wrap{height:8px;background:#21262D;border-radius:4px;overflow:hidden;margin-top:6px}
+  .score-bar{height:100%;border-radius:4px;transition:width .4s}
+  footer{text-align:center;color:#3A3A3A;font-size:11px;margin-top:40px;padding-top:20px;border-top:1px solid #21262D}
+</style>
+</head>
+    <body><div class="wrap">
+      <div class="banner">
+        <div class="banner-logo">💡</div>
+        <div><div class="banner-title">Lighthouse Audit Report</div>
+          <div class="banner-sub">https://www.adgm.com &nbsp;·&nbsp; 2026-06-22 13:36</div></div>
+        <div class="score-ring-wrap">
+          <div class="score-val" style="color:#F59E0B">66</div>
+          <div class="score-lbl">Overall Score</div>
+        </div>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi" style="border-top-color:#F59E0B">
+          <div class="kpi-val" style="color:#F59E0B">73</div>
+          <div class="kpi-lbl">Performance</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:73%;background:#F59E0B"></div></div>
+        </div>
+        <div class="kpi" style="border-top-color:#F59E0B">
+          <div class="kpi-val" style="color:#F59E0B">75</div>
+          <div class="kpi-lbl">Accessibility</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:75%;background:#F59E0B"></div></div>
+        </div>
+        <div class="kpi" style="border-top-color:#F59E0B">
+          <div class="kpi-val" style="color:#F59E0B">55</div>
+          <div class="kpi-lbl">Best Practices</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:55%;background:#F59E0B"></div></div>
+        </div>
+        <div class="kpi" style="border-top-color:#F59E0B">
+          <div class="kpi-val" style="color:#F59E0B">68</div>
+          <div class="kpi-lbl">SEO</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:68%;background:#F59E0B"></div></div>
+        </div>
+        <div class="kpi" style="border-top-color:#F59E0B">
+          <div class="kpi-val" style="color:#F59E0B">57</div>
+          <div class="kpi-lbl">PWA</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:57%;background:#F59E0B"></div></div>
+        </div></div>
+
+      <div class="card">
+        <div class="card-hdr"><span class="card-hdr-icon">⚡</span>
+          <span class="card-hdr-title">Core Web Vitals</span></div>
+        <div class="card-body"><div class="kpis" style="margin:0"><div class="kpi" style="border-top-color:#3B82F6">
+          <div class="kpi-val" style="color:#3B82F6;font-size:20px">2.1 s</div>
+          <div class="kpi-lbl">LCP</div>
+          <div class="kpi-sub">Target: <2.5s</div>
+        </div><div class="kpi" style="border-top-color:#3B82F6">
+          <div class="kpi-val" style="color:#3B82F6;font-size:20px">0.08</div>
+          <div class="kpi-lbl">CLS</div>
+          <div class="kpi-sub">Target: <0.1</div>
+        </div><div class="kpi" style="border-top-color:#3B82F6">
+          <div class="kpi-val" style="color:#3B82F6;font-size:20px">1.6 s</div>
+          <div class="kpi-lbl">FCP</div>
+          <div class="kpi-sub">Target: <1.8s</div>
+        </div><div class="kpi" style="border-top-color:#3B82F6">
+          <div class="kpi-val" style="color:#3B82F6;font-size:20px">3.1 s</div>
+          <div class="kpi-lbl">Speed Index</div>
+          <div class="kpi-sub">Target: <3.4s</div>
+        </div><div class="kpi" style="border-top-color:#3B82F6">
+          <div class="kpi-val" style="color:#3B82F6;font-size:20px">210 ms</div>
+          <div class="kpi-lbl">TBT</div>
+          <div class="kpi-sub">Target: <300ms</div>
+        </div><div class="kpi" style="border-top-color:#3B82F6">
+          <div class="kpi-val" style="color:#3B82F6;font-size:20px">480 ms</div>
+          <div class="kpi-lbl">TTFB</div>
+          <div class="kpi-sub">Target: <800ms</div>
+        </div></div></div>
+      </div>
+
+      <div class="card">
+        <div class="card-hdr"><span class="card-hdr-icon">🔍</span>
+          <span class="card-hdr-title">Audit Findings (5)</span></div>
+        <div class="card-body" style="padding:0">
+          <table><thead><tr><th>Category</th><th>Audit</th><th>Score</th><th>Value</th><th>Weight</th></tr></thead>
+          <tbody><tr>
+          <td><span class="badge badge-purple">performance</span></td>
+          <td class="td-name">Eliminate render-blocking resources</td>
+          <td><span class="badge badge-fail">45</span></td>
+          <td style="color:#EF4444;font-family:monospace;font-size:11px">Potential savings of 0.8 s</td>
+          <td style="color:#484F58;font-size:10px">w=1</td>
+        </tr><tr>
+          <td><span class="badge badge-purple">performance</span></td>
+          <td class="td-name">Reduce unused CSS</td>
+          <td><span class="badge badge-warn">60</span></td>
+          <td style="color:#F59E0B;font-family:monospace;font-size:11px">Potential savings of 72 KiB</td>
+          <td style="color:#484F58;font-size:10px">w=1</td>
+        </tr><tr>
+          <td><span class="badge badge-purple">accessibility</span></td>
+          <td class="td-name">Image elements do not have [alt] attributes</td>
+          <td><span class="badge badge-fail">0</span></td>
+          <td style="color:#EF4444;font-family:monospace;font-size:11px">3 elements</td>
+          <td style="color:#484F58;font-size:10px">w=3</td>
+        </tr><tr>
+          <td><span class="badge badge-purple">seo</span></td>
+          <td class="td-name">Document does not have a meta description</td>
+          <td><span class="badge badge-fail">0</span></td>
+          <td style="color:#EF4444;font-family:monospace;font-size:11px"></td>
+          <td style="color:#484F58;font-size:10px">w=1</td>
+        </tr><tr>
+          <td><span class="badge badge-purple">best-practices</span></td>
+          <td class="td-name">Uses HTTPS</td>
+          <td><span class="badge badge-pass">100</span></td>
+          <td style="color:#22C55E;font-family:monospace;font-size:11px"></td>
+          <td style="color:#484F58;font-size:10px">w=1</td>
+        </tr></tbody></table></div></div>
+
+      <footer>Generated by SiteSentinel Matrix Pro · 2026-06-22 13:36</footer>
+    </div></body></html>

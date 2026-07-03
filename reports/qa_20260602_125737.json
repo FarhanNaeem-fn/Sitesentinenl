@@ -1,0 +1,831 @@
+{
+  "url": "https://supabase.com/",
+  "viewport": "desktop",
+  "pages_scanned": 1,
+  "total_issues": 0,
+  "checks_passed": 0,
+  "checks_failed": 0,
+  "health_score": 100.0,
+  "details": {
+    "seo": {
+      "test_cases": [
+        {
+          "ID": "SEO-01",
+          "Category": "SEO",
+          "Test Name": "Title tag present",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "Supabase | The Postgres Development Platform.",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "SEO-03",
+          "Category": "SEO",
+          "Test Name": "Meta description present",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "SEO-05",
+          "Category": "SEO",
+          "Test Name": "Exactly one H1",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "Found 1 H1(s)",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "SEO-12",
+          "Category": "SEO",
+          "Test Name": "Viewport meta present",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "SEO-14",
+          "Category": "SEO",
+          "Test Name": "All images have alt",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "0/185 missing alt",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        }
+      ],
+      "passed": 5,
+      "failed": 0
+    },
+    "accessibility": {
+      "test_cases": [
+        {
+          "ID": "A11Y-01",
+          "Category": "Accessibility",
+          "Test Name": "HTML lang attribute set",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "lang='en'",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "A11Y-02",
+          "Category": "Accessibility",
+          "Test Name": "All images have alt text",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "0 missing alt",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "A11Y-03",
+          "Category": "Accessibility",
+          "Test Name": "All form fields labelled",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "0 unlabelled",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "A11Y-04",
+          "Category": "Accessibility",
+          "Test Name": "Skip navigation link",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        }
+      ],
+      "passed": 3,
+      "failed": 1
+    },
+    "performance": {
+      "test_cases": [
+        {
+          "ID": "PERF-01",
+          "Category": "Performance",
+          "Test Name": "TTFB < 600ms",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "52ms",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "PERF-02",
+          "Category": "Performance",
+          "Test Name": "FCP < 1800ms",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "704ms",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "PERF-04",
+          "Category": "Performance",
+          "Test Name": "Full page load < 4s",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "1006ms",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "PERF-05",
+          "Category": "Performance",
+          "Test Name": "Total page weight < 3MB",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "195KB",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        }
+      ],
+      "passed": 4,
+      "failed": 0,
+      "metrics": {
+        "ttfb": 52,
+        "fcp": 704,
+        "load": 1006,
+        "sizeKB": 195
+      }
+    },
+    "security": {
+      "test_cases": [
+        {
+          "ID": "SEC-01",
+          "Category": "Security",
+          "Test Name": "HTTPS enforced",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "SEC-02",
+          "Category": "Security",
+          "Test Name": "HSTS header present",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "SEC-03",
+          "Category": "Security",
+          "Test Name": "X-Content-Type-Options",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        },
+        {
+          "ID": "SEC-05",
+          "Category": "Security",
+          "Test Name": "Content-Security-Policy",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:28"
+        }
+      ],
+      "passed": 2,
+      "failed": 2
+    },
+    "broken_links": {
+      "test_cases": [
+        {
+          "ID": "LINK-OK",
+          "Category": "Links",
+          "Test Name": "29 links verified",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:35"
+        }
+      ],
+      "passed": 29,
+      "failed": 0
+    },
+    "console": {
+      "test_cases": [
+        {
+          "ID": "CON-01",
+          "Category": "Console Errors",
+          "Test Name": "No console errors",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:35"
+        }
+      ],
+      "passed": 1,
+      "failed": 0
+    },
+    "responsive": {
+      "test_cases": [
+        {
+          "ID": "RESP-desktop",
+          "Category": "Responsive",
+          "Test Name": "No overflow on Desktop (1920\u00d71080) \u2014 Chrome",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:36"
+        },
+        {
+          "ID": "RESP-mac",
+          "Category": "Responsive",
+          "Test Name": "No overflow on MacBook Pro (1440\u00d7900) \u2014 Safari",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:36"
+        },
+        {
+          "ID": "RESP-laptop",
+          "Category": "Responsive",
+          "Test Name": "No overflow on Generic Laptop (1366\u00d7768)",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        },
+        {
+          "ID": "RESP-mobile",
+          "Category": "Responsive",
+          "Test Name": "No overflow on iPhone 14 Pro (390\u00d7844)",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        }
+      ],
+      "passed": 4,
+      "failed": 0
+    },
+    "keyboard_access": {
+      "test_cases": [
+        {
+          "ID": "KEY-01",
+          "Category": "Keyboard",
+          "Test Name": "Focusable elements present",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        },
+        {
+          "ID": "KEY-03",
+          "Category": "Keyboard",
+          "Test Name": "Skip link present",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        }
+      ],
+      "passed": 1,
+      "failed": 1
+    },
+    "forms": {
+      "test_cases": [
+        {
+          "ID": "FORM-1-CSRF",
+          "Category": "Forms",
+          "Test Name": "Form 1 CSRF",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        }
+      ],
+      "passed": 0,
+      "failed": 1
+    },
+    "typography": {
+      "test_cases": [
+        {
+          "ID": "TYPO-01",
+          "Category": "Typography",
+          "Test Name": "Base font size \u2265 14px",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "16px",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        }
+      ],
+      "passed": 1,
+      "failed": 0
+    },
+    "html_quality": {
+      "test_cases": [
+        {
+          "ID": "HTML-01",
+          "Category": "HTML Quality",
+          "Test Name": "DOCTYPE declared",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        },
+        {
+          "ID": "HTML-02",
+          "Category": "HTML Quality",
+          "Test Name": "Charset UTF-8",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        },
+        {
+          "ID": "HTML-03",
+          "Category": "HTML Quality",
+          "Test Name": "Favicon present",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        }
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    "images": {
+      "test_cases": [
+        {
+          "ID": "IMG-01",
+          "Category": "Images",
+          "Test Name": "All images have alt",
+          "Result": true,
+          "Severity": "HIGH",
+          "Detail": "0 missing",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        }
+      ],
+      "passed": 158,
+      "failed": 0
+    },
+    "navigation": {
+      "test_cases": [
+        {
+          "ID": "NAV-01",
+          "Category": "Navigation",
+          "Test Name": "Nav landmark present",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        },
+        {
+          "ID": "NAV-04",
+          "Category": "Navigation",
+          "Test Name": "Footer landmark present",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "Timestamp": "12:57:37"
+        }
+      ],
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "domain_health": {},
+  "timestamp": "2026-06-02T12:57:21.684524",
+  "all_test_cases": [
+    {
+      "ID": "SEO-01",
+      "Category": "SEO",
+      "Test Name": "Title tag present",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "Supabase | The Postgres Development Platform.",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "SEO-03",
+      "Category": "SEO",
+      "Test Name": "Meta description present",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "SEO-05",
+      "Category": "SEO",
+      "Test Name": "Exactly one H1",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "Found 1 H1(s)",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "SEO-12",
+      "Category": "SEO",
+      "Test Name": "Viewport meta present",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "SEO-14",
+      "Category": "SEO",
+      "Test Name": "All images have alt",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "0/185 missing alt",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "A11Y-01",
+      "Category": "Accessibility",
+      "Test Name": "HTML lang attribute set",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "lang='en'",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "A11Y-02",
+      "Category": "Accessibility",
+      "Test Name": "All images have alt text",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "0 missing alt",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "A11Y-03",
+      "Category": "Accessibility",
+      "Test Name": "All form fields labelled",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "0 unlabelled",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "A11Y-04",
+      "Category": "Accessibility",
+      "Test Name": "Skip navigation link",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "PERF-01",
+      "Category": "Performance",
+      "Test Name": "TTFB < 600ms",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "52ms",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "PERF-02",
+      "Category": "Performance",
+      "Test Name": "FCP < 1800ms",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "704ms",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "PERF-04",
+      "Category": "Performance",
+      "Test Name": "Full page load < 4s",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "1006ms",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "PERF-05",
+      "Category": "Performance",
+      "Test Name": "Total page weight < 3MB",
+      "Result": "PASS",
+      "Severity": "MEDIUM",
+      "Detail": "195KB",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "SEC-01",
+      "Category": "Security",
+      "Test Name": "HTTPS enforced",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "SEC-02",
+      "Category": "Security",
+      "Test Name": "HSTS header present",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "SEC-03",
+      "Category": "Security",
+      "Test Name": "X-Content-Type-Options",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "SEC-05",
+      "Category": "Security",
+      "Test Name": "Content-Security-Policy",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:28"
+    },
+    {
+      "ID": "LINK-OK",
+      "Category": "Links",
+      "Test Name": "29 links verified",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:35"
+    },
+    {
+      "ID": "CON-01",
+      "Category": "Console Errors",
+      "Test Name": "No console errors",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:35"
+    },
+    {
+      "ID": "RESP-desktop",
+      "Category": "Responsive",
+      "Test Name": "No overflow on Desktop (1920\u00d71080) \u2014 Chrome",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:36"
+    },
+    {
+      "ID": "RESP-mac",
+      "Category": "Responsive",
+      "Test Name": "No overflow on MacBook Pro (1440\u00d7900) \u2014 Safari",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:36"
+    },
+    {
+      "ID": "RESP-laptop",
+      "Category": "Responsive",
+      "Test Name": "No overflow on Generic Laptop (1366\u00d7768)",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "RESP-mobile",
+      "Category": "Responsive",
+      "Test Name": "No overflow on iPhone 14 Pro (390\u00d7844)",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "KEY-01",
+      "Category": "Keyboard",
+      "Test Name": "Focusable elements present",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "KEY-03",
+      "Category": "Keyboard",
+      "Test Name": "Skip link present",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "FORM-1-CSRF",
+      "Category": "Forms",
+      "Test Name": "Form 1 CSRF",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "TYPO-01",
+      "Category": "Typography",
+      "Test Name": "Base font size \u2265 14px",
+      "Result": "PASS",
+      "Severity": "MEDIUM",
+      "Detail": "16px",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "HTML-01",
+      "Category": "HTML Quality",
+      "Test Name": "DOCTYPE declared",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "HTML-02",
+      "Category": "HTML Quality",
+      "Test Name": "Charset UTF-8",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "HTML-03",
+      "Category": "HTML Quality",
+      "Test Name": "Favicon present",
+      "Result": "PASS",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "IMG-01",
+      "Category": "Images",
+      "Test Name": "All images have alt",
+      "Result": true,
+      "Severity": "HIGH",
+      "Detail": "0 missing",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "NAV-01",
+      "Category": "Navigation",
+      "Test Name": "Nav landmark present",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    },
+    {
+      "ID": "NAV-04",
+      "Category": "Navigation",
+      "Test Name": "Footer landmark present",
+      "Result": "PASS",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "Timestamp": "12:57:37"
+    }
+  ],
+  "health_meta": {
+    "score": 100.0,
+    "grade": "Excellent",
+    "color": "#16a34a",
+    "deductions": []
+  }
+}

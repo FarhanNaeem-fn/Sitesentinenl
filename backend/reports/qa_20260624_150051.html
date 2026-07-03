@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QA Report — https://www.adgm.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0D1117; --bg2:#161B22; --bg3:#21262D; --border:#30363D;
+  --text:#C9D1D9; --white:#FFFFFF; --dim:#8B949E;
+  --pass:#22C55E; --fail:#EF4444; --warn:#F59E0B; --info:#3B82F6; --pur:#8B5CF6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:0}
+a{color:#58A6FF;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ── Top banner ── */
+.banner{background:linear-gradient(135deg,#0f1923 0%,#161B22 60%,#1a1f2e 100%);border-bottom:1px solid var(--border);padding:36px 48px 32px}
+.banner-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.brand-dot{width:10px;height:10px;border-radius:50%;background:var(--pass);box-shadow:0 0 10px var(--pass)}
+.brand-name{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim)}
+.banner h1{font-size:26px;font-weight:800;color:var(--white);margin-bottom:6px}
+.banner-meta{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--dim)}
+.banner-meta span{color:var(--text)}
+.score-ring-wrap{flex-shrink:0;text-align:center}
+.score-ring-wrap svg{display:block}
+.score-ring-val{font-size:32px;font-weight:800;fill:var(--white)}
+.score-ring-label{font-size:11px;fill:var(--dim);font-family:'Inter',sans-serif}
+
+/* ── Stat cards ── */
+.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--border);border-top:1px solid var(--border)}
+.stat-card{background:var(--bg2);padding:20px 16px 16px;border-top:3px solid transparent}
+.stat-val{font-size:26px;font-weight:800;color:var(--white);line-height:1;margin-bottom:6px}
+.stat-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--dim);margin-bottom:3px}
+.stat-sub{font-size:11px;color:#484F58}
+
+/* ── Page sections ── */
+.page-body{max-width:1200px;margin:0 auto;padding:40px 48px}
+.report-section{margin-bottom:48px}
+.section-hdr{display:flex;align-items:flex-start;gap:16px;margin-bottom:20px}
+.section-icon{font-size:28px;line-height:1;flex-shrink:0;margin-top:2px}
+.img-hdr h2,.lnk-hdr h2,.qa-hdr h2{font-size:20px;font-weight:800;color:var(--white);margin-bottom:4px}
+.img-hdr p,.lnk-hdr p,.qa-hdr p{font-size:13px;color:var(--dim)}
+
+/* ── Count badges ── */
+.count-badge{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:22px;padding:0 8px;border-radius:11px;font-size:12px;font-weight:800;font-family:'JetBrains Mono',monospace;background:rgba(245,158,11,0.15);color:var(--warn);border:1px solid rgba(245,158,11,0.3);vertical-align:middle;margin-left:8px}
+.count-badge.pass{background:rgba(34,197,94,0.12);color:var(--pass);border-color:rgba(34,197,94,0.3)}
+.count-badge.err{background:rgba(239,68,68,0.12);color:var(--fail);border-color:rgba(239,68,68,0.3)}
+
+/* ── Tables ── */
+.table-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;background:var(--bg2)}
+th{background:var(--bg3);padding:13px 14px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--dim);border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:11px 14px;border-bottom:1px solid var(--border);font-size:13px;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.tr-pass{border-left:3px solid var(--pass)}
+.tr-fail{border-left:3px solid var(--fail)}
+.td-page{font-weight:600;color:var(--white);white-space:nowrap}
+.td-fix{font-size:12px;color:var(--dim)}
+.lnk{color:#58A6FF;word-break:break-all}
+.mono{font-family:'JetBrains Mono',monospace;font-size:11px}
+.badge-warn{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(245,158,11,0.1);color:var(--warn);border:1px solid rgba(245,158,11,0.3)}
+.badge-err{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(239,68,68,0.1);color:var(--fail);border:1px solid rgba(239,68,68,0.3)}
+.cat-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,0.1);color:#a78bfa;border:1px solid rgba(139,92,246,0.25)}
+.sev-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;border:1px solid;font-family:'JetBrains Mono',monospace}
+.fix-hint{font-size:11px;color:#484F58;margin-top:4px;padding:4px 8px;background:rgba(255,255,255,0.02);border-left:2px solid var(--border);margin-top:6px}
+.inline-imgs{margin-top:8px;padding:8px 10px;background:rgba(88,166,255,0.05);border-radius:6px;border:1px solid rgba(88,166,255,0.15)}
+.inline-imgs ul{margin:4px 0 0 16px}
+.inline-imgs li{margin-bottom:2px}
+
+/* ── Footer ── */
+.report-footer{border-top:1px solid var(--border);padding:24px 48px;max-width:1200px;margin:0 auto;font-size:11px;color:#484F58;display:flex;justify-content:space-between}
+
+@media print{
+  body{background:#fff;color:#000}
+  .banner{background:#f8f9fa;color:#000}
+  .stat-card,.table-wrap{border:1px solid #ddd}
+  th{background:#f0f0f0;color:#333}
+  td{color:#333}
+}
+</style>
+</head>
+<body>
+
+<!-- ── BANNER ── -->
+<div class="banner">
+  <div class="banner-inner">
+    <div>
+      <div class="brand"><div class="brand-dot"></div><div class="brand-name">SiteSentinel Matrix QA</div></div>
+      <h1>Website Quality Audit Report</h1>
+      <div class="banner-meta">
+        Target: <span>https://www.adgm.com</span>&nbsp;&nbsp;·&nbsp;&nbsp;Generated: <span>2026-06-24T15:00:15.741101</span>&nbsp;&nbsp;·&nbsp;&nbsp;Pages crawled: <span>5</span>
+      </div>
+    </div>
+    <div class="score-ring-wrap">
+      <svg width="120" height="120" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#30363D" stroke-width="10"/>
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#22C55E" stroke-width="10"
+          stroke-linecap="round"
+          stroke-dasharray="314.16"
+          stroke-dashoffset="31.4"
+          transform="rotate(-90 60 60)"/>
+        <text x="60" y="56" text-anchor="middle" class="score-ring-val" font-family="Inter,sans-serif" font-weight="800">90</text>
+        <text x="60" y="72" text-anchor="middle" class="score-ring-label" font-family="Inter,sans-serif">Grade: Excellent</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ── STAT CARDS ── -->
+<div class="stats-grid"><div class="stat-card" style="border-top:3px solid #22C55E">
+            <div class="stat-val" style="color:#22C55E">90/100</div>
+            <div class="stat-label">Health Score</div>
+            <div class="stat-sub">Grade: Excellent</div>
+        </div><div class="stat-card" style="border-top:3px solid #3B82F6">
+            <div class="stat-val" style="color:#3B82F6">5</div>
+            <div class="stat-label">Pages Scanned</div>
+            <div class="stat-sub">Internal pages crawled</div>
+        </div><div class="stat-card" style="border-top:3px solid #8B5CF6">
+            <div class="stat-val" style="color:#8B5CF6">36</div>
+            <div class="stat-label">Tests Run</div>
+            <div class="stat-sub">25 passed · 11 failed</div>
+        </div><div class="stat-card" style="border-top:3px solid #F59E0B">
+            <div class="stat-val" style="color:#F59E0B">1</div>
+            <div class="stat-label">Image Issues</div>
+            <div class="stat-sub">Images with accessibility problems</div>
+        </div><div class="stat-card" style="border-top:3px solid #22C55E">
+            <div class="stat-val" style="color:#22C55E">0</div>
+            <div class="stat-label">Broken Links</div>
+            <div class="stat-sub">Links returning errors</div>
+        </div><div class="stat-card" style="border-top:3px solid #EF4444">
+            <div class="stat-val" style="color:#EF4444">12</div>
+            <div class="stat-label">Total Issues</div>
+            <div class="stat-sub">Items needing attention</div>
+        </div></div>
+
+<!-- ── PAGE BODY ── -->
+<div class="page-body">
+
+<!-- ── IMAGE ISSUES ── -->
+
+        <section class="report-section">
+            <div class="section-hdr img-hdr">
+                <span class="section-icon">🖼️</span>
+                <div>
+                    <h2>Image Issues <span class="count-badge">1</span></h2>
+                    <p>Images with missing or empty alt text detected across 1 page(s)</p>
+                </div>
+            </div>
+            <div class="table-wrap">
+            <table>
+                <thead><tr>
+                    <th style="width:130px">Page Name</th>
+                    <th>Page URL</th>
+                    <th>Image URL</th>
+                    <th style="width:190px">Issue</th>
+                    <th>Description &amp; Fix</th>
+                </tr></thead>
+                <tbody><tr style="background:rgba(245,158,11,0.04)">
+                <td class="td-page">Abu Dhabi&#x27;s International Financial Centre | ADGM</td>
+                <td><a class="lnk" href="https://www.adgm.com" target="_blank" rel="noopener">https://www.adgm.com</a></td>
+                <td><a class="lnk mono" href="https://adgm-mdm.my.salesforce.com/servlet/servlet.ImageServer?id=015NM000005uTkP&amp;oid=00D3t000002RU0U" target="_blank" rel="noopener">https://adgm-mdm.my.salesforce.com/servlet/servlet.ImageServer?id=015NM000005uTkP&amp;oid=0…</a></td>
+                <td><span class="badge-warn">Empty alt text (not marked decorative)</span></td>
+                <td class="td-fix">alt=&quot;&quot; is present but the image is not marked as decorative (role=&#x27;presentation&#x27;).<br/><span class="fix-hint">Add a meaningful description, or add role=&#x27;presentation&#x27; if purely decorative.</span></td>
+            </tr></tbody>
+            </table>
+            </div>
+        </section>
+
+<!-- ── BROKEN LINKS ── -->
+<section class="report-section">
+            <div class="section-hdr lnk-hdr"><span class="section-icon">🔗</span>
+            <div><h2>Broken Links <span class="count-badge pass">0</span></h2>
+            <p>No broken links detected — all checked links are accessible.</p></div></div>
+        </section>
+
+<!-- ── QA TEST RESULTS ── -->
+<section class="report-section">
+  <div class="section-hdr qa-hdr">
+    <span class="section-icon">🔬</span>
+    <div>
+      <h2>QA Test Results <span class="count-badge" style="background:rgba(139,92,246,0.12);color:#a78bfa;border-color:rgba(139,92,246,0.3)">36</span></h2>
+      <p>25 checks passed &nbsp;·&nbsp; 11 issues found across 14 categories</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+  <table>
+    <thead><tr>
+      <th>ID</th><th>Category</th><th>Test Name</th>
+      <th style="width:70px">Result</th><th>Severity</th><th>Detail &amp; Fix</th>
+    </tr></thead>
+    <tbody><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">SEO-01</td>
+            <td style="width:130px"><span class="cat-badge">SEO</span></td>
+            <td>Title tag present</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#EF4444;border-color:#EF444440;background:#EF444412">CRITICAL</span></td>
+            <td>Abu Dhabi&#x27;s International Financial Centre | ADGM</td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">SEO-03</td>
+            <td style="width:130px"><span class="cat-badge">SEO</span></td>
+            <td>Meta description present</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td>ADGM, a leading, award-winning, International Financial Centre, operates across Al Maryah Island and Al Reem Island, making it one of the largest financial districts in the world.</td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">SEO-05</td>
+            <td style="width:130px"><span class="cat-badge">SEO</span></td>
+            <td>Exactly one H1</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td>Found 2 H1(s)</td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">SEO-12</td>
+            <td style="width:130px"><span class="cat-badge">SEO</span></td>
+            <td>Viewport meta present</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#EF4444;border-color:#EF444440;background:#EF444412">CRITICAL</span></td>
+            <td></td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">SEO-14</td>
+            <td style="width:130px"><span class="cat-badge">SEO</span></td>
+            <td>All images have alt</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td>1/1 missing alt</td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">A11Y-01</td>
+            <td style="width:130px"><span class="cat-badge">Accessibility</span></td>
+            <td>HTML lang attribute set</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#EF4444;border-color:#EF444440;background:#EF444412">CRITICAL</span></td>
+            <td>lang=&#x27;en&#x27;</td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">A11Y-02</td>
+            <td style="width:130px"><span class="cat-badge">Accessibility</span></td>
+            <td>All images have alt text</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#EF4444;border-color:#EF444440;background:#EF444412">CRITICAL</span></td>
+            <td>0 missing alt</td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">A11Y-03</td>
+            <td style="width:130px"><span class="cat-badge">Accessibility</span></td>
+            <td>All form fields labelled</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#EF4444;border-color:#EF444440;background:#EF444412">CRITICAL</span></td>
+            <td>12 unlabelled</td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">A11Y-04</td>
+            <td style="width:130px"><span class="cat-badge">Accessibility</span></td>
+            <td>Skip navigation link</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">PERF-01</td>
+            <td style="width:130px"><span class="cat-badge">Performance</span></td>
+            <td>TTFB &lt; 600ms</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td>267ms</td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">PERF-02</td>
+            <td style="width:130px"><span class="cat-badge">Performance</span></td>
+            <td>FCP &lt; 1800ms</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td>4004ms</td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">PERF-04</td>
+            <td style="width:130px"><span class="cat-badge">Performance</span></td>
+            <td>Full page load &lt; 4s</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td>6644ms</td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">PERF-05</td>
+            <td style="width:130px"><span class="cat-badge">Performance</span></td>
+            <td>Total page weight &lt; 3MB</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#3B82F6;border-color:#3B82F640;background:#3B82F612">MEDIUM</span></td>
+            <td>1130KB</td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">SEC-01</td>
+            <td style="width:130px"><span class="cat-badge">Security</span></td>
+            <td>HTTPS enforced</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#EF4444;border-color:#EF444440;background:#EF444412">CRITICAL</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">SEC-02</td>
+            <td style="width:130px"><span class="cat-badge">Security</span></td>
+            <td>HSTS header present</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">SEC-03</td>
+            <td style="width:130px"><span class="cat-badge">Security</span></td>
+            <td>X-Content-Type-Options</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">SEC-05</td>
+            <td style="width:130px"><span class="cat-badge">Security</span></td>
+            <td>Content-Security-Policy</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">LINK-OK</td>
+            <td style="width:130px"><span class="cat-badge">Links</span></td>
+            <td>28 links verified</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#22C55E;border-color:#22C55E40;background:#22C55E12">PASS</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">CON-01</td>
+            <td style="width:130px"><span class="cat-badge">Console Errors</span></td>
+            <td>No console errors</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#22C55E;border-color:#22C55E40;background:#22C55E12">PASS</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">RESP-desktop</td>
+            <td style="width:130px"><span class="cat-badge">Responsive</span></td>
+            <td>No overflow on Desktop (1920×1080) — Chrome</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">RESP-mac</td>
+            <td style="width:130px"><span class="cat-badge">Responsive</span></td>
+            <td>No overflow on MacBook Pro (1440×900) — Safari</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">RESP-laptop</td>
+            <td style="width:130px"><span class="cat-badge">Responsive</span></td>
+            <td>No overflow on Generic Laptop (1366×768)</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">RESP-mobile</td>
+            <td style="width:130px"><span class="cat-badge">Responsive</span></td>
+            <td>No overflow on iPhone 14 Pro (390×844)</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">KEY-01</td>
+            <td style="width:130px"><span class="cat-badge">Keyboard</span></td>
+            <td>Focusable elements present</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#EF4444;border-color:#EF444440;background:#EF444412">CRITICAL</span></td>
+            <td></td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">KEY-03</td>
+            <td style="width:130px"><span class="cat-badge">Keyboard</span></td>
+            <td>Skip link present</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">MIXED-00</td>
+            <td style="width:130px"><span class="cat-badge">Security</span></td>
+            <td>No mixed content</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#22C55E;border-color:#22C55E40;background:#22C55E12">PASS</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">CONT-01</td>
+            <td style="width:130px"><span class="cat-badge">Content</span></td>
+            <td>Word count &gt; 300</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#8B949E;border-color:#8B949E40;background:#8B949E12">LOW</span></td>
+            <td>934 words</td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">CONT-02</td>
+            <td style="width:130px"><span class="cat-badge">Content</span></td>
+            <td>No placeholder text</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#3B82F6;border-color:#3B82F640;background:#3B82F612">MEDIUM</span></td>
+            <td></td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">FORM-1-CSRF</td>
+            <td style="width:130px"><span class="cat-badge">Forms</span></td>
+            <td>Form 1 CSRF</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#EF4444;border-color:#EF444440;background:#EF444412">CRITICAL</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">TYPO-01</td>
+            <td style="width:130px"><span class="cat-badge">Typography</span></td>
+            <td>Base font size ≥ 14px</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#3B82F6;border-color:#3B82F640;background:#3B82F612">MEDIUM</span></td>
+            <td>16px</td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">HTML-01</td>
+            <td style="width:130px"><span class="cat-badge">HTML Quality</span></td>
+            <td>DOCTYPE declared</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#EF4444;border-color:#EF444440;background:#EF444412">CRITICAL</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">HTML-02</td>
+            <td style="width:130px"><span class="cat-badge">HTML Quality</span></td>
+            <td>Charset UTF-8</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">HTML-03</td>
+            <td style="width:130px"><span class="cat-badge">HTML Quality</span></td>
+            <td>Favicon present</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#3B82F6;border-color:#3B82F640;background:#3B82F612">MEDIUM</span></td>
+            <td></td>
+        </tr><tr class="tr-pass">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">IMG-01</td>
+            <td style="width:130px"><span class="cat-badge">Images</span></td>
+            <td>All images have alt</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#22C55E">PASS</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td>0/1 images missing alt text</td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">NAV-01</td>
+            <td style="width:130px"><span class="cat-badge">Navigation</span></td>
+            <td>Nav landmark present</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#F59E0B;border-color:#F59E0B40;background:#F59E0B12">HIGH</span></td>
+            <td></td>
+        </tr><tr class="tr-fail">
+            <td style="width:60px;font-family:monospace;font-size:11px;color:#8B949E">NAV-04</td>
+            <td style="width:130px"><span class="cat-badge">Navigation</span></td>
+            <td>Footer landmark present</td>
+            <td style="width:70px;text-align:center"><span style="font-weight:800;color:#EF4444">FAIL</span></td>
+            <td style="width:85px"><span class="sev-badge" style="color:#3B82F6;border-color:#3B82F640;background:#3B82F612">MEDIUM</span></td>
+            <td></td>
+        </tr></tbody>
+  </table>
+  </div>
+</section>
+
+</div><!-- /page-body -->
+
+<div class="report-footer">
+  <span>SiteSentinel Matrix Pro · QA Audit Report</span>
+  <span>https://www.adgm.com · 2026-06-24T15:00:15.741101</span>
+</div>
+</body>
+</html>

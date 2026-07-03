@@ -1,0 +1,229 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SiteSentinel QA Report — https://hub.misk.org.sa/</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --bg: #0D1117; --card: #161B22; --border: #30363D;
+                --text: #C9D1D9; --white: #FFFFFF; --dim: #8B949E;
+                --pass: #238636; --fail: #DA3633; --warn: #D29922;
+                --accent: #3B82F6;
+            }
+            body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 40px; }
+            .container { max-width: 1200px; margin: 0 auto; }
+            .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+            .title h1 { font-weight: 800; color: var(--white); margin: 0; font-size: 28px; }
+            .title p { color: var(--dim); margin: 5px 0 0; font-family: 'JetBrains Mono'; font-size: 14px; }
+            .score-card { background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: 16px; display: flex; align-items: center; gap: 30px; margin-bottom: 40px; }
+            .ring { width: 100px; height: 100px; border-radius: 50%; border: 8px solid var(--border); display: flex; align-items: center; justify-content: center; position: relative; }
+            .ring.score { border-color: var(--pass); }
+            .ring span { font-size: 32px; font-weight: 800; color: var(--white); display: block; line-height: 1; }
+            .meta { flex: 1; }
+            .meta h2 { margin: 0; color: var(--white); font-size: 24px; }
+            .meta p { margin: 5px 0 0; color: var(--dim); }
+            table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+            th { text-align: left; background: #21262D; padding: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--dim); }
+            td { padding: 15px; border-top: 1px solid var(--border); font-size: 14px; }
+            .pass { border-left: 4px solid var(--pass); }
+            .fail { border-left: 4px solid var(--fail); }
+            .badge { padding: 4px 8px; border-radius: 4px; font-size: 10px; font-weight: 800; font-family: 'JetBrains Mono'; text-transform: uppercase; }
+            .badge.critical { background: rgba(218,54,51,0.1); color: #FF7B72; border: 1px solid rgba(218,54,51,0.2); }
+            .badge.high { background: rgba(210,153,34,0.1); color: #D29922; border: 1px solid rgba(210,153,34,0.2); }
+            .badge.medium { background: rgba(59,130,246,0.1); color: #58A6FF; border: 1px solid rgba(59,130,246,0.2); }
+            .badge.low { background: rgba(139,148,158,0.1); color: var(--dim); border: 1px solid var(--border); }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="title">
+                    <h1>SiteSentinel Matrix QA Report</h1>
+                    <p>Target: https://hub.misk.org.sa/ • Generated: 2026-06-17T19:05:35.906140</p>
+                </div>
+            </div>
+            
+            <div class="score-card">
+                <div class="ring score"><span>86</span></div>
+                <div class="meta">
+                    <h2>Grade: Good</h2>
+                    <p>Site health based on 13 matrix analysis points.</p>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Severity</th>
+                        <th>Analysis Point</th>
+                        <th>Result</th>
+                        <th>Findings & Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>SEO</strong><br/><small>Title tag present</small></td>
+            <td>PASS</td>
+            <td>
+                Misk Hub
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>Meta description present</small></td>
+            <td>PASS</td>
+            <td>
+                Designed for ambitious Saudi youth to explore, engage and experience Misk Foundation’s high-impact programs, insightful content and skill-building experiences.
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>Exactly one H1</small></td>
+            <td>PASS</td>
+            <td>
+                Found 1 H1(s)
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>SEO</strong><br/><small>Viewport meta present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>All images have alt</small></td>
+            <td>FAIL</td>
+            <td>
+                91/191 missing alt
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>TTFB < 600ms</small></td>
+            <td>PASS</td>
+            <td>
+                570ms
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>FCP < 1800ms</small></td>
+            <td>FAIL</td>
+            <td>
+                3900ms
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>Full page load < 4s</small></td>
+            <td>FAIL</td>
+            <td>
+                35277ms
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Performance</strong><br/><small>Total page weight < 3MB</small></td>
+            <td>FAIL</td>
+            <td>
+                27300KB
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>HTML lang attribute set</small></td>
+            <td>PASS</td>
+            <td>
+                lang='en-US'
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>All images have alt text</small></td>
+            <td>FAIL</td>
+            <td>
+                4 missing alt
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>All form fields labelled</small></td>
+            <td>FAIL</td>
+            <td>
+                34 unlabelled
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Accessibility</strong><br/><small>Skip navigation link</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html>
+    

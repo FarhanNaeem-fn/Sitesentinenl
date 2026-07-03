@@ -1,0 +1,728 @@
+{
+  "url": "https://orbit.0degrees.build/time/leave",
+  "total": 33,
+  "passed": 9,
+  "failed": 24,
+  "errors": 0,
+  "score": 27,
+  "viewport": "desktop",
+  "results": [
+    {
+      "id": "TC-01",
+      "name": "Test Case 1",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Leave request created with status 'Pending'; balance unchanged until approval; confirmation shown",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; 1 <form> element(s) found on page",
+      "status": "pass",
+      "reason": "PASSED \u2014 all 4 check(s) succeeded",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "1 <form> element(s) found on page",
+        "2 input field(s): email(you@company.com), password(\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022)",
+        "Submit button present: \"Log In\""
+      ],
+      "why_fail": [],
+      "evidence": "/reports/tc_ev_TC-01_1781771623.jpg",
+      "error": "",
+      "duration_ms": 5502
+    },
+    {
+      "id": "TC--02",
+      "name": "Test Case 2",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "0.5 days deducted on approval; half-day reflected in calendar view",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; 1 <form> element(s) found on page",
+      "status": "pass",
+      "reason": "PASSED \u2014 all 4 check(s) succeeded",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "1 <form> element(s) found on page",
+        "2 input field(s): email(you@company.com), password(\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022)",
+        "Submit button present: \"Log In\""
+      ],
+      "why_fail": [],
+      "evidence": "/reports/tc_ev_TC--02_1781771624.jpg",
+      "error": "",
+      "duration_ms": 1651
+    },
+    {
+      "id": "TC-03",
+      "name": "Test Case 3",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Widget shows correct available balance (total_allowance \u2013 used_allowance) in real time",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; 1 <form> element(s) found on page",
+      "status": "pass",
+      "reason": "PASSED \u2014 all 4 check(s) succeeded",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "1 <form> element(s) found on page",
+        "2 input field(s): email(you@company.com), password(\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022)",
+        "Submit button present: \"Log In\""
+      ],
+      "why_fail": [],
+      "evidence": "/reports/tc_ev_TC-03_1781771626.jpg",
+      "error": "",
+      "duration_ms": 1655
+    },
+    {
+      "id": "TC-04",
+      "name": "Test Case 4",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "System calculates 6 net working days (excludes Sat & Sun)",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-04_1781771628.jpg",
+      "error": "",
+      "duration_ms": 1592
+    },
+    {
+      "id": "TC-05",
+      "name": "Test Case 5",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Public holiday excluded; net days = total calendar days \u2013 weekends \u2013 public holidays",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-05_1781771629.jpg",
+      "error": "",
+      "duration_ms": 1600
+    },
+    {
+      "id": "TC-06",
+      "name": "Test Case 6",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Warning banner appears: 'Soft Warning: Requested days (5) exceed your available balance (3). This request is subject to special Administrator approval.'",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-06_1781771631.jpg",
+      "error": "",
+      "duration_ms": 1587
+    },
+    {
+      "id": "TC-07",
+      "name": "Test Case 7",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Leave request submitted successfully with status 'Pending'; no hard block",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; 1 <form> element(s) found on page",
+      "status": "pass",
+      "reason": "PASSED \u2014 all 4 check(s) succeeded",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "1 <form> element(s) found on page",
+        "2 input field(s): email(you@company.com), password(\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022)",
+        "Submit button present: \"Log In\""
+      ],
+      "why_fail": [],
+      "evidence": "/reports/tc_ev_TC-07_1781771632.jpg",
+      "error": "",
+      "duration_ms": 1660
+    },
+    {
+      "id": "TC-08",
+      "name": "Test Case 8",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "All configured leave types listed; no duplicates",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-08_1781771634.jpg",
+      "error": "",
+      "duration_ms": 1570
+    },
+    {
+      "id": "TC-09",
+      "name": "Test Case 9",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Validation error: 'Please select a leave type'; form not submitted",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; 1 <form> element(s) found on page",
+      "status": "pass",
+      "reason": "PASSED \u2014 all 4 check(s) succeeded",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "1 <form> element(s) found on page",
+        "2 input field(s): email(you@company.com), password(\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022)",
+        "Submit button present: \"Log In\""
+      ],
+      "why_fail": [],
+      "evidence": "/reports/tc_ev_TC-09_1781771636.jpg",
+      "error": "",
+      "duration_ms": 1646
+    },
+    {
+      "id": "TC-10",
+      "name": "Test Case 10",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Validation error: 'End date must be on or after start date'",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; 1 <form> element(s) found on page",
+      "status": "pass",
+      "reason": "PASSED \u2014 all 4 check(s) succeeded",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "1 <form> element(s) found on page",
+        "2 input field(s): email(you@company.com), password(\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022)",
+        "Submit button present: \"Log In\""
+      ],
+      "why_fail": [],
+      "evidence": "/reports/tc_ev_TC-10_1781771637.jpg",
+      "error": "",
+      "duration_ms": 1652
+    },
+    {
+      "id": "TC-11",
+      "name": "Test Case 11",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Validation error on reason field; form not submitted",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; 1 <form> element(s) found on page",
+      "status": "pass",
+      "reason": "PASSED \u2014 all 4 check(s) succeeded",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "1 <form> element(s) found on page",
+        "2 input field(s): email(you@company.com), password(\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022)",
+        "Submit button present: \"Log In\""
+      ],
+      "why_fail": [],
+      "evidence": "/reports/tc_ev_TC-11_1781771639.jpg",
+      "error": "",
+      "duration_ms": 1657
+    },
+    {
+      "id": "TC-12",
+      "name": "Test Case 12",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Net working days = 0; system shows error or prevents submission with 0 working days",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; 1 <form> element(s) found on page",
+      "status": "pass",
+      "reason": "PASSED \u2014 all 4 check(s) succeeded",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "1 <form> element(s) found on page",
+        "2 input field(s): email(you@company.com), password(\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022)",
+        "Submit button present: \"Log In\""
+      ],
+      "why_fail": [],
+      "evidence": "/reports/tc_ev_TC-12_1781771641.jpg",
+      "error": "",
+      "duration_ms": 1669
+    },
+    {
+      "id": "TC-13",
+      "name": "Test Case 13",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "System allows no policy will apply",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; 1 <form> element(s) found on page",
+      "status": "pass",
+      "reason": "PASSED \u2014 all 4 check(s) succeeded",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "1 <form> element(s) found on page",
+        "2 input field(s): email(you@company.com), password(\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022)",
+        "Submit button present: \"Log In\""
+      ],
+      "why_fail": [],
+      "evidence": "/reports/tc_ev_TC-13_1781771642.jpg",
+      "error": "",
+      "duration_ms": 1671
+    },
+    {
+      "id": "TC-14",
+      "name": "Test Case 14",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Status \u2192 'Approved'; used_allowance incremented by net days; audit record created in leave_balance_audit",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-14_1781771644.jpg",
+      "error": "",
+      "duration_ms": 1599
+    },
+    {
+      "id": "TC-15",
+      "name": "Test Case 15",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "used_allowance = 3; available balance = total_allowance \u2013 4 Should be validation occurred or if approved should be deduct from qouta",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-15_1781771645.jpg",
+      "error": "",
+      "duration_ms": 1622
+    },
+    {
+      "id": "TC-16",
+      "name": "Test Case 16",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "New audit row with type 'LEAVE_DEDUCTION', correct leave_id, date, amount",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-16_1781771647.jpg",
+      "error": "",
+      "duration_ms": 1585
+    },
+    {
+      "id": "TC-17",
+      "name": "Test Case 17",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "RPC notify_leave_event called with p_leave_id and p_event_type='approved'",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-17_1781771649.jpg",
+      "error": "",
+      "duration_ms": 1578
+    },
+    {
+      "id": "TC-18",
+      "name": "Test Case 18",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Approved leave days appear in timesheet; correct leave type and dates",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-18_1781771650.jpg",
+      "error": "",
+      "duration_ms": 1585
+    },
+    {
+      "id": "TC-19",
+      "name": "Test Case 19",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Request approved; used_allowance may exceed total_allowance; audit records adjustment",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-19_1781771652.jpg",
+      "error": "",
+      "duration_ms": 1594
+    },
+    {
+      "id": "TC-20",
+      "name": "Test Case 20",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Status \u2192 'Rejected'; rejection reason saved; notify_leave_event called with p_event_type='rejected'",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-20_1781771653.jpg",
+      "error": "",
+      "duration_ms": 1638
+    },
+    {
+      "id": "TC-21",
+      "name": "Test Case 21",
+      "type": "content",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "System blocks rejection; error message: 'Rejection reason is required'",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Some content present: 36 words; \u2717 Expected text not found: \"System blocks rejection; error message: 'Rejection reason is required'\" (checked 6 key terms, found 0)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Expected text not found: \"System blocks rejection; error message: 'Rejection reason is required'\" (checked 6 key terms, found 0)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Some content present: 36 words"
+      ],
+      "why_fail": [
+        "Expected text not found: \"System blocks rejection; error message: 'Rejection reason is required'\" (checked 6 key terms, found 0)"
+      ],
+      "evidence": "/reports/tc_ev_TC-21_1781771655.jpg",
+      "error": "",
+      "duration_ms": 1599
+    },
+    {
+      "id": "TC-22",
+      "name": "Test Case 22",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "used_allowance unchanged; balance same as before request",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-22_1781771657.jpg",
+      "error": "",
+      "duration_ms": 1566
+    },
+    {
+      "id": "TC-23",
+      "name": "Test Case 23",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Should be allow to change status after approved",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-23_1781771658.jpg",
+      "error": "",
+      "duration_ms": 1587
+    },
+    {
+      "id": "TC-24",
+      "name": "Test Case 24",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Should be reverted to quota",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-24_1781771660.jpg",
+      "error": "",
+      "duration_ms": 1600
+    },
+    {
+      "id": "TC-25",
+      "name": "Test Case 25",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Status \u2192 'Cancelled'",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-25_1781771661.jpg",
+      "error": "",
+      "duration_ms": 1593
+    },
+    {
+      "id": "TC-26",
+      "name": "Test Case 26",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "All team leave requests visible; color-coded by status",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-26_1781771663.jpg",
+      "error": "",
+      "duration_ms": 1556
+    },
+    {
+      "id": "TC-27",
+      "name": "Test Case 27",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Only approved leaves shown; pending and rejected hidden",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-27_1781771665.jpg",
+      "error": "",
+      "duration_ms": 1577
+    },
+    {
+      "id": "TC-28",
+      "name": "Test Case 28",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Should not allow to add leave request",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-28_1781771666.jpg",
+      "error": "",
+      "duration_ms": 1555
+    },
+    {
+      "id": "TC-29",
+      "name": "Test Case 29",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Employee's leave calculations use Pakistan holiday calendar",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-29_1781771668.jpg",
+      "error": "",
+      "duration_ms": 1594
+    },
+    {
+      "id": "TC-30",
+      "name": "Test Case 30",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Net days differ if region-specific holiday falls in range for one employee but not the other",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-30_1781771669.jpg",
+      "error": "",
+      "duration_ms": 1587
+    },
+    {
+      "id": "TC-31",
+      "name": "Test Case 31",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "UI should be proper",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-31_1781771671.jpg",
+      "error": "",
+      "duration_ms": 1598
+    },
+    {
+      "id": "TC-32",
+      "name": "Test Case 32",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Should be reduce from quota",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-32_1781771672.jpg",
+      "error": "",
+      "duration_ms": 1580
+    },
+    {
+      "id": "TC-33",
+      "name": "Test Case 33",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Should be reduce from quota",
+      "severity": "Medium",
+      "actual": "HTTP 200 OK \u2014 server responded successfully; Page title present: \"Orbit Business OS\"; \u2717 Page appears empty or near-empty (only 36 words of visible text)",
+      "status": "fail",
+      "reason": "FAILED \u2014 Page appears empty or near-empty (only 36 words of visible text)",
+      "why_pass": [
+        "HTTP 200 OK \u2014 server responded successfully",
+        "Page title present: \"Orbit Business OS\"",
+        "No error messages detected in page body"
+      ],
+      "why_fail": [
+        "Page appears empty or near-empty (only 36 words of visible text)"
+      ],
+      "evidence": "/reports/tc_ev_TC-33_1781771674.jpg",
+      "error": "",
+      "duration_ms": 1603
+    }
+  ],
+  "timestamp": "2026-06-18T13:34:34.713466"
+}

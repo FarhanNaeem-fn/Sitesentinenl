@@ -1,0 +1,232 @@
+{
+  "url": "https://www.adgm.com",
+  "timestamp": "2026-07-01T13:05:39.664513",
+  "modules": [
+    "multi_device",
+    "accessibility_deep",
+    "security",
+    "crux",
+    "third_party",
+    "spa",
+    "network"
+  ],
+  "categories": [
+    "performance",
+    "accessibility",
+    "best-practices",
+    "seo"
+  ],
+  "security": {
+    "score": 60,
+    "passed": 5,
+    "failed": 4,
+    "https": true,
+    "headers": [
+      {
+        "name": "Content-Security-Policy",
+        "present": false,
+        "value": "",
+        "severity": "critical",
+        "desc": "Prevents XSS and injection attacks"
+      },
+      {
+        "name": "Strict-Transport-Security",
+        "present": true,
+        "value": "max-age=15552000; includeSubDomains",
+        "severity": "critical",
+        "desc": "Forces HTTPS connections"
+      },
+      {
+        "name": "X-Frame-Options",
+        "present": true,
+        "value": "SAMEORIGIN",
+        "severity": "high",
+        "desc": "Prevents clickjacking"
+      },
+      {
+        "name": "X-Content-Type-Options",
+        "present": true,
+        "value": "nosniff",
+        "severity": "high",
+        "desc": "Prevents MIME-type sniffing"
+      },
+      {
+        "name": "Referrer-Policy",
+        "present": true,
+        "value": "strict-origin-when-cross-origin",
+        "severity": "medium",
+        "desc": "Controls referrer header info"
+      },
+      {
+        "name": "Permissions-Policy",
+        "present": false,
+        "value": "",
+        "severity": "medium",
+        "desc": "Restricts browser feature access"
+      },
+      {
+        "name": "X-XSS-Protection",
+        "present": true,
+        "value": "1",
+        "severity": "low",
+        "desc": "Legacy XSS filter (deprecated but checked)"
+      },
+      {
+        "name": "Cross-Origin-Opener-Policy",
+        "present": false,
+        "value": "",
+        "severity": "medium",
+        "desc": "Isolates browsing context"
+      },
+      {
+        "name": "Cross-Origin-Resource-Policy",
+        "present": false,
+        "value": "",
+        "severity": "low",
+        "desc": "Controls resource sharing"
+      }
+    ]
+  },
+  "crux": {
+    "score": 77,
+    "metrics": {},
+    "origin": "https://www.adgm.com",
+    "source": "simulated",
+    "note": "CrUX data unavailable \u2014 add CRUX_API_KEY or PSI_API_KEY for real field data"
+  },
+  "multi_device": {
+    "desktop": {
+      "scores": {
+        "performance": 67,
+        "accessibility": 59,
+        "best-practices": 81,
+        "seo": 56
+      },
+      "cwv": {
+        "lcp": "2.1 s",
+        "cls": "0.08",
+        "fcp": "1.6 s",
+        "si": "3.2 s",
+        "tbt": "210 ms",
+        "ttfb": "480 ms"
+      },
+      "findings": [],
+      "simulated": true,
+      "perf": 67
+    },
+    "mobile": {
+      "scores": {
+        "performance": 64,
+        "accessibility": 35,
+        "best-practices": 73,
+        "seo": 43
+      },
+      "cwv": {
+        "lcp": "4.2 s",
+        "cls": "0.18",
+        "fcp": "3.1 s",
+        "si": "6.8 s",
+        "tbt": "890 ms",
+        "ttfb": "850 ms"
+      },
+      "findings": [],
+      "simulated": true,
+      "perf": 64
+    },
+    "combined_perf": 65,
+    "score": 65,
+    "simulated": true
+  },
+  "third_party": {
+    "score": 20,
+    "total_requests": 59,
+    "script_count": 26,
+    "unique_domains": 17,
+    "domains": [
+      "a.emea01.idio.episerver.net",
+      "fonts.gstatic.com",
+      "www.googletagmanager.com",
+      "uaenorth-0.in.applicationinsights.azure.com",
+      "js.monitor.azure.com",
+      "assets.adgm.com",
+      "s.emea01.idio.episerver.net",
+      "adgm-mdm.my.salesforce.com",
+      "unpkg.com",
+      "adgm-mdm.my.site.com",
+      "www.google-analytics.com",
+      "www.google.com",
+      "cdnjs.cloudflare.com",
+      "connect.facebook.net",
+      "adgm-mdm.my.salesforce-scrt.com",
+      "analytics.welcomesoftware.com",
+      "www.gstatic.com"
+    ]
+  },
+  "spa": {
+    "score": 82,
+    "framework": "Unknown",
+    "render_mode": "Traditional HTML",
+    "ssr": false
+  },
+  "accessibility_deep": {
+    "score": 29,
+    "checks": [
+      {
+        "name": "Image alt text",
+        "passed": false,
+        "detail": "26/29 images have alt text"
+      },
+      {
+        "name": "HTML lang attribute",
+        "passed": true,
+        "detail": "Required for screen readers"
+      },
+      {
+        "name": "Single H1 heading",
+        "passed": false,
+        "detail": "2 H1 found"
+      },
+      {
+        "name": "Main landmark",
+        "passed": false,
+        "detail": "Semantic page structure"
+      },
+      {
+        "name": "Skip navigation",
+        "passed": false,
+        "detail": "Keyboard accessibility"
+      },
+      {
+        "name": "Form input labels",
+        "passed": true,
+        "detail": "10/5 inputs labeled"
+      },
+      {
+        "name": "Button accessible names",
+        "passed": false,
+        "detail": "6 buttons without accessible name"
+      }
+    ],
+    "passed": 2,
+    "total": 7
+  },
+  "network": {
+    "score": 65,
+    "total_kb": 1131,
+    "js_kb": 895,
+    "css_kb": 118,
+    "img_kb": 0,
+    "resource_count": 79
+  },
+  "module_scores": {
+    "security": 60,
+    "crux": 77,
+    "multi_device": 65,
+    "third_party": 20,
+    "spa": 82,
+    "accessibility_deep": 29,
+    "network": 65
+  },
+  "overall_score": 55,
+  "grade": "D"
+}

@@ -1,0 +1,142 @@
+:root {
+  --pro-orange: #F59E0B;
+  --pro-orange-glow: rgba(245, 158, 11, 0.4);
+  --deep-bg: #0D1117;
+  --card-bg: #161B22;
+  --raised-bg: #21262D;
+  --border-dim: #30363D;
+  --text-main: #E6EDF3;
+  --text-muted: #8B949E;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Reset & Base ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 14px; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--deep-bg);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.01em;
+}
+
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* ── Scrollbars ───────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #30363D; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--pro-orange); }
+
+/* ── Animations ───────────────────────────────────────────────── */
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+@keyframes slide-in { from { transform: translateX(30px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse-ring { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.05); } }
+@keyframes glow-pulse { 0%,100% { box-shadow: 0 0 10px var(--pro-orange-glow); } 50% { box-shadow: 0 0 20px var(--pro-orange-glow); } }
+
+.animate-slide-in { animation: slide-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.spinner { animation: spin 0.8s linear infinite; }
+.pulse { animation: pulse-ring 2s ease-in-out infinite; }
+.pro-glow { animation: glow-pulse 3s infinite; }
+
+/* ── Matrix Pro Cards ─────────────────────────────────────────── */
+.be-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-dim);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.be-card:hover { border-color: #484F58; transform: translateY(-2px); }
+
+/* ── Inputs ───────────────────────────────────────────────────── */
+.be-input {
+  width: 100%;
+  background: #0D1117;
+  border: 1px solid var(--border-dim);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 10px 14px;
+  outline: none;
+  transition: all 0.2s;
+}
+.be-input:focus {
+  border-color: var(--pro-orange);
+  box-shadow: 0 0 0 3px var(--pro-orange-glow);
+}
+.be-input::placeholder { color: #484F58; }
+
+/* ── Buttons ──────────────────────────────────────────────────── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--pro-orange);
+  color: #0D1117;
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn-gold:hover { background: #FBB03B; transform: scale(1.02); box-shadow: 0 0 20px var(--pro-orange-glow); }
+.btn-gold:active { transform: scale(0.98); }
+.btn-gold:disabled { background: #21262D; color: #484F58; cursor: not-allowed; box-shadow: none; transform: none; }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-dim);
+  border-radius: 8px;
+  font-size: 12px;
+  padding: 9px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-ghost:hover { border-color: var(--pro-orange); color: var(--pro-orange); background: rgba(245,158,11,0.05); }
+
+/* ── Badge ────────────────────────────────────────────────────── */
+.be-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Progress ─────────────────────────────────────────────────── */
+.be-pill {
+  display: inline-flex; align-items: center;
+  padding: 6px 14px; border-radius: 10px;
+  font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; border: 1px solid var(--border-dim);
+  background: var(--raised-bg); color: var(--text-muted);
+}
+.be-pill:hover  { border-color: var(--pro-orange); color: var(--pro-orange); }
+.be-pill.active {
+  background: var(--pro-orange-glow); color: var(--pro-orange);
+  border-color: var(--pro-orange);
+}

@@ -1,0 +1,373 @@
+{
+  "url": "https://www.rakbank.ae/en",
+  "domain": "www.rakbank.ae",
+  "timestamp": "2026-06-24T13:29:20.439525",
+  "overall_score": 54,
+  "technical_score": 87,
+  "content_score": 44,
+  "trust_score": 45,
+  "structured_data_score": 0,
+  "robots_analysis": {
+    "accessible": true,
+    "crawlers": [
+      {
+        "name": "GPTBot",
+        "owner": "OpenAI",
+        "desc": "OpenAI training & ChatGPT Search",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "Google-Extended",
+        "owner": "Google",
+        "desc": "Google AI Overviews (Gemini)",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "PerplexityBot",
+        "owner": "Perplexity",
+        "desc": "Perplexity AI search engine",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "ClaudeBot",
+        "owner": "Anthropic",
+        "desc": "Claude AI by Anthropic",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "anthropic-ai",
+        "owner": "Anthropic",
+        "desc": "Anthropic data collection",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "CCBot",
+        "owner": "CommonCrawl",
+        "desc": "Common Crawl (training data source)",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "Googlebot",
+        "owner": "Google",
+        "desc": "Google Search Indexer",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "Bytespider",
+        "owner": "ByteDance",
+        "desc": "ByteDance / TikTok AI crawler",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "FacebookBot",
+        "owner": "Meta",
+        "desc": "Meta AI / Llama training data",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "Applebot",
+        "owner": "Apple",
+        "desc": "Apple Intelligence crawler",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "cohere-ai",
+        "owner": "Cohere",
+        "desc": "Cohere AI training crawler",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "AI2Bot",
+        "owner": "Allen AI",
+        "desc": "Allen Institute for AI research",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      },
+      {
+        "name": "omgili",
+        "owner": "Webz.io",
+        "desc": "Webz.io AI data provider",
+        "status": "partial",
+        "rule": "Disallow: /contentassets/, /siteassets/"
+      }
+    ],
+    "blocked_count": 0,
+    "allowed_count": 0,
+    "partial_count": 13
+  },
+  "technical_details": {
+    "score": 87,
+    "breakdown": {
+      "https": {
+        "label": "HTTPS secure connection",
+        "pass": true,
+        "pts": 12,
+        "max": 12
+      },
+      "title": {
+        "label": "Title tag present",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "meta_desc": {
+        "label": "Meta description present",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "viewport": {
+        "label": "Mobile viewport meta tag",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "canonical": {
+        "label": "Canonical URL tag",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "og_tags": {
+        "label": "Open Graph tags",
+        "pass": true,
+        "pts": 7,
+        "max": 7
+      },
+      "twitter": {
+        "label": "Twitter / X Card meta",
+        "pass": false,
+        "pts": 0,
+        "max": 5
+      },
+      "sitemap": {
+        "label": "XML Sitemap accessible",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "robots_ok": {
+        "label": "robots.txt accessible",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "ttfb": {
+        "label": "TTFB < 600ms (actual 122ms)",
+        "pass": true,
+        "pts": 12,
+        "max": 12
+      },
+      "load_time": {
+        "label": "Page loads < 2s (actual 31739ms)",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "internal_links": {
+        "label": "Internal links >= 5 (found 435)",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      }
+    },
+    "title": "RAKBANK | Your Best Banking Partner in UAE for Personal, Business, Wholesale and Islamic Banking",
+    "load_ms": 31739,
+    "ttfb": 122,
+    "is_https": true,
+    "canonical": "https://www.rakbank.ae/en",
+    "og_title": "RAKBANK | Your Best Banking Partner in UAE for Personal, Business, Wholesale and Islamic Banking",
+    "sitemap": true,
+    "internal_links": 435,
+    "images": 69
+  },
+  "content_details": {
+    "score": 44,
+    "breakdown": {
+      "h1": {
+        "label": "Single H1 tag (answer-first)",
+        "pass": false,
+        "pts": 0,
+        "max": 14
+      },
+      "h2": {
+        "label": "2+ H2 subheadings (content structure)",
+        "pass": true,
+        "pts": 10,
+        "max": 10
+      },
+      "h3": {
+        "label": "H3 subheadings present",
+        "pass": true,
+        "pts": 6,
+        "max": 6
+      },
+      "hierarchy": {
+        "label": "Correct heading hierarchy H1->H2->H3",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "word_count": {
+        "label": "Word count >= 1000 (found 949)",
+        "pass": false,
+        "pts": 10,
+        "max": 16
+      },
+      "faq": {
+        "label": "FAQ / Q&A pattern detected",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "author": {
+        "label": "Author byline visible",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "date": {
+        "label": "Publication date visible",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "breadcrumb": {
+        "label": "Breadcrumb navigation",
+        "pass": false,
+        "pts": 0,
+        "max": 6
+      },
+      "ext_links": {
+        "label": "External authoritative links >= 2",
+        "pass": true,
+        "pts": 10,
+        "max": 10
+      }
+    },
+    "word_count": 949,
+    "h1s": [
+      "Silver Account",
+      "RAKBANK Business Account",
+      "RAKBANK salutes our heroes",
+      "RAKBANK Credit Cards",
+      "RAKBANK Accounts",
+      "50 years with you",
+      "Credit Cards",
+      "Elevate & World Credit Card",
+      "Elevate Credit Card",
+      "World Credit Card",
+      "Air Arabia Platinum Credit Card",
+      "Titanium Credit Card",
+      "RED Credit Card"
+    ],
+    "h2s": [
+      "Buy silver digitally starting from 1 gram",
+      "The best in business is open for business",
+      "Honouring the heroes who are keeping the UAE safe and moving",
+      "Get up to 750 welcome bonus",
+      "Less banking. More living.",
+      "How can we help you today?",
+      "Experience the RAKBANK difference",
+      "A journey carried by trust, belief, and people",
+      "Earn, invest and manage your money all in one place",
+      "Discover your perfect credit card"
+    ],
+    "has_faq": false,
+    "has_author": false,
+    "has_date": false,
+    "external_links": 26
+  },
+  "trust_details": {
+    "score": 45,
+    "breakdown": {
+      "https": {
+        "label": "HTTPS with valid TLS",
+        "pass": true,
+        "pts": 25,
+        "max": 25
+      },
+      "author": {
+        "label": "Author byline / E-E-A-T signal",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "date": {
+        "label": "Content freshness signal (date)",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "ext_refs": {
+        "label": "Links to authoritative sources",
+        "pass": true,
+        "pts": 20,
+        "max": 20
+      },
+      "og_img": {
+        "label": "Social sharing image (og:image)",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      }
+    }
+  },
+  "structured_data_details": {
+    "score": 0,
+    "breakdown": {
+      "json_ld": {
+        "label": "JSON-LD present (0 blocks)",
+        "pass": false,
+        "pts": 0,
+        "max": 30
+      },
+      "article": {
+        "label": "Article / WebPage schema",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "faq_schema": {
+        "label": "FAQPage schema",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      },
+      "org": {
+        "label": "Organization / Website schema",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      },
+      "breadcrumb": {
+        "label": "BreadcrumbList schema",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "auth_date": {
+        "label": "Author + date in structured data",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      }
+    },
+    "json_ld_count": 0,
+    "schema_types": []
+  },
+  "competitors": [],
+  "llm_analysis": null,
+  "audit_id": "6757ad55-e58"
+}

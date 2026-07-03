@@ -1,0 +1,178 @@
+{
+  "url": "https://www.adgm.com",
+  "timestamp": "2026-07-03T11:08:05.907148",
+  "modules": [
+    "multi_device",
+    "accessibility_deep",
+    "security",
+    "crux",
+    "third_party",
+    "spa",
+    "network"
+  ],
+  "categories": [
+    "performance",
+    "accessibility",
+    "best-practices",
+    "seo"
+  ],
+  "security": {
+    "score": 60,
+    "passed": 5,
+    "failed": 4,
+    "https": true,
+    "headers": [
+      {
+        "name": "Content-Security-Policy",
+        "present": false,
+        "value": "",
+        "severity": "critical",
+        "desc": "Prevents XSS and injection attacks"
+      },
+      {
+        "name": "Strict-Transport-Security",
+        "present": true,
+        "value": "max-age=15552000; includeSubDomains",
+        "severity": "critical",
+        "desc": "Forces HTTPS connections"
+      },
+      {
+        "name": "X-Frame-Options",
+        "present": true,
+        "value": "SAMEORIGIN",
+        "severity": "high",
+        "desc": "Prevents clickjacking"
+      },
+      {
+        "name": "X-Content-Type-Options",
+        "present": true,
+        "value": "nosniff",
+        "severity": "high",
+        "desc": "Prevents MIME-type sniffing"
+      },
+      {
+        "name": "Referrer-Policy",
+        "present": true,
+        "value": "strict-origin-when-cross-origin",
+        "severity": "medium",
+        "desc": "Controls referrer header info"
+      },
+      {
+        "name": "Permissions-Policy",
+        "present": false,
+        "value": "",
+        "severity": "medium",
+        "desc": "Restricts browser feature access"
+      },
+      {
+        "name": "X-XSS-Protection",
+        "present": true,
+        "value": "1",
+        "severity": "low",
+        "desc": "Legacy XSS filter (deprecated but checked)"
+      },
+      {
+        "name": "Cross-Origin-Opener-Policy",
+        "present": false,
+        "value": "",
+        "severity": "medium",
+        "desc": "Isolates browsing context"
+      },
+      {
+        "name": "Cross-Origin-Resource-Policy",
+        "present": false,
+        "value": "",
+        "severity": "low",
+        "desc": "Controls resource sharing"
+      }
+    ]
+  },
+  "crux": {
+    "score": 68,
+    "metrics": {},
+    "origin": "https://www.adgm.com",
+    "source": "simulated",
+    "note": "CrUX data unavailable \u2014 add CRUX_API_KEY or PSI_API_KEY for real field data"
+  },
+  "multi_device": {
+    "desktop": {
+      "scores": {
+        "performance": 72,
+        "accessibility": 63,
+        "best-practices": 75,
+        "seo": 64
+      },
+      "cwv": {
+        "lcp": "2.1 s",
+        "cls": "0.08",
+        "fcp": "1.6 s",
+        "si": "3.2 s",
+        "tbt": "210 ms",
+        "ttfb": "480 ms"
+      },
+      "findings": [],
+      "simulated": true,
+      "perf": 72
+    },
+    "mobile": {
+      "scores": {
+        "performance": 41,
+        "accessibility": 54,
+        "best-practices": 70,
+        "seo": 54
+      },
+      "cwv": {
+        "lcp": "4.2 s",
+        "cls": "0.18",
+        "fcp": "3.1 s",
+        "si": "6.8 s",
+        "tbt": "890 ms",
+        "ttfb": "850 ms"
+      },
+      "findings": [],
+      "simulated": true,
+      "perf": 41
+    },
+    "combined_perf": 53,
+    "score": 53,
+    "simulated": true
+  },
+  "third_party": {
+    "score": 70,
+    "total_requests": 0,
+    "script_count": 0,
+    "unique_domains": 0,
+    "domains": []
+  },
+  "spa": {
+    "score": 75,
+    "framework": "Unknown",
+    "render_mode": "Traditional HTML",
+    "ssr": false
+  },
+  "accessibility_deep": {
+    "score": 70,
+    "checks": [],
+    "passed": 0,
+    "total": 0
+  },
+  "network": {
+    "score": 70,
+    "total_kb": 0,
+    "js_kb": 0,
+    "css_kb": 0,
+    "img_kb": 0,
+    "resource_count": 0
+  },
+  "module_scores": {
+    "security": 60,
+    "crux": 68,
+    "multi_device": 53,
+    "third_party": 70,
+    "spa": 75,
+    "accessibility_deep": 70,
+    "network": 70
+  },
+  "overall_score": 64,
+  "grade": "C"
+}

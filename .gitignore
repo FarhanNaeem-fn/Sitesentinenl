@@ -1,82 +1,183 @@
-# ======================================
-# Node.js
-# ======================================
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
+### C
+# Object files
+*.o
+*.obj
+*.elf
 
-# Build
-dist/
-build/
-coverage/
+# Precompiled Headers
+*.gch
+*.pch
 
-# ======================================
-# React / Vite
-# ======================================
-.vite/
-
-# ======================================
-# Python / FastAPI
-# ======================================
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+*.dll
 *.so
+*.so.*
+*.dylib
 
-venv/
-.venv/
-env/
+# Executables
+*.exe
+*.out
 
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+# Linker output
+*.ilk
+*.map
+*.exp
 
-# ======================================
-# Environment Variables
-# ======================================
-.env
-.env.*
-!.env.example
+# Debug files
+*.dSYM/
+*.idb
+*.pdb
 
-# ======================================
-# IDE
-# ======================================
-.vscode/
-.idea/
+### C++
+# Object files
+*.o
+*.obj
 
-# ======================================
-# Claude
-# ======================================
-.claude/
+# Precompiled Headers
+*.gch
+*.pch
 
-# ======================================
+# Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Debug files
+*.dSYM/
+*.idb
+*.pdb
+
+### Node
+# Dependencies
+node_modules/
+
 # Logs
-# ======================================
 *.log
 
-# ======================================
-# OS Files
-# ======================================
-.DS_Store
+# Runtime data
+*.pid
+*.pid.lock
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output
+
+# Build output
+dist/
+build/Release
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Framework build output and caches
+.cache
+.parcel-cache
+.next
+out/
+.nuxt
+
+# dotenv environment variable files
+.env
+.env.local
+.env.*.local
+
+# npm cache directory
+.npm
+*.tgz
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/install-state.gz
+.pnp.*
+
+### Objective-C
+# Xcode user settings
+xcuserdata/
+
+# Xcode build data
+DerivedData/
+
+# Obj-C/Swift specific
+*.hmap
+
+# App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+### Python
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# dotenv environment variable files
+.env
+
+# Virtual environments
+.venv
+env/
+venv/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.pytest_cache/
+
+# Type checkers
+.mypy_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+# .python-version
+
+### Windows
+# Windows thumbnail cache files
 Thumbs.db
 
-# ======================================
-# Cache
-# ======================================
-.cache/
-tmp/
-temp/
+# Folder config file
+[Dd]esktop.ini
 
-# ======================================
-# Database
-# ======================================
-*.sqlite
-*.sqlite3
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# ======================================
-# Misc
-# ======================================
-*.bak
-*.swp
+# Windows shortcuts
+*.lnk
+frontend/node_modules

@@ -1,0 +1,359 @@
+{
+  "url": "https://bahrandbeyond.ae/en",
+  "domain": "bahrandbeyond.ae",
+  "timestamp": "2026-06-24T13:32:16.319681",
+  "overall_score": 63,
+  "technical_score": 88,
+  "content_score": 58,
+  "trust_score": 60,
+  "structured_data_score": 0,
+  "robots_analysis": {
+    "accessible": true,
+    "crawlers": [
+      {
+        "name": "GPTBot",
+        "owner": "OpenAI",
+        "desc": "OpenAI training & ChatGPT Search",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "Google-Extended",
+        "owner": "Google",
+        "desc": "Google AI Overviews (Gemini)",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "PerplexityBot",
+        "owner": "Perplexity",
+        "desc": "Perplexity AI search engine",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "ClaudeBot",
+        "owner": "Anthropic",
+        "desc": "Claude AI by Anthropic",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "anthropic-ai",
+        "owner": "Anthropic",
+        "desc": "Anthropic data collection",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "CCBot",
+        "owner": "CommonCrawl",
+        "desc": "Common Crawl (training data source)",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "Googlebot",
+        "owner": "Google",
+        "desc": "Google Search Indexer",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "Bytespider",
+        "owner": "ByteDance",
+        "desc": "ByteDance / TikTok AI crawler",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "FacebookBot",
+        "owner": "Meta",
+        "desc": "Meta AI / Llama training data",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "Applebot",
+        "owner": "Apple",
+        "desc": "Apple Intelligence crawler",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "cohere-ai",
+        "owner": "Cohere",
+        "desc": "Cohere AI training crawler",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "AI2Bot",
+        "owner": "Allen AI",
+        "desc": "Allen Institute for AI research",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      },
+      {
+        "name": "omgili",
+        "owner": "Webz.io",
+        "desc": "Webz.io AI data provider",
+        "status": "blocked",
+        "rule": "Disallow: /"
+      }
+    ],
+    "blocked_count": 13,
+    "allowed_count": 0,
+    "partial_count": 0
+  },
+  "technical_details": {
+    "score": 88,
+    "breakdown": {
+      "https": {
+        "label": "HTTPS secure connection",
+        "pass": true,
+        "pts": 12,
+        "max": 12
+      },
+      "title": {
+        "label": "Title tag present",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "meta_desc": {
+        "label": "Meta description present",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "viewport": {
+        "label": "Mobile viewport meta tag",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "canonical": {
+        "label": "Canonical URL tag",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "og_tags": {
+        "label": "Open Graph tags",
+        "pass": true,
+        "pts": 7,
+        "max": 7
+      },
+      "twitter": {
+        "label": "Twitter / X Card meta",
+        "pass": true,
+        "pts": 5,
+        "max": 5
+      },
+      "sitemap": {
+        "label": "XML Sitemap accessible",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "robots_ok": {
+        "label": "robots.txt accessible",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "ttfb": {
+        "label": "TTFB < 600ms (actual 292ms)",
+        "pass": true,
+        "pts": 12,
+        "max": 12
+      },
+      "load_time": {
+        "label": "Page loads < 2s (actual 3562ms)",
+        "pass": false,
+        "pts": 4,
+        "max": 8
+      },
+      "internal_links": {
+        "label": "Internal links >= 5 (found 1)",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      }
+    },
+    "title": "Bahr & Beyond",
+    "load_ms": 3562,
+    "ttfb": 292,
+    "is_https": true,
+    "canonical": "https://www.bahrandbeyond.ae/en",
+    "og_title": "Bahr & Beyond",
+    "sitemap": true,
+    "internal_links": 1,
+    "images": 42
+  },
+  "content_details": {
+    "score": 58,
+    "breakdown": {
+      "h1": {
+        "label": "Single H1 tag (answer-first)",
+        "pass": true,
+        "pts": 14,
+        "max": 14
+      },
+      "h2": {
+        "label": "2+ H2 subheadings (content structure)",
+        "pass": true,
+        "pts": 10,
+        "max": 10
+      },
+      "h3": {
+        "label": "H3 subheadings present",
+        "pass": true,
+        "pts": 6,
+        "max": 6
+      },
+      "hierarchy": {
+        "label": "Correct heading hierarchy H1->H2->H3",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "word_count": {
+        "label": "Word count >= 1000 (found 148)",
+        "pass": false,
+        "pts": 0,
+        "max": 16
+      },
+      "faq": {
+        "label": "FAQ / Q&A pattern detected",
+        "pass": true,
+        "pts": 10,
+        "max": 10
+      },
+      "author": {
+        "label": "Author byline visible",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "date": {
+        "label": "Publication date visible",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "breadcrumb": {
+        "label": "Breadcrumb navigation",
+        "pass": false,
+        "pts": 0,
+        "max": 6
+      },
+      "ext_links": {
+        "label": "External authoritative links >= 2",
+        "pass": true,
+        "pts": 10,
+        "max": 10
+      }
+    },
+    "word_count": 148,
+    "h1s": [
+      "Dive\u00a0IntoThe\u00a0Blue"
+    ],
+    "h2s": [
+      "OUR EXPERIENCES",
+      "WHATWEOFFER",
+      "OurProtocols",
+      "MeetOurTeam",
+      "Whoit\u2019sfor?",
+      "Have\u00a0a\u00a0Question?",
+      "Dive\u00a0right\u00a0in",
+      "Still\u00a0have\u00a0questions?"
+    ],
+    "has_faq": true,
+    "has_author": false,
+    "has_date": false,
+    "external_links": 15
+  },
+  "trust_details": {
+    "score": 60,
+    "breakdown": {
+      "https": {
+        "label": "HTTPS with valid TLS",
+        "pass": true,
+        "pts": 25,
+        "max": 25
+      },
+      "author": {
+        "label": "Author byline / E-E-A-T signal",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "date": {
+        "label": "Content freshness signal (date)",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "ext_refs": {
+        "label": "Links to authoritative sources",
+        "pass": true,
+        "pts": 20,
+        "max": 20
+      },
+      "og_img": {
+        "label": "Social sharing image (og:image)",
+        "pass": true,
+        "pts": 15,
+        "max": 15
+      }
+    }
+  },
+  "structured_data_details": {
+    "score": 0,
+    "breakdown": {
+      "json_ld": {
+        "label": "JSON-LD present (0 blocks)",
+        "pass": false,
+        "pts": 0,
+        "max": 30
+      },
+      "article": {
+        "label": "Article / WebPage schema",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "faq_schema": {
+        "label": "FAQPage schema",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      },
+      "org": {
+        "label": "Organization / Website schema",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      },
+      "breadcrumb": {
+        "label": "BreadcrumbList schema",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "auth_date": {
+        "label": "Author + date in structured data",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      }
+    },
+    "json_ld_count": 0,
+    "schema_types": []
+  },
+  "competitors": [],
+  "llm_analysis": null,
+  "audit_id": "55171ddb-327"
+}

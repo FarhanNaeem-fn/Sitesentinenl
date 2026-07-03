@@ -1,0 +1,362 @@
+{
+  "url": "https://www.bop.ps/en/personal",
+  "domain": "www.bop.ps",
+  "timestamp": "2026-06-24T12:59:44.966255",
+  "overall_score": 34,
+  "technical_score": 55,
+  "content_score": 20,
+  "trust_score": 45,
+  "structured_data_score": 0,
+  "robots_analysis": {
+    "accessible": false,
+    "crawlers": [
+      {
+        "name": "GPTBot",
+        "owner": "OpenAI",
+        "desc": "OpenAI training & ChatGPT Search",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "Google-Extended",
+        "owner": "Google",
+        "desc": "Google AI Overviews (Gemini)",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "PerplexityBot",
+        "owner": "Perplexity",
+        "desc": "Perplexity AI search engine",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "ClaudeBot",
+        "owner": "Anthropic",
+        "desc": "Claude AI by Anthropic",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "anthropic-ai",
+        "owner": "Anthropic",
+        "desc": "Anthropic data collection",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "CCBot",
+        "owner": "CommonCrawl",
+        "desc": "Common Crawl (training data source)",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "Googlebot",
+        "owner": "Google",
+        "desc": "Google Search Indexer",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "Bytespider",
+        "owner": "ByteDance",
+        "desc": "ByteDance / TikTok AI crawler",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "FacebookBot",
+        "owner": "Meta",
+        "desc": "Meta AI / Llama training data",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "Applebot",
+        "owner": "Apple",
+        "desc": "Apple Intelligence crawler",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "cohere-ai",
+        "owner": "Cohere",
+        "desc": "Cohere AI training crawler",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "AI2Bot",
+        "owner": "Allen AI",
+        "desc": "Allen Institute for AI research",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "omgili",
+        "owner": "Webz.io",
+        "desc": "Webz.io AI data provider",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      }
+    ],
+    "blocked_count": 0,
+    "allowed_count": 13,
+    "partial_count": 0
+  },
+  "technical_details": {
+    "score": 55,
+    "breakdown": {
+      "https": {
+        "label": "HTTPS secure connection",
+        "pass": true,
+        "pts": 12,
+        "max": 12
+      },
+      "title": {
+        "label": "Title tag present",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "meta_desc": {
+        "label": "Meta description present",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "viewport": {
+        "label": "Mobile viewport meta tag",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "canonical": {
+        "label": "Canonical URL tag",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "og_tags": {
+        "label": "Open Graph tags",
+        "pass": false,
+        "pts": 0,
+        "max": 7
+      },
+      "twitter": {
+        "label": "Twitter / X Card meta",
+        "pass": true,
+        "pts": 5,
+        "max": 5
+      },
+      "sitemap": {
+        "label": "XML Sitemap accessible",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "robots_ok": {
+        "label": "robots.txt accessible",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "ttfb": {
+        "label": "TTFB < 600ms (actual 683ms)",
+        "pass": false,
+        "pts": 6,
+        "max": 12
+      },
+      "load_time": {
+        "label": "Page loads < 2s (actual 5133ms)",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "internal_links": {
+        "label": "Internal links >= 5 (found 45)",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      }
+    },
+    "title": "Bank of Palestine | Retail Banking",
+    "load_ms": 5133,
+    "ttfb": 683,
+    "is_https": true,
+    "canonical": "",
+    "og_title": "",
+    "sitemap": false,
+    "internal_links": 45,
+    "images": 19
+  },
+  "content_details": {
+    "score": 20,
+    "breakdown": {
+      "h1": {
+        "label": "Single H1 tag (answer-first)",
+        "pass": false,
+        "pts": 0,
+        "max": 14
+      },
+      "h2": {
+        "label": "2+ H2 subheadings (content structure)",
+        "pass": true,
+        "pts": 10,
+        "max": 10
+      },
+      "h3": {
+        "label": "H3 subheadings present",
+        "pass": false,
+        "pts": 0,
+        "max": 6
+      },
+      "hierarchy": {
+        "label": "Correct heading hierarchy H1->H2->H3",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "word_count": {
+        "label": "Word count >= 1000 (found 172)",
+        "pass": false,
+        "pts": 0,
+        "max": 16
+      },
+      "faq": {
+        "label": "FAQ / Q&A pattern detected",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "author": {
+        "label": "Author byline visible",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "date": {
+        "label": "Publication date visible",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "breadcrumb": {
+        "label": "Breadcrumb navigation",
+        "pass": false,
+        "pts": 0,
+        "max": 6
+      },
+      "ext_links": {
+        "label": "External authoritative links >= 2",
+        "pass": true,
+        "pts": 10,
+        "max": 10
+      }
+    },
+    "word_count": 172,
+    "h1s": [],
+    "h2s": [
+      "Online Banking",
+      "Choose your own design"
+    ],
+    "has_faq": false,
+    "has_author": false,
+    "has_date": false,
+    "external_links": 12
+  },
+  "trust_details": {
+    "score": 45,
+    "breakdown": {
+      "https": {
+        "label": "HTTPS with valid TLS",
+        "pass": true,
+        "pts": 25,
+        "max": 25
+      },
+      "author": {
+        "label": "Author byline / E-E-A-T signal",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "date": {
+        "label": "Content freshness signal (date)",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "ext_refs": {
+        "label": "Links to authoritative sources",
+        "pass": true,
+        "pts": 20,
+        "max": 20
+      },
+      "og_img": {
+        "label": "Social sharing image (og:image)",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      }
+    }
+  },
+  "structured_data_details": {
+    "score": 0,
+    "breakdown": {
+      "json_ld": {
+        "label": "JSON-LD present (0 blocks)",
+        "pass": false,
+        "pts": 0,
+        "max": 30
+      },
+      "article": {
+        "label": "Article / WebPage schema",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "faq_schema": {
+        "label": "FAQPage schema",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      },
+      "org": {
+        "label": "Organization / Website schema",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      },
+      "breadcrumb": {
+        "label": "BreadcrumbList schema",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "auth_date": {
+        "label": "Author + date in structured data",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      }
+    },
+    "json_ld_count": 0,
+    "schema_types": []
+  },
+  "competitors": [
+    {
+      "url": "https://www.rakbank.ae/en",
+      "overall_score": 54,
+      "technical_score": 87,
+      "content_score": 44,
+      "trust_score": 45,
+      "sd_score": 0,
+      "title": "RAKBANK | Your Best Banking Partner in UAE for Personal, Business, Wholesale and Islamic Banking",
+      "word_count": 954
+    }
+  ],
+  "llm_analysis": null,
+  "audit_id": "0ada36ce-a83"
+}

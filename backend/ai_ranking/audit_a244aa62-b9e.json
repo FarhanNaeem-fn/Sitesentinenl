@@ -1,0 +1,350 @@
+{
+  "url": "https://www.daraz.pk",
+  "domain": "www.daraz.pk",
+  "timestamp": "2026-06-24T13:01:16.537815",
+  "overall_score": 50,
+  "technical_score": 72,
+  "content_score": 46,
+  "trust_score": 45,
+  "structured_data_score": 0,
+  "robots_analysis": {
+    "accessible": true,
+    "crawlers": [
+      {
+        "name": "GPTBot",
+        "owner": "OpenAI",
+        "desc": "OpenAI training & ChatGPT Search",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "Google-Extended",
+        "owner": "Google",
+        "desc": "Google AI Overviews (Gemini)",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "PerplexityBot",
+        "owner": "Perplexity",
+        "desc": "Perplexity AI search engine",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "ClaudeBot",
+        "owner": "Anthropic",
+        "desc": "Claude AI by Anthropic",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "anthropic-ai",
+        "owner": "Anthropic",
+        "desc": "Anthropic data collection",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "CCBot",
+        "owner": "CommonCrawl",
+        "desc": "Common Crawl (training data source)",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "Googlebot",
+        "owner": "Google",
+        "desc": "Google Search Indexer",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "Bytespider",
+        "owner": "ByteDance",
+        "desc": "ByteDance / TikTok AI crawler",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "FacebookBot",
+        "owner": "Meta",
+        "desc": "Meta AI / Llama training data",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "Applebot",
+        "owner": "Apple",
+        "desc": "Apple Intelligence crawler",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "cohere-ai",
+        "owner": "Cohere",
+        "desc": "Cohere AI training crawler",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "AI2Bot",
+        "owner": "Allen AI",
+        "desc": "Allen Institute for AI research",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      },
+      {
+        "name": "omgili",
+        "owner": "Webz.io",
+        "desc": "Webz.io AI data provider",
+        "status": "partial",
+        "rule": "Disallow: /checkout/, /customer/"
+      }
+    ],
+    "blocked_count": 0,
+    "allowed_count": 0,
+    "partial_count": 13
+  },
+  "technical_details": {
+    "score": 72,
+    "breakdown": {
+      "https": {
+        "label": "HTTPS secure connection",
+        "pass": true,
+        "pts": 12,
+        "max": 12
+      },
+      "title": {
+        "label": "Title tag present",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "meta_desc": {
+        "label": "Meta description present",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "viewport": {
+        "label": "Mobile viewport meta tag",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "canonical": {
+        "label": "Canonical URL tag",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "og_tags": {
+        "label": "Open Graph tags",
+        "pass": false,
+        "pts": 0,
+        "max": 7
+      },
+      "twitter": {
+        "label": "Twitter / X Card meta",
+        "pass": false,
+        "pts": 0,
+        "max": 5
+      },
+      "sitemap": {
+        "label": "XML Sitemap accessible",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "robots_ok": {
+        "label": "robots.txt accessible",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "ttfb": {
+        "label": "TTFB < 600ms (actual 297ms)",
+        "pass": true,
+        "pts": 12,
+        "max": 12
+      },
+      "load_time": {
+        "label": "Page loads < 2s (actual 9715ms)",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "internal_links": {
+        "label": "Internal links >= 5 (found 271)",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      }
+    },
+    "title": "Online Shopping in Pakistan: Fashion, Electronics & Groceries - Daraz.pk",
+    "load_ms": 9715,
+    "ttfb": 297,
+    "is_https": true,
+    "canonical": "https://www.daraz.pk/",
+    "og_title": "",
+    "sitemap": true,
+    "internal_links": 271,
+    "images": 116
+  },
+  "content_details": {
+    "score": 46,
+    "breakdown": {
+      "h1": {
+        "label": "Single H1 tag (answer-first)",
+        "pass": true,
+        "pts": 14,
+        "max": 14
+      },
+      "h2": {
+        "label": "2+ H2 subheadings (content structure)",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "h3": {
+        "label": "H3 subheadings present",
+        "pass": true,
+        "pts": 6,
+        "max": 6
+      },
+      "hierarchy": {
+        "label": "Correct heading hierarchy H1->H2->H3",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "word_count": {
+        "label": "Word count >= 1000 (found 2216)",
+        "pass": true,
+        "pts": 16,
+        "max": 16
+      },
+      "faq": {
+        "label": "FAQ / Q&A pattern detected",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "author": {
+        "label": "Author byline visible",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "date": {
+        "label": "Publication date visible",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "breadcrumb": {
+        "label": "Breadcrumb navigation",
+        "pass": false,
+        "pts": 0,
+        "max": 6
+      },
+      "ext_links": {
+        "label": "External authoritative links >= 2",
+        "pass": true,
+        "pts": 10,
+        "max": 10
+      }
+    },
+    "word_count": 2216,
+    "h1s": [
+      "How Daraz Transformed Online Shopping in Pakistan"
+    ],
+    "h2s": [],
+    "has_faq": false,
+    "has_author": false,
+    "has_date": false,
+    "external_links": 60
+  },
+  "trust_details": {
+    "score": 45,
+    "breakdown": {
+      "https": {
+        "label": "HTTPS with valid TLS",
+        "pass": true,
+        "pts": 25,
+        "max": 25
+      },
+      "author": {
+        "label": "Author byline / E-E-A-T signal",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "date": {
+        "label": "Content freshness signal (date)",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "ext_refs": {
+        "label": "Links to authoritative sources",
+        "pass": true,
+        "pts": 20,
+        "max": 20
+      },
+      "og_img": {
+        "label": "Social sharing image (og:image)",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      }
+    }
+  },
+  "structured_data_details": {
+    "score": 0,
+    "breakdown": {
+      "json_ld": {
+        "label": "JSON-LD present (0 blocks)",
+        "pass": false,
+        "pts": 0,
+        "max": 30
+      },
+      "article": {
+        "label": "Article / WebPage schema",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "faq_schema": {
+        "label": "FAQPage schema",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      },
+      "org": {
+        "label": "Organization / Website schema",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      },
+      "breadcrumb": {
+        "label": "BreadcrumbList schema",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "auth_date": {
+        "label": "Author + date in structured data",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      }
+    },
+    "json_ld_count": 0,
+    "schema_types": []
+  },
+  "competitors": [],
+  "llm_analysis": null,
+  "audit_id": "a244aa62-b9e"
+}

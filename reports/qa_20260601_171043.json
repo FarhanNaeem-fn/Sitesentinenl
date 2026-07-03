@@ -1,0 +1,139 @@
+{
+  "url": "https://example.com",
+  "viewport": "desktop",
+  "pages_scanned": 1,
+  "total_issues": 9,
+  "checks_passed": 16,
+  "checks_failed": 9,
+  "health_score": 64,
+  "details": {
+    "seo": {
+      "checks": {
+        "title": true,
+        "meta_desc": false,
+        "h1_count": true,
+        "canonical": false,
+        "og_title": false,
+        "viewport": true
+      },
+      "passed": 3,
+      "failed": 3
+    },
+    "accessibility": {
+      "checks": {
+        "img_alt": true,
+        "html_lang": true,
+        "form_labels": true,
+        "skip_nav": false
+      },
+      "passed": 3,
+      "failed": 1,
+      "imgs_no_alt": 0,
+      "unlabelled_inputs": 0
+    },
+    "performance": {
+      "passed": 1,
+      "failed": 0,
+      "ttfb_ms": 0,
+      "fcp_ms": 0,
+      "load_ms": 0
+    },
+    "broken_links": {
+      "broken": [],
+      "total_checked": 0,
+      "passed": 0,
+      "failed": 0
+    },
+    "security": {
+      "checks": {
+        "HSTS": false,
+        "CSP": false,
+        "X-Frame-Options": false,
+        "X-Content-Type": false,
+        "Referrer-Policy": false,
+        "HTTPS": true
+      },
+      "passed": 1,
+      "failed": 5
+    },
+    "mixed_content": {
+      "mixed": [],
+      "passed": 1,
+      "failed": 0
+    },
+    "responsive": {
+      "viewports": {
+        "Desktop(1920px)": {
+          "overflow": false,
+          "ok": true
+        },
+        "Mac(1440px)": {
+          "overflow": false,
+          "ok": true
+        },
+        "Laptop(1366px)": {
+          "overflow": false,
+          "ok": true
+        },
+        "Mobile(430px)": {
+          "overflow": false,
+          "ok": true
+        }
+      },
+      "passed": 4,
+      "failed": 0
+    },
+    "console": {
+      "passed": 1,
+      "failed": 0,
+      "error_count": 0,
+      "errors": []
+    },
+    "content": {
+      "passed": 1,
+      "failed": 0
+    },
+    "health_score": {
+      "passed": 1,
+      "failed": 0,
+      "note": "calculated below"
+    }
+  },
+  "domain_health": {
+    "domain": "example.com",
+    "checks": {
+      "ssl": {
+        "ok": true,
+        "detail": "HTTPS enabled"
+      },
+      "response_time": {
+        "ok": true,
+        "detail": "1115ms (target <2000ms)",
+        "ms": 1115
+      },
+      "robots_txt": {
+        "ok": false,
+        "detail": "Not found or error"
+      },
+      "sitemap": {
+        "ok": false,
+        "detail": "Not found"
+      },
+      "favicon": {
+        "ok": false,
+        "detail": "Missing"
+      },
+      "mobile_friendly": {
+        "ok": true,
+        "detail": "width=device-width, initial-scale=1"
+      },
+      "page_size": {
+        "ok": true,
+        "detail": "0KB (target <3000KB)",
+        "kb": 0
+      }
+    },
+    "score": 57
+  },
+  "timestamp": "2026-06-01T17:10:23.500551"
+}

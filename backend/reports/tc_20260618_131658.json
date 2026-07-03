@@ -1,0 +1,624 @@
+{
+  "url": "https://orbit.0degrees.build/time/leave",
+  "total": 33,
+  "passed": 32,
+  "failed": 1,
+  "errors": 0,
+  "score": 97,
+  "results": [
+    {
+      "id": "TC-01",
+      "name": "Test Case 1",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Leave request created with status 'Pending'; balance unchanged until approval; confirmation shown",
+      "severity": "Medium",
+      "actual": "HTTP 200; 1 form(s); 2 input(s)",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "1 form(s)",
+        "2 input(s)",
+        "1 submit button(s)"
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-01_1781770573.jpg",
+      "error": "",
+      "duration_ms": 2754
+    },
+    {
+      "id": "TC--02",
+      "name": "Test Case 2",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "0.5 days deducted on approval; half-day reflected in calendar view",
+      "severity": "Medium",
+      "actual": "HTTP 200; 1 form(s); 2 input(s)",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "1 form(s)",
+        "2 input(s)",
+        "1 submit button(s)"
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC--02_1781770574.jpg",
+      "error": "",
+      "duration_ms": 1440
+    },
+    {
+      "id": "TC-03",
+      "name": "Test Case 3",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Widget shows correct available balance (total_allowance \u2013 used_allowance) in real time",
+      "severity": "Medium",
+      "actual": "HTTP 200; 1 form(s); 2 input(s)",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "1 form(s)",
+        "2 input(s)",
+        "1 submit button(s)"
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-03_1781770575.jpg",
+      "error": "",
+      "duration_ms": 1439
+    },
+    {
+      "id": "TC-04",
+      "name": "Test Case 4",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "System calculates 6 net working days (excludes Sat & Sun)",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-04_1781770577.jpg",
+      "error": "",
+      "duration_ms": 1427
+    },
+    {
+      "id": "TC-05",
+      "name": "Test Case 5",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Public holiday excluded; net days = total calendar days \u2013 weekends \u2013 public holidays",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-05_1781770578.jpg",
+      "error": "",
+      "duration_ms": 1417
+    },
+    {
+      "id": "TC-06",
+      "name": "Test Case 6",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Warning banner appears: 'Soft Warning: Requested days (5) exceed your available balance (3). This request is subject to special Administrator approval.'",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-06_1781770580.jpg",
+      "error": "",
+      "duration_ms": 1404
+    },
+    {
+      "id": "TC-07",
+      "name": "Test Case 7",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Leave request submitted successfully with status 'Pending'; no hard block",
+      "severity": "Medium",
+      "actual": "HTTP 200; 1 form(s); 2 input(s)",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "1 form(s)",
+        "2 input(s)",
+        "1 submit button(s)"
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-07_1781770581.jpg",
+      "error": "",
+      "duration_ms": 1427
+    },
+    {
+      "id": "TC-08",
+      "name": "Test Case 8",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "All configured leave types listed; no duplicates",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-08_1781770583.jpg",
+      "error": "",
+      "duration_ms": 1366
+    },
+    {
+      "id": "TC-09",
+      "name": "Test Case 9",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Validation error: 'Please select a leave type'; form not submitted",
+      "severity": "Medium",
+      "actual": "HTTP 200; 1 form(s); 2 input(s)",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "1 form(s)",
+        "2 input(s)",
+        "1 submit button(s)"
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-09_1781770584.jpg",
+      "error": "",
+      "duration_ms": 1400
+    },
+    {
+      "id": "TC-10",
+      "name": "Test Case 10",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Validation error: 'End date must be on or after start date'",
+      "severity": "Medium",
+      "actual": "HTTP 200; 1 form(s); 2 input(s)",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "1 form(s)",
+        "2 input(s)",
+        "1 submit button(s)"
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-10_1781770585.jpg",
+      "error": "",
+      "duration_ms": 1415
+    },
+    {
+      "id": "TC-11",
+      "name": "Test Case 11",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Validation error on reason field; form not submitted",
+      "severity": "Medium",
+      "actual": "HTTP 200; 1 form(s); 2 input(s)",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "1 form(s)",
+        "2 input(s)",
+        "1 submit button(s)"
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-11_1781770587.jpg",
+      "error": "",
+      "duration_ms": 1445
+    },
+    {
+      "id": "TC-12",
+      "name": "Test Case 12",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Net working days = 0; system shows error or prevents submission with 0 working days",
+      "severity": "Medium",
+      "actual": "HTTP 200; 1 form(s); 2 input(s)",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "1 form(s)",
+        "2 input(s)",
+        "1 submit button(s)"
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-12_1781770588.jpg",
+      "error": "",
+      "duration_ms": 1422
+    },
+    {
+      "id": "TC-13",
+      "name": "Test Case 13",
+      "type": "form",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "System allows no policy will apply",
+      "severity": "Medium",
+      "actual": "HTTP 200; 1 form(s); 2 input(s)",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "1 form(s)",
+        "2 input(s)",
+        "1 submit button(s)"
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-13_1781770590.jpg",
+      "error": "",
+      "duration_ms": 1410
+    },
+    {
+      "id": "TC-14",
+      "name": "Test Case 14",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Status \u2192 'Approved'; used_allowance incremented by net days; audit record created in leave_balance_audit",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-14_1781770591.jpg",
+      "error": "",
+      "duration_ms": 1414
+    },
+    {
+      "id": "TC-15",
+      "name": "Test Case 15",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "used_allowance = 3; available balance = total_allowance \u2013 4 Should be validation occurred or if approved should be deduct from qouta",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-15_1781770592.jpg",
+      "error": "",
+      "duration_ms": 1404
+    },
+    {
+      "id": "TC-16",
+      "name": "Test Case 16",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "New audit row with type 'LEAVE_DEDUCTION', correct leave_id, date, amount",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-16_1781770594.jpg",
+      "error": "",
+      "duration_ms": 1423
+    },
+    {
+      "id": "TC-17",
+      "name": "Test Case 17",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "RPC notify_leave_event called with p_leave_id and p_event_type='approved'",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-17_1781770595.jpg",
+      "error": "",
+      "duration_ms": 1416
+    },
+    {
+      "id": "TC-18",
+      "name": "Test Case 18",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Approved leave days appear in timesheet; correct leave type and dates",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-18_1781770597.jpg",
+      "error": "",
+      "duration_ms": 1385
+    },
+    {
+      "id": "TC-19",
+      "name": "Test Case 19",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Request approved; used_allowance may exceed total_allowance; audit records adjustment",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-19_1781770598.jpg",
+      "error": "",
+      "duration_ms": 1349
+    },
+    {
+      "id": "TC-20",
+      "name": "Test Case 20",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Status \u2192 'Rejected'; rejection reason saved; notify_leave_event called with p_event_type='rejected'",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-20_1781770599.jpg",
+      "error": "",
+      "duration_ms": 1400
+    },
+    {
+      "id": "TC-21",
+      "name": "Test Case 21",
+      "type": "content",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "System blocks rejection; error message: 'Rejection reason is required'",
+      "severity": "Medium",
+      "actual": "HTTP 200; \u26a0 text not found: \"System blocks rejection; error message: \"",
+      "status": "fail",
+      "checks_pass": [
+        "HTTP 200"
+      ],
+      "checks_fail": [
+        "text not found: \"System blocks rejection; error message: \""
+      ],
+      "evidence": "/reports/tc_ev_TC-21_1781770601.jpg",
+      "error": "",
+      "duration_ms": 1372
+    },
+    {
+      "id": "TC-22",
+      "name": "Test Case 22",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "used_allowance unchanged; balance same as before request",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-22_1781770602.jpg",
+      "error": "",
+      "duration_ms": 1400
+    },
+    {
+      "id": "TC-23",
+      "name": "Test Case 23",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Should be allow to change status after approved",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-23_1781770604.jpg",
+      "error": "",
+      "duration_ms": 1423
+    },
+    {
+      "id": "TC-24",
+      "name": "Test Case 24",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Should be reverted to quota",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-24_1781770605.jpg",
+      "error": "",
+      "duration_ms": 1375
+    },
+    {
+      "id": "TC-25",
+      "name": "Test Case 25",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Status \u2192 'Cancelled'",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-25_1781770606.jpg",
+      "error": "",
+      "duration_ms": 1393
+    },
+    {
+      "id": "TC-26",
+      "name": "Test Case 26",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "All team leave requests visible; color-coded by status",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-26_1781770608.jpg",
+      "error": "",
+      "duration_ms": 1381
+    },
+    {
+      "id": "TC-27",
+      "name": "Test Case 27",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Only approved leaves shown; pending and rejected hidden",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-27_1781770609.jpg",
+      "error": "",
+      "duration_ms": 1393
+    },
+    {
+      "id": "TC-28",
+      "name": "Test Case 28",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Should not allow to add leave request",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-28_1781770611.jpg",
+      "error": "",
+      "duration_ms": 1398
+    },
+    {
+      "id": "TC-29",
+      "name": "Test Case 29",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Employee's leave calculations use Pakistan holiday calendar",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-29_1781770612.jpg",
+      "error": "",
+      "duration_ms": 1392
+    },
+    {
+      "id": "TC-30",
+      "name": "Test Case 30",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Net days differ if region-specific holiday falls in range for one employee but not the other",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-30_1781770613.jpg",
+      "error": "",
+      "duration_ms": 1417
+    },
+    {
+      "id": "TC-31",
+      "name": "Test Case 31",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "UI should be proper",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-31_1781770615.jpg",
+      "error": "",
+      "duration_ms": 1412
+    },
+    {
+      "id": "TC-32",
+      "name": "Test Case 32",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Should be reduce from quota",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-32_1781770616.jpg",
+      "error": "",
+      "duration_ms": 1385
+    },
+    {
+      "id": "TC-33",
+      "name": "Test Case 33",
+      "type": "navigation",
+      "target_url": "https://orbit.0degrees.build/time/leave",
+      "expected": "Should be reduce from quota",
+      "severity": "Medium",
+      "actual": "HTTP 200; title \"Orbit Business OS\"",
+      "status": "pass",
+      "checks_pass": [
+        "HTTP 200",
+        "title \"Orbit Business OS\""
+      ],
+      "checks_fail": [],
+      "evidence": "/reports/tc_ev_TC-33_1781770618.jpg",
+      "error": "",
+      "duration_ms": 1417
+    }
+  ],
+  "timestamp": "2026-06-18T13:16:58.184162"
+}

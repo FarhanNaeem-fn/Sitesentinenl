@@ -1,0 +1,634 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SiteSentinel QA Report — https://www.pakwheels.com/</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --bg: #0D1117; --card: #161B22; --border: #30363D;
+                --text: #C9D1D9; --white: #FFFFFF; --dim: #8B949E;
+                --pass: #238636; --fail: #DA3633; --warn: #D29922;
+                --accent: #3B82F6;
+            }
+            body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 40px; }
+            .container { max-width: 1200px; margin: 0 auto; }
+            .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+            .title h1 { font-weight: 800; color: var(--white); margin: 0; font-size: 28px; }
+            .title p { color: var(--dim); margin: 5px 0 0; font-family: 'JetBrains Mono'; font-size: 14px; }
+            .score-card { background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: 16px; display: flex; align-items: center; gap: 30px; margin-bottom: 40px; }
+            .ring { width: 100px; height: 100px; border-radius: 50%; border: 8px solid var(--border); display: flex; align-items: center; justify-content: center; position: relative; }
+            .ring.score { border-color: var(--pass); }
+            .ring span { font-size: 32px; font-weight: 800; color: var(--white); display: block; line-height: 1; }
+            .meta { flex: 1; }
+            .meta h2 { margin: 0; color: var(--white); font-size: 24px; }
+            .meta p { margin: 5px 0 0; color: var(--dim); }
+            table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+            th { text-align: left; background: #21262D; padding: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--dim); }
+            td { padding: 15px; border-top: 1px solid var(--border); font-size: 14px; }
+            .pass { border-left: 4px solid var(--pass); }
+            .fail { border-left: 4px solid var(--fail); }
+            .badge { padding: 4px 8px; border-radius: 4px; font-size: 10px; font-weight: 800; font-family: 'JetBrains Mono'; text-transform: uppercase; }
+            .badge.critical { background: rgba(218,54,51,0.1); color: #FF7B72; border: 1px solid rgba(218,54,51,0.2); }
+            .badge.high { background: rgba(210,153,34,0.1); color: #D29922; border: 1px solid rgba(210,153,34,0.2); }
+            .badge.medium { background: rgba(59,130,246,0.1); color: #58A6FF; border: 1px solid rgba(59,130,246,0.2); }
+            .badge.low { background: rgba(139,148,158,0.1); color: var(--dim); border: 1px solid var(--border); }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="title">
+                    <h1>SiteSentinel Matrix QA Report</h1>
+                    <p>Target: https://www.pakwheels.com/ • Generated: 2026-06-09T17:33:27.916562</p>
+                </div>
+            </div>
+            
+            <div class="score-card">
+                <div class="ring score"><span>54</span></div>
+                <div class="meta">
+                    <h2>Grade: Poor</h2>
+                    <p>Site health based on 51 matrix analysis points.</p>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Severity</th>
+                        <th>Analysis Point</th>
+                        <th>Result</th>
+                        <th>Findings & Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>SEO</strong><br/><small>Title tag present</small></td>
+            <td>PASS</td>
+            <td>
+                Buy & Sell Cars, Bikes & Autoparts - Find Car Prices, News & Reviews | PakWheels
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>Meta description present</small></td>
+            <td>PASS</td>
+            <td>
+                Pakistan's #1 automobile website. Buy & Sell Cars, Bikes, Auto parts & Accessories in Pakistan. Post Ad for free and reach thousands of buyers. Discuss & read everything related to automobiles. Get your Car/Gari inspected and calculate prices with Pakista
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>Exactly one H1</small></td>
+            <td>PASS</td>
+            <td>
+                Found 1 H1(s)
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>SEO</strong><br/><small>Viewport meta present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>All images have alt</small></td>
+            <td>FAIL</td>
+            <td>
+                65/410 missing alt
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>HTML lang attribute set</small></td>
+            <td>PASS</td>
+            <td>
+                lang='en'
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>All images have alt text</small></td>
+            <td>FAIL</td>
+            <td>
+                65 missing alt
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>All form fields labelled</small></td>
+            <td>FAIL</td>
+            <td>
+                48 unlabelled
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Accessibility</strong><br/><small>Skip navigation link</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>TTFB < 600ms</small></td>
+            <td>FAIL</td>
+            <td>
+                717ms
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>FCP < 1800ms</small></td>
+            <td>PASS</td>
+            <td>
+                1244ms
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>Full page load < 4s</small></td>
+            <td>PASS</td>
+            <td>
+                2227ms
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Performance</strong><br/><small>Total page weight < 3MB</small></td>
+            <td>PASS</td>
+            <td>
+                0KB
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Security</strong><br/><small>HTTPS enforced</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Security</strong><br/><small>HSTS header present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Security</strong><br/><small>X-Content-Type-Options</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Security</strong><br/><small>Content-Security-Policy</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge pass">PASS</span></td>
+            <td><strong>Links</strong><br/><small>28 links verified</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Console</strong><br/><small>CORS blocked: https://wsa3.pakwheels.com/assets/Lato-Regular-ec4ec131</small></td>
+            <td>FAIL</td>
+            <td>
+                CORS error for 'https://wsa3.pakwheels.com/assets/Lato-Regular-ec4ec131252fa8df45289f92475e369beb1ccbbe3ff995069561599684b0019b.woff2'.
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Console</strong><br/><small>[unknown] (unknown URL)</small></td>
+            <td>FAIL</td>
+            <td>
+                Network request to '(unknown URL)' failed to load.
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Console</strong><br/><small>CORS blocked: https://wsa3.pakwheels.com/assets/Lato-Regular-52e808ac</small></td>
+            <td>FAIL</td>
+            <td>
+                CORS error for 'https://wsa3.pakwheels.com/assets/Lato-Regular-52e808ac766a6b2fe7cab2ad7fc159746e21413d4686e7b92f185110ff5c866e.woff'.
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Console</strong><br/><small>[unknown] (unknown URL)</small></td>
+            <td>FAIL</td>
+            <td>
+                Network request to '(unknown URL)' failed to load.
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Console</strong><br/><small>[unknown] (unknown URL)</small></td>
+            <td>FAIL</td>
+            <td>
+                Network request to '(unknown URL)' failed to load.
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Console</strong><br/><small>Provider's accounts list is empty.</small></td>
+            <td>FAIL</td>
+            <td>
+                Provider's accounts list is empty.
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Console</strong><br/><small>[401] (unknown URL)</small></td>
+            <td>FAIL</td>
+            <td>
+                Resource request to '(unknown URL)' returned HTTP 401. The resource does not exist or access is forbidden.
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Console</strong><br/><small>[OptinMonster] This account is not currently active. It is either expired, pause</small></td>
+            <td>FAIL</td>
+            <td>
+                [OptinMonster] This account is not currently active. It is either expired, paused, archived, cancelled or temporarily suspended.
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Console</strong><br/><small>[GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token.</small></td>
+            <td>FAIL</td>
+            <td>
+                [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token.
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Console</strong><br/><small>CORS blocked: https://wsa3.pakwheels.com/assets/Lato-Regular-ec4ec131</small></td>
+            <td>FAIL</td>
+            <td>
+                CORS error for 'https://wsa3.pakwheels.com/assets/Lato-Regular-ec4ec131252fa8df45289f92475e369beb1ccbbe3ff995069561599684b0019b.woff2'.
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on Desktop (1920×1080) — Chrome</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on MacBook Pro (1440×900) — Safari</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on Generic Laptop (1366×768)</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on iPhone 14 Pro (390×844)</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Keyboard</strong><br/><small>Focusable elements present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Keyboard</strong><br/><small>Skip link present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge pass">PASS</span></td>
+            <td><strong>Security</strong><br/><small>No mixed content</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge low">LOW</span></td>
+            <td><strong>Content</strong><br/><small>Word count > 300</small></td>
+            <td>PASS</td>
+            <td>
+                2270 words
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Content</strong><br/><small>No placeholder text</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Forms</strong><br/><small>Form 1 CSRF</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Forms</strong><br/><small>Form 2 CSRF</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Forms</strong><br/><small>Form 3 CSRF</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Forms</strong><br/><small>Form 4 CSRF</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Forms</strong><br/><small>Form 5 CSRF</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Forms</strong><br/><small>Form 6 CSRF</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Forms</strong><br/><small>Form 7 CSRF</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Typography</strong><br/><small>Base font size ≥ 14px</small></td>
+            <td>PASS</td>
+            <td>
+                14px
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>HTML Quality</strong><br/><small>DOCTYPE declared</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>HTML Quality</strong><br/><small>Charset UTF-8</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>HTML Quality</strong><br/><small>Favicon present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Images</strong><br/><small>All images have alt</small></td>
+            <td>FAIL</td>
+            <td>
+                65 missing
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Navigation</strong><br/><small>Nav landmark present</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Navigation</strong><br/><small>Footer landmark present</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+            </td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html>
+    

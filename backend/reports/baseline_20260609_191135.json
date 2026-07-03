@@ -1,0 +1,265 @@
+{
+  "url": "https://www.adgm.com",
+  "modes_run": [
+    "normal",
+    "ai"
+  ],
+  "normal_score": 63,
+  "ai_score": 79,
+  "combined_score": 71,
+  "normal_results": [
+    {
+      "check": "First Impressions",
+      "criterion": "Does the page look professional and trustworthy?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Navigation Clarity",
+      "criterion": "Can users find what they need within 3 clicks?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Content Readability",
+      "criterion": "Is text readable \u2014 font size \u2265 16px, good contrast?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "CTA Visibility",
+      "criterion": "Are call-to-action buttons prominent and descriptive?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Mobile Usability",
+      "criterion": "Touch targets \u2265 44px, no pinch-zoom needed?",
+      "status": "fail",
+      "ok": false
+    },
+    {
+      "check": "Load Speed Perception",
+      "criterion": "Does the page feel fast to a normal user?",
+      "status": "fail",
+      "ok": false
+    },
+    {
+      "check": "Error Messages",
+      "criterion": "Are error messages helpful and not cryptic?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Form Usability",
+      "criterion": "Are forms easy to complete with clear labels?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Search Functionality",
+      "criterion": "Is search present and returning relevant results?",
+      "status": "fail",
+      "ok": false
+    },
+    {
+      "check": "Accessibility Basics",
+      "criterion": "Can a keyboard-only user navigate the page?",
+      "status": "fail",
+      "ok": false
+    },
+    {
+      "check": "Visual Hierarchy",
+      "criterion": "Does the layout guide the eye naturally?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Trust Signals",
+      "criterion": "Are SSL, contact info, and social proof visible?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "404 / Error Pages",
+      "criterion": "Do error pages redirect users helpfully?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Image Quality",
+      "criterion": "Are images sharp, appropriately sized, and alt-tagged?",
+      "status": "fail",
+      "ok": false
+    },
+    {
+      "check": "Link Descriptiveness",
+      "criterion": "Do links say where they go (not 'click here')?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Content Freshness",
+      "criterion": "Does the content appear current and maintained?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Cookie Consent",
+      "criterion": "Is the cookie banner clear and easy to dismiss?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Social Media Links",
+      "criterion": "Are social links present and working?",
+      "status": "fail",
+      "ok": false
+    },
+    {
+      "check": "Back-to-Top",
+      "criterion": "Is there a back-to-top mechanism on long pages?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Footer Completeness",
+      "criterion": "Does the footer have contact, legal, and nav links?",
+      "status": "fail",
+      "ok": false
+    },
+    {
+      "check": "Breadcrumbs",
+      "criterion": "Are breadcrumbs present on deep pages?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Language / i18n",
+      "criterion": "Is the content in the expected language?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Contrast Ratio",
+      "criterion": "Do foreground/background colours pass WCAG AA?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Print Stylesheet",
+      "criterion": "Does the page print cleanly?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Offline Behaviour",
+      "criterion": "Is there a graceful offline page?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "PWA Prompt",
+      "criterion": "Is there an install-to-homescreen prompt?",
+      "status": "pass",
+      "ok": true
+    },
+    {
+      "check": "Animation Preference",
+      "criterion": "Does the site respect prefers-reduced-motion?",
+      "status": "fail",
+      "ok": false
+    },
+    {
+      "check": "Focus Indicators",
+      "criterion": "Are keyboard focus rings visible on interactive elements?",
+      "status": "fail",
+      "ok": false
+    },
+    {
+      "check": "Scroll Behaviour",
+      "criterion": "Is scroll smooth and not janky on mobile?",
+      "status": "fail",
+      "ok": false
+    },
+    {
+      "check": "Overall Experience",
+      "criterion": "Would a typical user return to this site?",
+      "status": "fail",
+      "ok": false
+    }
+  ],
+  "ai_results": [
+    {
+      "module": "Security Posture",
+      "description": "HTTPS, headers, cookie flags, XSS vectors",
+      "score": 83,
+      "detail": "HTTPS: yes",
+      "status": "pass"
+    },
+    {
+      "module": "SEO Score",
+      "description": "Title, meta, H1, canonical, OG, JSON-LD",
+      "score": 76,
+      "detail": "title:True meta:True h1:2",
+      "status": "pass"
+    },
+    {
+      "module": "Performance Budget",
+      "description": "LCP, TBT, CLS, FCP, Speed Index, TTFB",
+      "score": 71,
+      "detail": "error: Page.evaluate: SyntaxError: Unexpected t",
+      "status": "pass"
+    },
+    {
+      "module": "Content Strategy",
+      "description": "Keyword usage, content depth, duplicate content",
+      "score": 100,
+      "detail": "word count: ~976",
+      "status": "pass"
+    },
+    {
+      "module": "UX Audit",
+      "description": "Heuristic evaluation \u2014 10 Nielsen principles",
+      "score": 70,
+      "detail": "nav:True footer:False",
+      "status": "pass"
+    },
+    {
+      "module": "Technical Debt",
+      "description": "Console errors, deprecated APIs, polyfills",
+      "score": 79,
+      "detail": "console errors: evaluated",
+      "status": "pass"
+    },
+    {
+      "module": "Accessibility Score",
+      "description": "WCAG 2.1 AA pass rate",
+      "score": 65,
+      "detail": "imgs_no_alt:1 lang:en",
+      "status": "warn"
+    },
+    {
+      "module": "Analytics Readiness",
+      "description": "GA/GTM present, event tracking, conversion setup",
+      "score": 91,
+      "detail": "analytics detected: True",
+      "status": "pass"
+    },
+    {
+      "module": "API Health",
+      "description": "Endpoint response times, error rates, schema",
+      "score": 65,
+      "detail": "endpoint sampling",
+      "status": "warn"
+    },
+    {
+      "module": "Mobile Readiness",
+      "description": "Core Web Vitals on mobile, viewport, touch targets",
+      "score": 88,
+      "detail": "viewport: width=device-width, initial-scale=1.0",
+      "status": "pass"
+    }
+  ],
+  "timestamp": "2026-06-09T19:11:24.629661"
+}

@@ -1,0 +1,63 @@
+{
+  "scores": {
+    "performance": 73,
+    "accessibility": 75,
+    "best-practices": 55,
+    "seo": 68,
+    "pwa": 57
+  },
+  "cwv": {
+    "lcp": "2.1 s",
+    "fid": "18 ms",
+    "cls": "0.08",
+    "fcp": "1.6 s",
+    "si": "3.1 s",
+    "tbt": "210 ms",
+    "ttfb": "480 ms"
+  },
+  "findings": [
+    {
+      "category": "performance",
+      "id": "render-blocking-resources",
+      "title": "Eliminate render-blocking resources",
+      "score": 45,
+      "display_value": "Potential savings of 0.8 s",
+      "weight": 1
+    },
+    {
+      "category": "performance",
+      "id": "unused-css-rules",
+      "title": "Reduce unused CSS",
+      "score": 60,
+      "display_value": "Potential savings of 72 KiB",
+      "weight": 1
+    },
+    {
+      "category": "accessibility",
+      "id": "image-alt",
+      "title": "Image elements do not have [alt] attributes",
+      "score": 0,
+      "display_value": "3 elements",
+      "weight": 3
+    },
+    {
+      "category": "seo",
+      "id": "meta-description",
+      "title": "Document does not have a meta description",
+      "score": 0,
+      "display_value": "",
+      "weight": 1
+    },
+    {
+      "category": "best-practices",
+      "id": "uses-https",
+      "title": "Uses HTTPS",
+      "score": 100,
+      "display_value": "",
+      "weight": 1
+    }
+  ],
+  "simulated": true,
+  "url": "https://www.adgm.com",
+  "simulated_note": "Install PSI_API_KEY in .env for real Lighthouse data."
+}

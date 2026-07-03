@@ -1,0 +1,505 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SiteSentinel QA Report — https://www.adgm.com</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --bg: #0D1117; --card: #161B22; --border: #30363D;
+                --text: #C9D1D9; --white: #FFFFFF; --dim: #8B949E;
+                --pass: #238636; --fail: #DA3633; --warn: #D29922;
+                --accent: #3B82F6;
+            }
+            body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 40px; }
+            .container { max-width: 1200px; margin: 0 auto; }
+            .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+            .title h1 { font-weight: 800; color: var(--white); margin: 0; font-size: 28px; }
+            .title p { color: var(--dim); margin: 5px 0 0; font-family: 'JetBrains Mono'; font-size: 14px; }
+            .score-card { background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: 16px; display: flex; align-items: center; gap: 30px; margin-bottom: 40px; }
+            .ring { width: 100px; height: 100px; border-radius: 50%; border: 8px solid var(--border); display: flex; align-items: center; justify-content: center; position: relative; }
+            .ring.score { border-color: var(--pass); }
+            .ring span { font-size: 32px; font-weight: 800; color: var(--white); display: block; line-height: 1; }
+            .meta { flex: 1; }
+            .meta h2 { margin: 0; color: var(--white); font-size: 24px; }
+            .meta p { margin: 5px 0 0; color: var(--dim); }
+            table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+            th { text-align: left; background: #21262D; padding: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--dim); }
+            td { padding: 15px; border-top: 1px solid var(--border); font-size: 14px; }
+            .pass { border-left: 4px solid var(--pass); }
+            .fail { border-left: 4px solid var(--fail); }
+            .badge { padding: 4px 8px; border-radius: 4px; font-size: 10px; font-weight: 800; font-family: 'JetBrains Mono'; text-transform: uppercase; }
+            .badge.critical { background: rgba(218,54,51,0.1); color: #FF7B72; border: 1px solid rgba(218,54,51,0.2); }
+            .badge.high { background: rgba(210,153,34,0.1); color: #D29922; border: 1px solid rgba(210,153,34,0.2); }
+            .badge.medium { background: rgba(59,130,246,0.1); color: #58A6FF; border: 1px solid rgba(59,130,246,0.2); }
+            .badge.low { background: rgba(139,148,158,0.1); color: var(--dim); border: 1px solid var(--border); }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="title">
+                    <h1>SiteSentinel Matrix QA Report</h1>
+                    <p>Target: https://www.adgm.com • Generated: 2026-06-18T13:56:50.359213</p>
+                </div>
+            </div>
+            
+            <div class="score-card">
+                <div class="ring score"><span>87</span></div>
+                <div class="meta">
+                    <h2>Grade: Good</h2>
+                    <p>Site health based on 36 matrix analysis points.</p>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Severity</th>
+                        <th>Analysis Point</th>
+                        <th>Result</th>
+                        <th>Findings & Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>SEO</strong><br/><small>Title tag present</small></td>
+            <td>PASS</td>
+            <td>
+                Abu Dhabi's International Financial Centre | ADGM
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>Meta description present</small></td>
+            <td>PASS</td>
+            <td>
+                ADGM, a leading, award-winning, International Financial Centre, operates across Al Maryah Island and Al Reem Island, making it one of the largest financial districts in the world.
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>Exactly one H1</small></td>
+            <td>FAIL</td>
+            <td>
+                Found 2 H1(s)
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>SEO</strong><br/><small>Viewport meta present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>All images have alt</small></td>
+            <td>FAIL</td>
+            <td>
+                1/1 missing alt
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>HTML lang attribute set</small></td>
+            <td>PASS</td>
+            <td>
+                lang='en'
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>All images have alt text</small></td>
+            <td>PASS</td>
+            <td>
+                0 missing alt
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>All form fields labelled</small></td>
+            <td>FAIL</td>
+            <td>
+                12 unlabelled
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Accessibility</strong><br/><small>Skip navigation link</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>TTFB < 600ms</small></td>
+            <td>FAIL</td>
+            <td>
+                15102ms
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>FCP < 1800ms</small></td>
+            <td>FAIL</td>
+            <td>
+                18120ms
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>Full page load < 4s</small></td>
+            <td>FAIL</td>
+            <td>
+                20531ms
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Performance</strong><br/><small>Total page weight < 3MB</small></td>
+            <td>PASS</td>
+            <td>
+                1130KB
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Security</strong><br/><small>HTTPS enforced</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Security</strong><br/><small>HSTS header present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Security</strong><br/><small>X-Content-Type-Options</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Security</strong><br/><small>Content-Security-Policy</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge pass">PASS</span></td>
+            <td><strong>Links</strong><br/><small>28 links verified</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge pass">PASS</span></td>
+            <td><strong>Console Errors</strong><br/><small>No console errors</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on Desktop (1920×1080) — Chrome</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on MacBook Pro (1440×900) — Safari</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on Generic Laptop (1366×768)</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on iPhone 14 Pro (390×844)</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Keyboard</strong><br/><small>Focusable elements present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Keyboard</strong><br/><small>Skip link present</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge pass">PASS</span></td>
+            <td><strong>Security</strong><br/><small>No mixed content</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge low">LOW</span></td>
+            <td><strong>Content</strong><br/><small>Word count > 300</small></td>
+            <td>PASS</td>
+            <td>
+                927 words
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Content</strong><br/><small>No placeholder text</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Forms</strong><br/><small>Form 1 CSRF</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Typography</strong><br/><small>Base font size ≥ 14px</small></td>
+            <td>PASS</td>
+            <td>
+                16px
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>HTML Quality</strong><br/><small>DOCTYPE declared</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>HTML Quality</strong><br/><small>Charset UTF-8</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>HTML Quality</strong><br/><small>Favicon present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Images</strong><br/><small>All images have alt</small></td>
+            <td>PASS</td>
+            <td>
+                0/1 images missing alt text
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Navigation</strong><br/><small>Nav landmark present</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Navigation</strong><br/><small>Footer landmark present</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html>
+    

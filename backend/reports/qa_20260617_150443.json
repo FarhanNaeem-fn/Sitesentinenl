@@ -1,0 +1,1293 @@
+{
+  "url": "https://www.daraz.pk",
+  "viewport": "desktop",
+  "pages_scanned": 1,
+  "total_issues": 0,
+  "checks_passed": 0,
+  "checks_failed": 0,
+  "health_score": 85,
+  "details": {
+    "health_score": {
+      "test_cases": [
+        {
+          "ID": "DOM-SSL",
+          "Category": "Domain",
+          "Test Name": "Ssl",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "HTTPS enabled",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:43"
+        },
+        {
+          "ID": "DOM-RES",
+          "Category": "Domain",
+          "Test Name": "Response Time",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "557ms (target <2000ms)",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:43"
+        },
+        {
+          "ID": "DOM-ROB",
+          "Category": "Domain",
+          "Test Name": "Robots Txt",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "Found",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:43"
+        },
+        {
+          "ID": "DOM-SIT",
+          "Category": "Domain",
+          "Test Name": "Sitemap",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "Found",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:43"
+        },
+        {
+          "ID": "DOM-FAV",
+          "Category": "Domain",
+          "Test Name": "Favicon",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "https://laz-img-cdn.alicdn.com/imgextra/i1/O1CN01V8uEDV1jdZ9",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:43"
+        },
+        {
+          "ID": "DOM-MOB",
+          "Category": "Domain",
+          "Test Name": "Mobile Friendly",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "Viewport meta missing",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:43"
+        },
+        {
+          "ID": "DOM-PAG",
+          "Category": "Domain",
+          "Test Name": "Page Size",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "3933KB (target <3000KB)",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:43"
+        }
+      ],
+      "passed": 5,
+      "failed": 2,
+      "total": 7
+    },
+    "seo": {
+      "test_cases": [
+        {
+          "ID": "SEO-01",
+          "Category": "SEO",
+          "Test Name": "Title tag present",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "Online Shopping in Pakistan: Fashion, Electronics & Groceries - Daraz.pk",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "SEO-03",
+          "Category": "SEO",
+          "Test Name": "Meta description present",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "Pakistan's Best Online Shopping Store with 15+ Million Products at Resounding Discounts in Karachi, Lahore, Islamabad All Across Pakistan with Cash on Delivery (COD). Pick Your Favorite Mobiles, Appliances, Apparels, & Fashion Accessories on Amazing Deals Exclusively Available at Daraz.pk.",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "SEO-05",
+          "Category": "SEO",
+          "Test Name": "Exactly one H1",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "Found 1 H1(s)",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "SEO-12",
+          "Category": "SEO",
+          "Test Name": "Viewport meta present",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "SEO-14",
+          "Category": "SEO",
+          "Test Name": "All images have alt",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "92/116 missing alt",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        }
+      ],
+      "passed": 3,
+      "failed": 2,
+      "total": 5
+    },
+    "accessibility": {
+      "test_cases": [
+        {
+          "ID": "A11Y-01",
+          "Category": "Accessibility",
+          "Test Name": "HTML lang attribute set",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "lang=''",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "A11Y-02",
+          "Category": "Accessibility",
+          "Test Name": "All images have alt text",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "91 missing alt",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "A11Y-03",
+          "Category": "Accessibility",
+          "Test Name": "All form fields labelled",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "4 unlabelled",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "A11Y-04",
+          "Category": "Accessibility",
+          "Test Name": "Skip navigation link",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        }
+      ],
+      "passed": 0,
+      "failed": 4,
+      "total": 4
+    },
+    "performance": {
+      "test_cases": [
+        {
+          "ID": "PERF-01",
+          "Category": "Performance",
+          "Test Name": "TTFB < 600ms",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "343ms",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "PERF-02",
+          "Category": "Performance",
+          "Test Name": "FCP < 1800ms",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "976ms",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "PERF-04",
+          "Category": "Performance",
+          "Test Name": "Full page load < 4s",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "5082ms",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "PERF-05",
+          "Category": "Performance",
+          "Test Name": "Total page weight < 3MB",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "3933KB",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        }
+      ],
+      "passed": 2,
+      "failed": 2,
+      "total": 4,
+      "metrics": {
+        "ttfb": 343,
+        "fcp": 976,
+        "load": 5082,
+        "sizeKB": 3933
+      }
+    },
+    "security": {
+      "test_cases": [
+        {
+          "ID": "SEC-01",
+          "Category": "Security",
+          "Test Name": "HTTPS enforced",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "SEC-02",
+          "Category": "Security",
+          "Test Name": "HSTS header present",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "SEC-03",
+          "Category": "Security",
+          "Test Name": "X-Content-Type-Options",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        },
+        {
+          "ID": "SEC-05",
+          "Category": "Security",
+          "Test Name": "Content-Security-Policy",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:34"
+        }
+      ],
+      "passed": 3,
+      "failed": 1,
+      "total": 4
+    },
+    "broken_links": {
+      "test_cases": [
+        {
+          "ID": "LINK-OK",
+          "Category": "Links",
+          "Test Name": "9 links verified",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:39"
+        }
+      ],
+      "passed": 9,
+      "failed": 0,
+      "total": 9
+    },
+    "console": {
+      "test_cases": [
+        {
+          "ID": "CON-01",
+          "Category": "Console Errors",
+          "Test Name": "No console errors",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:39"
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "total": 1
+    },
+    "responsive": {
+      "test_cases": [
+        {
+          "ID": "RESP-desktop",
+          "Category": "Responsive",
+          "Test Name": "No overflow on Desktop (1920\u00d71080) \u2014 Chrome",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:40"
+        },
+        {
+          "ID": "RESP-mac",
+          "Category": "Responsive",
+          "Test Name": "No overflow on MacBook Pro (1440\u00d7900) \u2014 Safari",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:40"
+        },
+        {
+          "ID": "RESP-laptop",
+          "Category": "Responsive",
+          "Test Name": "No overflow on Generic Laptop (1366\u00d7768)",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        },
+        {
+          "ID": "RESP-mobile",
+          "Category": "Responsive",
+          "Test Name": "No overflow on iPhone 14 Pro (390\u00d7844)",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        }
+      ],
+      "passed": 3,
+      "failed": 1,
+      "total": 4
+    },
+    "keyboard_access": {
+      "test_cases": [
+        {
+          "ID": "KEY-01",
+          "Category": "Keyboard",
+          "Test Name": "Focusable elements present",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        },
+        {
+          "ID": "KEY-03",
+          "Category": "Keyboard",
+          "Test Name": "Skip link present",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        }
+      ],
+      "passed": 2,
+      "failed": 0,
+      "total": 2
+    },
+    "mixed_content": {
+      "test_cases": [
+        {
+          "ID": "MIXED-00",
+          "Category": "Security",
+          "Test Name": "No mixed content",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "total": 1
+    },
+    "content": {
+      "test_cases": [
+        {
+          "ID": "CONT-01",
+          "Category": "Content",
+          "Test Name": "Word count > 300",
+          "Result": "PASS",
+          "Severity": "LOW",
+          "Detail": "2663 words",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        },
+        {
+          "ID": "CONT-02",
+          "Category": "Content",
+          "Test Name": "No placeholder text",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        }
+      ],
+      "passed": 2,
+      "failed": 0,
+      "total": 2
+    },
+    "forms": {
+      "test_cases": [
+        {
+          "ID": "FORM-1-CSRF",
+          "Category": "Forms",
+          "Test Name": "Form 1 CSRF",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        }
+      ],
+      "passed": 0,
+      "failed": 1,
+      "total": 1
+    },
+    "typography": {
+      "test_cases": [
+        {
+          "ID": "TYPO-01",
+          "Category": "Typography",
+          "Test Name": "Base font size \u2265 14px",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "12px",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        }
+      ],
+      "passed": 0,
+      "failed": 1,
+      "total": 1
+    },
+    "html_quality": {
+      "test_cases": [
+        {
+          "ID": "HTML-01",
+          "Category": "HTML Quality",
+          "Test Name": "DOCTYPE declared",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        },
+        {
+          "ID": "HTML-02",
+          "Category": "HTML Quality",
+          "Test Name": "Charset UTF-8",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        },
+        {
+          "ID": "HTML-03",
+          "Category": "HTML Quality",
+          "Test Name": "Favicon present",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        }
+      ],
+      "passed": 3,
+      "failed": 0,
+      "total": 3
+    },
+    "images": {
+      "test_cases": [
+        {
+          "ID": "IMG-01",
+          "Category": "Images",
+          "Test Name": "All images have alt",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "91 missing",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        }
+      ],
+      "passed": 25,
+      "failed": 91,
+      "total": 116
+    },
+    "navigation": {
+      "test_cases": [
+        {
+          "ID": "NAV-01",
+          "Category": "Navigation",
+          "Test Name": "Nav landmark present",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        },
+        {
+          "ID": "NAV-04",
+          "Category": "Navigation",
+          "Test Name": "Footer landmark present",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:41"
+        }
+      ],
+      "passed": 0,
+      "failed": 2,
+      "total": 2
+    }
+  },
+  "domain_health": {
+    "domain": "www.daraz.pk",
+    "checks": {
+      "ssl": {
+        "ok": true,
+        "detail": "HTTPS enabled"
+      },
+      "response_time": {
+        "ok": true,
+        "detail": "557ms (target <2000ms)",
+        "ms": 557
+      },
+      "robots_txt": {
+        "ok": true,
+        "detail": "Found"
+      },
+      "sitemap": {
+        "ok": true,
+        "detail": "Found"
+      },
+      "favicon": {
+        "ok": true,
+        "detail": "https://laz-img-cdn.alicdn.com/imgextra/i1/O1CN01V8uEDV1jdZ9"
+      },
+      "mobile_friendly": {
+        "ok": false,
+        "detail": "Viewport meta missing"
+      },
+      "page_size": {
+        "ok": false,
+        "detail": "3933KB (target <3000KB)",
+        "kb": 3933
+      }
+    },
+    "score": 71
+  },
+  "timestamp": "2026-06-17T15:04:27.783052",
+  "all_test_cases": [
+    {
+      "ID": "SEO-01",
+      "Category": "SEO",
+      "Test Name": "Title tag present",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "Online Shopping in Pakistan: Fashion, Electronics & Groceries - Daraz.pk",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "SEO-03",
+      "Category": "SEO",
+      "Test Name": "Meta description present",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "Pakistan's Best Online Shopping Store with 15+ Million Products at Resounding Discounts in Karachi, Lahore, Islamabad All Across Pakistan with Cash on Delivery (COD). Pick Your Favorite Mobiles, Appliances, Apparels, & Fashion Accessories on Amazing Deals Exclusively Available at Daraz.pk.",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "SEO-05",
+      "Category": "SEO",
+      "Test Name": "Exactly one H1",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "Found 1 H1(s)",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "SEO-12",
+      "Category": "SEO",
+      "Test Name": "Viewport meta present",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "SEO-14",
+      "Category": "SEO",
+      "Test Name": "All images have alt",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "92/116 missing alt",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "A11Y-01",
+      "Category": "Accessibility",
+      "Test Name": "HTML lang attribute set",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "lang=''",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "A11Y-02",
+      "Category": "Accessibility",
+      "Test Name": "All images have alt text",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "91 missing alt",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "A11Y-03",
+      "Category": "Accessibility",
+      "Test Name": "All form fields labelled",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "4 unlabelled",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "A11Y-04",
+      "Category": "Accessibility",
+      "Test Name": "Skip navigation link",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "PERF-01",
+      "Category": "Performance",
+      "Test Name": "TTFB < 600ms",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "343ms",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "PERF-02",
+      "Category": "Performance",
+      "Test Name": "FCP < 1800ms",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "976ms",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "PERF-04",
+      "Category": "Performance",
+      "Test Name": "Full page load < 4s",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "5082ms",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "PERF-05",
+      "Category": "Performance",
+      "Test Name": "Total page weight < 3MB",
+      "Result": "FAIL",
+      "Severity": "MEDIUM",
+      "Detail": "3933KB",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "SEC-01",
+      "Category": "Security",
+      "Test Name": "HTTPS enforced",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "SEC-02",
+      "Category": "Security",
+      "Test Name": "HSTS header present",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "SEC-03",
+      "Category": "Security",
+      "Test Name": "X-Content-Type-Options",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "SEC-05",
+      "Category": "Security",
+      "Test Name": "Content-Security-Policy",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:34"
+    },
+    {
+      "ID": "LINK-OK",
+      "Category": "Links",
+      "Test Name": "9 links verified",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:39"
+    },
+    {
+      "ID": "CON-01",
+      "Category": "Console Errors",
+      "Test Name": "No console errors",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:39"
+    },
+    {
+      "ID": "RESP-desktop",
+      "Category": "Responsive",
+      "Test Name": "No overflow on Desktop (1920\u00d71080) \u2014 Chrome",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:40"
+    },
+    {
+      "ID": "RESP-mac",
+      "Category": "Responsive",
+      "Test Name": "No overflow on MacBook Pro (1440\u00d7900) \u2014 Safari",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:40"
+    },
+    {
+      "ID": "RESP-laptop",
+      "Category": "Responsive",
+      "Test Name": "No overflow on Generic Laptop (1366\u00d7768)",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "RESP-mobile",
+      "Category": "Responsive",
+      "Test Name": "No overflow on iPhone 14 Pro (390\u00d7844)",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "KEY-01",
+      "Category": "Keyboard",
+      "Test Name": "Focusable elements present",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "KEY-03",
+      "Category": "Keyboard",
+      "Test Name": "Skip link present",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "MIXED-00",
+      "Category": "Security",
+      "Test Name": "No mixed content",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "CONT-01",
+      "Category": "Content",
+      "Test Name": "Word count > 300",
+      "Result": "PASS",
+      "Severity": "LOW",
+      "Detail": "2663 words",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "CONT-02",
+      "Category": "Content",
+      "Test Name": "No placeholder text",
+      "Result": "PASS",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "FORM-1-CSRF",
+      "Category": "Forms",
+      "Test Name": "Form 1 CSRF",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "TYPO-01",
+      "Category": "Typography",
+      "Test Name": "Base font size \u2265 14px",
+      "Result": "FAIL",
+      "Severity": "MEDIUM",
+      "Detail": "12px",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "HTML-01",
+      "Category": "HTML Quality",
+      "Test Name": "DOCTYPE declared",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "HTML-02",
+      "Category": "HTML Quality",
+      "Test Name": "Charset UTF-8",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "HTML-03",
+      "Category": "HTML Quality",
+      "Test Name": "Favicon present",
+      "Result": "PASS",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "IMG-01",
+      "Category": "Images",
+      "Test Name": "All images have alt",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "91 missing",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "NAV-01",
+      "Category": "Navigation",
+      "Test Name": "Nav landmark present",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    },
+    {
+      "ID": "NAV-04",
+      "Category": "Navigation",
+      "Test Name": "Footer landmark present",
+      "Result": "FAIL",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:41"
+    }
+  ],
+  "health_meta": {
+    "score": 85,
+    "grade": "Good",
+    "color": "#1d4ed8",
+    "deductions": [
+      {
+        "category": "Performance",
+        "label": "High performance issues",
+        "points": 3.0,
+        "count": 1
+      },
+      {
+        "category": "Accessibility",
+        "label": "Critical a11y issues",
+        "points": 12.0,
+        "count": 3
+      }
+    ]
+  }
+}

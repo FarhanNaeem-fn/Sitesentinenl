@@ -1,0 +1,359 @@
+{
+  "url": "https://www.amazone.com/",
+  "domain": "www.amazone.com",
+  "timestamp": "2026-06-24T13:35:15.295367",
+  "overall_score": 43,
+  "technical_score": 63,
+  "content_score": 36,
+  "trust_score": 45,
+  "structured_data_score": 0,
+  "robots_analysis": {
+    "accessible": false,
+    "crawlers": [
+      {
+        "name": "GPTBot",
+        "owner": "OpenAI",
+        "desc": "OpenAI training & ChatGPT Search",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "Google-Extended",
+        "owner": "Google",
+        "desc": "Google AI Overviews (Gemini)",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "PerplexityBot",
+        "owner": "Perplexity",
+        "desc": "Perplexity AI search engine",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "ClaudeBot",
+        "owner": "Anthropic",
+        "desc": "Claude AI by Anthropic",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "anthropic-ai",
+        "owner": "Anthropic",
+        "desc": "Anthropic data collection",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "CCBot",
+        "owner": "CommonCrawl",
+        "desc": "Common Crawl (training data source)",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "Googlebot",
+        "owner": "Google",
+        "desc": "Google Search Indexer",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "Bytespider",
+        "owner": "ByteDance",
+        "desc": "ByteDance / TikTok AI crawler",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "FacebookBot",
+        "owner": "Meta",
+        "desc": "Meta AI / Llama training data",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "Applebot",
+        "owner": "Apple",
+        "desc": "Apple Intelligence crawler",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "cohere-ai",
+        "owner": "Cohere",
+        "desc": "Cohere AI training crawler",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "AI2Bot",
+        "owner": "Allen AI",
+        "desc": "Allen Institute for AI research",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      },
+      {
+        "name": "omgili",
+        "owner": "Webz.io",
+        "desc": "Webz.io AI data provider",
+        "status": "unknown",
+        "rule": "robots.txt not accessible"
+      }
+    ],
+    "blocked_count": 0,
+    "allowed_count": 13,
+    "partial_count": 0
+  },
+  "technical_details": {
+    "score": 63,
+    "breakdown": {
+      "https": {
+        "label": "HTTPS secure connection",
+        "pass": true,
+        "pts": 12,
+        "max": 12
+      },
+      "title": {
+        "label": "Title tag present",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "meta_desc": {
+        "label": "Meta description present",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "viewport": {
+        "label": "Mobile viewport meta tag",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "canonical": {
+        "label": "Canonical URL tag",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      },
+      "og_tags": {
+        "label": "Open Graph tags",
+        "pass": true,
+        "pts": 7,
+        "max": 7
+      },
+      "twitter": {
+        "label": "Twitter / X Card meta",
+        "pass": false,
+        "pts": 0,
+        "max": 5
+      },
+      "sitemap": {
+        "label": "XML Sitemap accessible",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "robots_ok": {
+        "label": "robots.txt accessible",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "ttfb": {
+        "label": "TTFB < 600ms (actual 270ms)",
+        "pass": true,
+        "pts": 12,
+        "max": 12
+      },
+      "load_time": {
+        "label": "Page loads < 2s (actual 31020ms)",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "internal_links": {
+        "label": "Internal links >= 5 (found 185)",
+        "pass": true,
+        "pts": 8,
+        "max": 8
+      }
+    },
+    "title": "Amazon.fr : livres, DVD, jeux vid\u00e9o, musique, high-tech, informatique, jouets, v\u00eatements, chaussures, sport, bricolage, maison, beaut\u00e9, pu\u00e9riculture, \u00e9picerie et plus encore !",
+    "load_ms": 31020,
+    "ttfb": 270,
+    "is_https": true,
+    "canonical": "https://www.amazon.fr/",
+    "og_title": "",
+    "sitemap": false,
+    "internal_links": 185,
+    "images": 81
+  },
+  "content_details": {
+    "score": 36,
+    "breakdown": {
+      "h1": {
+        "label": "Single H1 tag (answer-first)",
+        "pass": false,
+        "pts": 0,
+        "max": 14
+      },
+      "h2": {
+        "label": "2+ H2 subheadings (content structure)",
+        "pass": true,
+        "pts": 10,
+        "max": 10
+      },
+      "h3": {
+        "label": "H3 subheadings present",
+        "pass": true,
+        "pts": 6,
+        "max": 6
+      },
+      "hierarchy": {
+        "label": "Correct heading hierarchy H1->H2->H3",
+        "pass": false,
+        "pts": 0,
+        "max": 8
+      },
+      "word_count": {
+        "label": "Word count >= 1000 (found 843)",
+        "pass": false,
+        "pts": 10,
+        "max": 16
+      },
+      "faq": {
+        "label": "FAQ / Q&A pattern detected",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "author": {
+        "label": "Author byline visible",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "date": {
+        "label": "Publication date visible",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "breadcrumb": {
+        "label": "Breadcrumb navigation",
+        "pass": false,
+        "pts": 0,
+        "max": 6
+      },
+      "ext_links": {
+        "label": "External authoritative links >= 2",
+        "pass": true,
+        "pts": 10,
+        "max": 10
+      }
+    },
+    "word_count": 843,
+    "h1s": [],
+    "h2s": [
+      "Passer \u00e0",
+      "Raccourcis clavier",
+      "Soins Personnels",
+      "Ventes Flash fran\u00e7aises",
+      "Essentiels estivaux \u00e0 partir de 10\u20ac",
+      "Identifiez-vous pour une meilleure exp\u00e9rienceIdentifiez-vous pour une meilleure exp\u00e9rience",
+      "Offres exclusives. Rejoignez Prime",
+      "Deals sur le merch des artistes",
+      "Styl\u00e9 et efficace",
+      "Jusqu'\u00e0 -15% sur les Produits d'occasion"
+    ],
+    "has_faq": false,
+    "has_author": false,
+    "has_date": false,
+    "external_links": 21
+  },
+  "trust_details": {
+    "score": 45,
+    "breakdown": {
+      "https": {
+        "label": "HTTPS with valid TLS",
+        "pass": true,
+        "pts": 25,
+        "max": 25
+      },
+      "author": {
+        "label": "Author byline / E-E-A-T signal",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "date": {
+        "label": "Content freshness signal (date)",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "ext_refs": {
+        "label": "Links to authoritative sources",
+        "pass": true,
+        "pts": 20,
+        "max": 20
+      },
+      "og_img": {
+        "label": "Social sharing image (og:image)",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      }
+    }
+  },
+  "structured_data_details": {
+    "score": 0,
+    "breakdown": {
+      "json_ld": {
+        "label": "JSON-LD present (0 blocks)",
+        "pass": false,
+        "pts": 0,
+        "max": 30
+      },
+      "article": {
+        "label": "Article / WebPage schema",
+        "pass": false,
+        "pts": 0,
+        "max": 20
+      },
+      "faq_schema": {
+        "label": "FAQPage schema",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      },
+      "org": {
+        "label": "Organization / Website schema",
+        "pass": false,
+        "pts": 0,
+        "max": 15
+      },
+      "breadcrumb": {
+        "label": "BreadcrumbList schema",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      },
+      "auth_date": {
+        "label": "Author + date in structured data",
+        "pass": false,
+        "pts": 0,
+        "max": 10
+      }
+    },
+    "json_ld_count": 0,
+    "schema_types": []
+  },
+  "competitors": [],
+  "llm_analysis": null,
+  "audit_id": "a9c302a0-461"
+}

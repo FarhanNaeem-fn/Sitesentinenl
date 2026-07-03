@@ -1,0 +1,3137 @@
+{
+  "url": "https://www.daraz.pk",
+  "viewport": "desktop",
+  "pages_scanned": 1,
+  "total_issues": 0,
+  "checks_passed": 0,
+  "checks_failed": 0,
+  "health_score": 85,
+  "details": {
+    "health_score": {
+      "test_cases": [
+        {
+          "ID": "DOM-SSL",
+          "Category": "Domain",
+          "Test Name": "Ssl",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "HTTPS enabled",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:55"
+        },
+        {
+          "ID": "DOM-RES",
+          "Category": "Domain",
+          "Test Name": "Response Time",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "515ms (target <2000ms)",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:55"
+        },
+        {
+          "ID": "DOM-ROB",
+          "Category": "Domain",
+          "Test Name": "Robots Txt",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "Found",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:55"
+        },
+        {
+          "ID": "DOM-SIT",
+          "Category": "Domain",
+          "Test Name": "Sitemap",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "Found",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:55"
+        },
+        {
+          "ID": "DOM-FAV",
+          "Category": "Domain",
+          "Test Name": "Favicon",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "https://laz-img-cdn.alicdn.com/imgextra/i1/O1CN01V8uEDV1jdZ9",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:55"
+        },
+        {
+          "ID": "DOM-MOB",
+          "Category": "Domain",
+          "Test Name": "Mobile Friendly",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "Viewport meta missing",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:55"
+        },
+        {
+          "ID": "DOM-PAG",
+          "Category": "Domain",
+          "Test Name": "Page Size",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "3702KB (target <3000KB)",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:55"
+        }
+      ],
+      "passed": 5,
+      "failed": 2,
+      "total": 7
+    },
+    "seo": {
+      "test_cases": [
+        {
+          "ID": "SEO-01",
+          "Category": "SEO",
+          "Test Name": "Title tag present",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "Online Shopping in Pakistan: Fashion, Electronics & Groceries - Daraz.pk",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "SEO-03",
+          "Category": "SEO",
+          "Test Name": "Meta description present",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "Pakistan's Best Online Shopping Store with 15+ Million Products at Resounding Discounts in Karachi, Lahore, Islamabad All Across Pakistan with Cash on Delivery (COD). Pick Your Favorite Mobiles, Appliances, Apparels, & Fashion Accessories on Amazing Deals Exclusively Available at Daraz.pk.",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "SEO-05",
+          "Category": "SEO",
+          "Test Name": "Exactly one H1",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "Found 1 H1(s)",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "SEO-12",
+          "Category": "SEO",
+          "Test Name": "Viewport meta present",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "SEO-14",
+          "Category": "SEO",
+          "Test Name": "All images have alt",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "92/116 missing alt",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        }
+      ],
+      "passed": 3,
+      "failed": 2,
+      "total": 5
+    },
+    "accessibility": {
+      "test_cases": [
+        {
+          "ID": "A11Y-01",
+          "Category": "Accessibility",
+          "Test Name": "HTML lang attribute set",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "lang=''",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "A11Y-02",
+          "Category": "Accessibility",
+          "Test Name": "All images have alt text",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "91 missing alt",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "A11Y-03",
+          "Category": "Accessibility",
+          "Test Name": "All form fields labelled",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "4 unlabelled",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "A11Y-04",
+          "Category": "Accessibility",
+          "Test Name": "Skip navigation link",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        }
+      ],
+      "passed": 0,
+      "failed": 4,
+      "total": 4
+    },
+    "performance": {
+      "test_cases": [
+        {
+          "ID": "PERF-01",
+          "Category": "Performance",
+          "Test Name": "TTFB < 600ms",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "280ms",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "PERF-02",
+          "Category": "Performance",
+          "Test Name": "FCP < 1800ms",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "976ms",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "PERF-04",
+          "Category": "Performance",
+          "Test Name": "Full page load < 4s",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "4748ms",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "PERF-05",
+          "Category": "Performance",
+          "Test Name": "Total page weight < 3MB",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "3702KB",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        }
+      ],
+      "passed": 2,
+      "failed": 2,
+      "total": 4,
+      "metrics": {
+        "ttfb": 280,
+        "fcp": 976,
+        "load": 4748,
+        "sizeKB": 3702
+      }
+    },
+    "security": {
+      "test_cases": [
+        {
+          "ID": "SEC-01",
+          "Category": "Security",
+          "Test Name": "HTTPS enforced",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "SEC-02",
+          "Category": "Security",
+          "Test Name": "HSTS header present",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "SEC-03",
+          "Category": "Security",
+          "Test Name": "X-Content-Type-Options",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        },
+        {
+          "ID": "SEC-05",
+          "Category": "Security",
+          "Test Name": "Content-Security-Policy",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:47"
+        }
+      ],
+      "passed": 3,
+      "failed": 1,
+      "total": 4
+    },
+    "broken_links": {
+      "test_cases": [
+        {
+          "ID": "LINK-OK",
+          "Category": "Links",
+          "Test Name": "8 links verified",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:51"
+        }
+      ],
+      "passed": 8,
+      "failed": 0,
+      "total": 8
+    },
+    "console": {
+      "test_cases": [
+        {
+          "ID": "CON-01",
+          "Category": "Console Errors",
+          "Test Name": "No console errors",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:51"
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "total": 1
+    },
+    "responsive": {
+      "test_cases": [
+        {
+          "ID": "RESP-desktop",
+          "Category": "Responsive",
+          "Test Name": "No overflow on Desktop (1920\u00d71080) \u2014 Chrome",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:52"
+        },
+        {
+          "ID": "RESP-mac",
+          "Category": "Responsive",
+          "Test Name": "No overflow on MacBook Pro (1440\u00d7900) \u2014 Safari",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:52"
+        },
+        {
+          "ID": "RESP-laptop",
+          "Category": "Responsive",
+          "Test Name": "No overflow on Generic Laptop (1366\u00d7768)",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        },
+        {
+          "ID": "RESP-mobile",
+          "Category": "Responsive",
+          "Test Name": "No overflow on iPhone 14 Pro (390\u00d7844)",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        }
+      ],
+      "passed": 3,
+      "failed": 1,
+      "total": 4
+    },
+    "keyboard_access": {
+      "test_cases": [
+        {
+          "ID": "KEY-01",
+          "Category": "Keyboard",
+          "Test Name": "Focusable elements present",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        },
+        {
+          "ID": "KEY-03",
+          "Category": "Keyboard",
+          "Test Name": "Skip link present",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        }
+      ],
+      "passed": 2,
+      "failed": 0,
+      "total": 2
+    },
+    "mixed_content": {
+      "test_cases": [
+        {
+          "ID": "MIXED-00",
+          "Category": "Security",
+          "Test Name": "No mixed content",
+          "Result": "PASS",
+          "Severity": "PASS",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        }
+      ],
+      "passed": 1,
+      "failed": 0,
+      "total": 1
+    },
+    "content": {
+      "test_cases": [
+        {
+          "ID": "CONT-01",
+          "Category": "Content",
+          "Test Name": "Word count > 300",
+          "Result": "PASS",
+          "Severity": "LOW",
+          "Detail": "2739 words",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        },
+        {
+          "ID": "CONT-02",
+          "Category": "Content",
+          "Test Name": "No placeholder text",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        }
+      ],
+      "passed": 2,
+      "failed": 0,
+      "total": 2
+    },
+    "forms": {
+      "test_cases": [
+        {
+          "ID": "FORM-1-CSRF",
+          "Category": "Forms",
+          "Test Name": "Form 1 CSRF",
+          "Result": "FAIL",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        }
+      ],
+      "passed": 0,
+      "failed": 1,
+      "total": 1
+    },
+    "typography": {
+      "test_cases": [
+        {
+          "ID": "TYPO-01",
+          "Category": "Typography",
+          "Test Name": "Base font size \u2265 14px",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "12px",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        }
+      ],
+      "passed": 0,
+      "failed": 1,
+      "total": 1
+    },
+    "html_quality": {
+      "test_cases": [
+        {
+          "ID": "HTML-01",
+          "Category": "HTML Quality",
+          "Test Name": "DOCTYPE declared",
+          "Result": "PASS",
+          "Severity": "CRITICAL",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        },
+        {
+          "ID": "HTML-02",
+          "Category": "HTML Quality",
+          "Test Name": "Charset UTF-8",
+          "Result": "PASS",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        },
+        {
+          "ID": "HTML-03",
+          "Category": "HTML Quality",
+          "Test Name": "Favicon present",
+          "Result": "PASS",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        }
+      ],
+      "passed": 3,
+      "failed": 0,
+      "total": 3
+    },
+    "images": {
+      "test_cases": [
+        {
+          "ID": "IMG-01",
+          "Category": "Images",
+          "Test Name": "All images have alt",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "91/116 images missing alt text",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "Add descriptive alt attributes to all <img> tags. Example: <img src='photo.jpg' alt='A clear description of the image'>",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53",
+          "missing_alt_images": [
+            "https://img.lazcdn.com/us/domino/947cfc0e-a6ec-4c42-b0e9-5ca7b9be607c_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/fe892782-8ce2-43c2-af6a-1620ad6a8d73_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/65c2f75d-a2ab-4016-a141-d489df26c761_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/535dd818-e979-4b11-82e2-42e0f220e18f_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/6556c5d1-269b-4416-8021-df3e7f20d7a3_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/be449e1a-83cd-481e-8e39-82fdc345a6d0_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/8e0e2a04-64c3-4b5b-8274-bb719442734e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/289d7ccd-ea37-4042-bf87-77fd0b44ceaf_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/1a982242-3869-4e6b-be7c-fb9ab501e857_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/ffcccb87-b1cd-4cc9-9018-454cf69c18b2_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/8c2b123f-d24e-44d0-8604-297b686a1526_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/252dfa3d-ddb2-4cfb-9e61-dc0b3aaea9eb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/1dfd81b0-b0ac-4e20-a61c-49ff6a68c7cb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/cd3d3612-43ee-47da-b49a-ff03d87ffcb8_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/8c59ed80-afb4-48c9-b1d2-11766f1be63e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+            "https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg_.avif",
+            "https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x80q80.png_.avif",
+            "https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150x150q80.png_.avif",
+            "https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150x150q80.png_.avif",
+            "https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg_360x360q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/d8078d2550743042f2d813d5884ac01f.jpg_400x400q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/4d1297db4fd1085366287422dbe9c136.jpg_400x400q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/963cc6da441d752c274e93b6fbca1667.png_400x400q80.png_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/3f5fda338afe10018b9ffce5be9f8ab4.jpg_400x400q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/d92ee1715a31b155e9ed193458ff554e.jpg_400x400q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/a72955e693587e2f9c344c8b177b3075.png_400x400q80.png_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/fd60558ccf3b4d26d374156a28e4f2de.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/collect/sg/p/d25ad5ced074e5ec8ba47fa355742727.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/bbdb27df9d31919c87874faf7a271b77.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/612e0ba9c881b0e82547943230dfa67e.png_170x170q80.png_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/e834cb29bdcaf63862fcdc8d310b05ff.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/8aa5a7a36d531d850dddbd8218864635.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/3608c8e8bfafe78f1e469491eb1a11b5.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/8b7170944580e04517e0c16d6565607d.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/g/kf/Sfdd16529b41f4324bb4f7c402d890bd6b.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/d5278108183232415fc45fe84598aeb7.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/5ad0d6cc4297f79e92a1b19db7f9ccc6.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/08ff71d784574c1f2f0de2beca21faef.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/af65394097d4adf3e767ec2d502a43de.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/15b7961953d77b15344ef45a70d2ce11.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/34a5bbcb48da65893abdc8c765fe9429.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/1b54c09536bd3f3426ccdbc6ee25b251.jpg_170x170q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/dd85d6680c9830ecababc0e53031c7cc.png_200x200q80.png_.avif",
+            "https://img.drz.lazcdn.com/g/kf/S379f097753334f2f815308923d3dfb71L.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/34e4b442d8b440de085cef6622423f5e.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/collect/sg/p/e95799d308e6fd53ea29abf18c0ab903.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/g/kf/Sb04cea1733b44c8281d9145e1801867dQ.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/d540b3c4bbff901b22a56d6a14b80aa1.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/b3af1348df2133ea3236b7c61b485b3f.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/ff40f31b9e18f87fcd9d50c390429d8a.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/7b37057d5c91e9ea62c97fb14f88a874.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/fba763c6367582549670972c9a809a8e.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/da62eed6e0c52d72888471a721be91fe.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/g/kf/S7cb0aadbecb14f8693d4bf7157983c6cM.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/46663f4d701cdacf6f26474312deafd1.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/5be5569437e8e4e16000882a61fd5f20.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/4fcae7f0d2b8b7f397de17a2a35d18df.png_200x200q80.png_.avif",
+            "https://img.drz.lazcdn.com/collect/sg/p/5b297d895d5b96a85b03838f1eea22b4.png_200x200q80.png_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/0003188b71edf2c72f8c6ee347ad5b26.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/g/kf/S43acc2f29a7b4e9ab5b6753df5e7d648E.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/b54cb160fca949d6811fe99d142cebb9.png_200x200q80.png_.avif",
+            "https://img.drz.lazcdn.com/g/kf/S42cd6e61a5d1451fb898043a4047ee44L.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/ad235507f2d5f3c6c262454302e8b1d3.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/d7762d2f9408b473ee33c79698392e75.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/dc9d7d310db45c559e4e3473578564da.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/03f04031be6e3992eba54930306cb8c9.png_200x200q80.png_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/8ebb49c32f8002d944b6ea5c9c0408a4.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/g/kf/S7db13eb9b066410bad767cf284c5f68di.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/aecbf4f39cf3126198c491afb403eccc.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/0a3e1cbf4165ffb144ac939fec2ac6ce.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/27080fd42a52b084f8a2c62c9ecdf2de.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/g/kf/S6b662d4d044d42b899895219c29dc28f9.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/9af62b395bf4c1746ac6e347743f7b22.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/a4b68f65caada3592df60d4e0e1420ce.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/adc291a29d17c7742d66868a1ef65e37.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/g/kf/S1d6a37772af9427aa4120cca35621510B.png_200x200q80.png_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/90c90d5fcef9dc1ad6c1965ad8af4606.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/ed301a10c797487ea7b752af31943977.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/9d8648212febd2a1ef3a23d6a65b5b0d.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/12fb392c98ac9dd27d7117520f9728ad.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/a80892ee5eb9f5a088f67028ea4ea53b.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/g/kf/S20ff726b56b94c6b86004cfd2c357a2cJ.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/dfb89edc3ebdfa176439ff338ffa9cb1.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/g/kf/S2c8e885b7bf746ac8d91ad7419a6eeb2g.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/516cffb0fb3e5bd725d27c77fb987a8f.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/g/kf/Sf6d7c8a93bd14215839ca75580eeac36z.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/a568e0dcf0daa127d845b8f1f0796a86.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/c2108b87ef83157d7e67f6c74dae360f.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/76a6ce9d58368254dd29e5c9ebb523e8.jpg_200x200q80.jpg_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/99a97c23db1b632866f93854c92572b7.png_200x200q80.png_.avif",
+            "https://img.drz.lazcdn.com/static/pk/p/34ac1c58a31b289a102931b05382f440.jpg_200x200q80.jpg_.avif"
+          ],
+          "page_url": "https://www.daraz.pk/#?"
+        }
+      ],
+      "passed": 0,
+      "failed": 91,
+      "total": 116,
+      "missing_alt_images": [
+        "https://img.lazcdn.com/us/domino/947cfc0e-a6ec-4c42-b0e9-5ca7b9be607c_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/fe892782-8ce2-43c2-af6a-1620ad6a8d73_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/65c2f75d-a2ab-4016-a141-d489df26c761_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/535dd818-e979-4b11-82e2-42e0f220e18f_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/6556c5d1-269b-4416-8021-df3e7f20d7a3_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/be449e1a-83cd-481e-8e39-82fdc345a6d0_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/8e0e2a04-64c3-4b5b-8274-bb719442734e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/289d7ccd-ea37-4042-bf87-77fd0b44ceaf_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/1a982242-3869-4e6b-be7c-fb9ab501e857_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/ffcccb87-b1cd-4cc9-9018-454cf69c18b2_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/8c2b123f-d24e-44d0-8604-297b686a1526_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/252dfa3d-ddb2-4cfb-9e61-dc0b3aaea9eb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/1dfd81b0-b0ac-4e20-a61c-49ff6a68c7cb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/cd3d3612-43ee-47da-b49a-ff03d87ffcb8_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/8c59ed80-afb4-48c9-b1d2-11766f1be63e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg_.avif",
+        "https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x80q80.png_.avif",
+        "https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150x150q80.png_.avif",
+        "https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150x150q80.png_.avif",
+        "https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg_360x360q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/d8078d2550743042f2d813d5884ac01f.jpg_400x400q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/4d1297db4fd1085366287422dbe9c136.jpg_400x400q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/963cc6da441d752c274e93b6fbca1667.png_400x400q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/3f5fda338afe10018b9ffce5be9f8ab4.jpg_400x400q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/d92ee1715a31b155e9ed193458ff554e.jpg_400x400q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/a72955e693587e2f9c344c8b177b3075.png_400x400q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/fd60558ccf3b4d26d374156a28e4f2de.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/collect/sg/p/d25ad5ced074e5ec8ba47fa355742727.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/bbdb27df9d31919c87874faf7a271b77.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/612e0ba9c881b0e82547943230dfa67e.png_170x170q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/e834cb29bdcaf63862fcdc8d310b05ff.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/8aa5a7a36d531d850dddbd8218864635.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/3608c8e8bfafe78f1e469491eb1a11b5.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/8b7170944580e04517e0c16d6565607d.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/Sfdd16529b41f4324bb4f7c402d890bd6b.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/d5278108183232415fc45fe84598aeb7.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/5ad0d6cc4297f79e92a1b19db7f9ccc6.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/08ff71d784574c1f2f0de2beca21faef.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/af65394097d4adf3e767ec2d502a43de.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/15b7961953d77b15344ef45a70d2ce11.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/34a5bbcb48da65893abdc8c765fe9429.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/1b54c09536bd3f3426ccdbc6ee25b251.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/dd85d6680c9830ecababc0e53031c7cc.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S379f097753334f2f815308923d3dfb71L.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/34e4b442d8b440de085cef6622423f5e.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/collect/sg/p/e95799d308e6fd53ea29abf18c0ab903.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/Sb04cea1733b44c8281d9145e1801867dQ.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/d540b3c4bbff901b22a56d6a14b80aa1.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/b3af1348df2133ea3236b7c61b485b3f.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/ff40f31b9e18f87fcd9d50c390429d8a.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/7b37057d5c91e9ea62c97fb14f88a874.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/fba763c6367582549670972c9a809a8e.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/da62eed6e0c52d72888471a721be91fe.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S7cb0aadbecb14f8693d4bf7157983c6cM.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/46663f4d701cdacf6f26474312deafd1.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/5be5569437e8e4e16000882a61fd5f20.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/4fcae7f0d2b8b7f397de17a2a35d18df.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/collect/sg/p/5b297d895d5b96a85b03838f1eea22b4.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/0003188b71edf2c72f8c6ee347ad5b26.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S43acc2f29a7b4e9ab5b6753df5e7d648E.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/b54cb160fca949d6811fe99d142cebb9.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S42cd6e61a5d1451fb898043a4047ee44L.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/ad235507f2d5f3c6c262454302e8b1d3.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/d7762d2f9408b473ee33c79698392e75.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/dc9d7d310db45c559e4e3473578564da.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/03f04031be6e3992eba54930306cb8c9.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/8ebb49c32f8002d944b6ea5c9c0408a4.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S7db13eb9b066410bad767cf284c5f68di.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/aecbf4f39cf3126198c491afb403eccc.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/0a3e1cbf4165ffb144ac939fec2ac6ce.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/27080fd42a52b084f8a2c62c9ecdf2de.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S6b662d4d044d42b899895219c29dc28f9.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/9af62b395bf4c1746ac6e347743f7b22.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/a4b68f65caada3592df60d4e0e1420ce.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/adc291a29d17c7742d66868a1ef65e37.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S1d6a37772af9427aa4120cca35621510B.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/90c90d5fcef9dc1ad6c1965ad8af4606.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/ed301a10c797487ea7b752af31943977.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/9d8648212febd2a1ef3a23d6a65b5b0d.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/12fb392c98ac9dd27d7117520f9728ad.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/a80892ee5eb9f5a088f67028ea4ea53b.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S20ff726b56b94c6b86004cfd2c357a2cJ.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/dfb89edc3ebdfa176439ff338ffa9cb1.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S2c8e885b7bf746ac8d91ad7419a6eeb2g.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/516cffb0fb3e5bd725d27c77fb987a8f.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/Sf6d7c8a93bd14215839ca75580eeac36z.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/a568e0dcf0daa127d845b8f1f0796a86.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/c2108b87ef83157d7e67f6c74dae360f.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/76a6ce9d58368254dd29e5c9ebb523e8.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/99a97c23db1b632866f93854c92572b7.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/34ac1c58a31b289a102931b05382f440.jpg_200x200q80.jpg_.avif"
+      ]
+    },
+    "navigation": {
+      "test_cases": [
+        {
+          "ID": "NAV-01",
+          "Category": "Navigation",
+          "Test Name": "Nav landmark present",
+          "Result": "FAIL",
+          "Severity": "HIGH",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        },
+        {
+          "ID": "NAV-04",
+          "Category": "Navigation",
+          "Test Name": "Footer landmark present",
+          "Result": "FAIL",
+          "Severity": "MEDIUM",
+          "Detail": "",
+          "Expected": "",
+          "Actual": "",
+          "fix_hint": "",
+          "screenshot": null,
+          "screenshot_coords": null,
+          "Timestamp": "15:04:53"
+        }
+      ],
+      "passed": 0,
+      "failed": 2,
+      "total": 2
+    }
+  },
+  "domain_health": {
+    "domain": "www.daraz.pk",
+    "checks": {
+      "ssl": {
+        "ok": true,
+        "detail": "HTTPS enabled"
+      },
+      "response_time": {
+        "ok": true,
+        "detail": "515ms (target <2000ms)",
+        "ms": 515
+      },
+      "robots_txt": {
+        "ok": true,
+        "detail": "Found"
+      },
+      "sitemap": {
+        "ok": true,
+        "detail": "Found"
+      },
+      "favicon": {
+        "ok": true,
+        "detail": "https://laz-img-cdn.alicdn.com/imgextra/i1/O1CN01V8uEDV1jdZ9"
+      },
+      "mobile_friendly": {
+        "ok": false,
+        "detail": "Viewport meta missing"
+      },
+      "page_size": {
+        "ok": false,
+        "detail": "3702KB (target <3000KB)",
+        "kb": 3702
+      }
+    },
+    "score": 71
+  },
+  "timestamp": "2026-06-19T15:04:39.913463",
+  "all_test_cases": [
+    {
+      "ID": "SEO-01",
+      "Category": "SEO",
+      "Test Name": "Title tag present",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "Online Shopping in Pakistan: Fashion, Electronics & Groceries - Daraz.pk",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "SEO-03",
+      "Category": "SEO",
+      "Test Name": "Meta description present",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "Pakistan's Best Online Shopping Store with 15+ Million Products at Resounding Discounts in Karachi, Lahore, Islamabad All Across Pakistan with Cash on Delivery (COD). Pick Your Favorite Mobiles, Appliances, Apparels, & Fashion Accessories on Amazing Deals Exclusively Available at Daraz.pk.",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "SEO-05",
+      "Category": "SEO",
+      "Test Name": "Exactly one H1",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "Found 1 H1(s)",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "SEO-12",
+      "Category": "SEO",
+      "Test Name": "Viewport meta present",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "SEO-14",
+      "Category": "SEO",
+      "Test Name": "All images have alt",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "92/116 missing alt",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "A11Y-01",
+      "Category": "Accessibility",
+      "Test Name": "HTML lang attribute set",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "lang=''",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "A11Y-02",
+      "Category": "Accessibility",
+      "Test Name": "All images have alt text",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "91 missing alt",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "A11Y-03",
+      "Category": "Accessibility",
+      "Test Name": "All form fields labelled",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "4 unlabelled",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "A11Y-04",
+      "Category": "Accessibility",
+      "Test Name": "Skip navigation link",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "PERF-01",
+      "Category": "Performance",
+      "Test Name": "TTFB < 600ms",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "280ms",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "PERF-02",
+      "Category": "Performance",
+      "Test Name": "FCP < 1800ms",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "976ms",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "PERF-04",
+      "Category": "Performance",
+      "Test Name": "Full page load < 4s",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "4748ms",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "PERF-05",
+      "Category": "Performance",
+      "Test Name": "Total page weight < 3MB",
+      "Result": "FAIL",
+      "Severity": "MEDIUM",
+      "Detail": "3702KB",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "SEC-01",
+      "Category": "Security",
+      "Test Name": "HTTPS enforced",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "SEC-02",
+      "Category": "Security",
+      "Test Name": "HSTS header present",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "SEC-03",
+      "Category": "Security",
+      "Test Name": "X-Content-Type-Options",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "SEC-05",
+      "Category": "Security",
+      "Test Name": "Content-Security-Policy",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:47"
+    },
+    {
+      "ID": "LINK-OK",
+      "Category": "Links",
+      "Test Name": "8 links verified",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:51"
+    },
+    {
+      "ID": "CON-01",
+      "Category": "Console Errors",
+      "Test Name": "No console errors",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:51"
+    },
+    {
+      "ID": "RESP-desktop",
+      "Category": "Responsive",
+      "Test Name": "No overflow on Desktop (1920\u00d71080) \u2014 Chrome",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:52"
+    },
+    {
+      "ID": "RESP-mac",
+      "Category": "Responsive",
+      "Test Name": "No overflow on MacBook Pro (1440\u00d7900) \u2014 Safari",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:52"
+    },
+    {
+      "ID": "RESP-laptop",
+      "Category": "Responsive",
+      "Test Name": "No overflow on Generic Laptop (1366\u00d7768)",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "RESP-mobile",
+      "Category": "Responsive",
+      "Test Name": "No overflow on iPhone 14 Pro (390\u00d7844)",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "KEY-01",
+      "Category": "Keyboard",
+      "Test Name": "Focusable elements present",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "KEY-03",
+      "Category": "Keyboard",
+      "Test Name": "Skip link present",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "MIXED-00",
+      "Category": "Security",
+      "Test Name": "No mixed content",
+      "Result": "PASS",
+      "Severity": "PASS",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "CONT-01",
+      "Category": "Content",
+      "Test Name": "Word count > 300",
+      "Result": "PASS",
+      "Severity": "LOW",
+      "Detail": "2739 words",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "CONT-02",
+      "Category": "Content",
+      "Test Name": "No placeholder text",
+      "Result": "PASS",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "FORM-1-CSRF",
+      "Category": "Forms",
+      "Test Name": "Form 1 CSRF",
+      "Result": "FAIL",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "TYPO-01",
+      "Category": "Typography",
+      "Test Name": "Base font size \u2265 14px",
+      "Result": "FAIL",
+      "Severity": "MEDIUM",
+      "Detail": "12px",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "HTML-01",
+      "Category": "HTML Quality",
+      "Test Name": "DOCTYPE declared",
+      "Result": "PASS",
+      "Severity": "CRITICAL",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "HTML-02",
+      "Category": "HTML Quality",
+      "Test Name": "Charset UTF-8",
+      "Result": "PASS",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "HTML-03",
+      "Category": "HTML Quality",
+      "Test Name": "Favicon present",
+      "Result": "PASS",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "IMG-01",
+      "Category": "Images",
+      "Test Name": "All images have alt",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "91/116 images missing alt text",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "Add descriptive alt attributes to all <img> tags. Example: <img src='photo.jpg' alt='A clear description of the image'>",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53",
+      "missing_alt_images": [
+        "https://img.lazcdn.com/us/domino/947cfc0e-a6ec-4c42-b0e9-5ca7b9be607c_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/fe892782-8ce2-43c2-af6a-1620ad6a8d73_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/65c2f75d-a2ab-4016-a141-d489df26c761_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/535dd818-e979-4b11-82e2-42e0f220e18f_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/6556c5d1-269b-4416-8021-df3e7f20d7a3_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/be449e1a-83cd-481e-8e39-82fdc345a6d0_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/8e0e2a04-64c3-4b5b-8274-bb719442734e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/289d7ccd-ea37-4042-bf87-77fd0b44ceaf_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/1a982242-3869-4e6b-be7c-fb9ab501e857_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/ffcccb87-b1cd-4cc9-9018-454cf69c18b2_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/8c2b123f-d24e-44d0-8604-297b686a1526_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/252dfa3d-ddb2-4cfb-9e61-dc0b3aaea9eb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/1dfd81b0-b0ac-4e20-a61c-49ff6a68c7cb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/cd3d3612-43ee-47da-b49a-ff03d87ffcb8_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/8c59ed80-afb4-48c9-b1d2-11766f1be63e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+        "https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg_.avif",
+        "https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x80q80.png_.avif",
+        "https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150x150q80.png_.avif",
+        "https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150x150q80.png_.avif",
+        "https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg_360x360q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/d8078d2550743042f2d813d5884ac01f.jpg_400x400q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/4d1297db4fd1085366287422dbe9c136.jpg_400x400q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/963cc6da441d752c274e93b6fbca1667.png_400x400q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/3f5fda338afe10018b9ffce5be9f8ab4.jpg_400x400q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/d92ee1715a31b155e9ed193458ff554e.jpg_400x400q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/a72955e693587e2f9c344c8b177b3075.png_400x400q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/fd60558ccf3b4d26d374156a28e4f2de.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/collect/sg/p/d25ad5ced074e5ec8ba47fa355742727.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/bbdb27df9d31919c87874faf7a271b77.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/612e0ba9c881b0e82547943230dfa67e.png_170x170q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/e834cb29bdcaf63862fcdc8d310b05ff.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/8aa5a7a36d531d850dddbd8218864635.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/3608c8e8bfafe78f1e469491eb1a11b5.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/8b7170944580e04517e0c16d6565607d.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/Sfdd16529b41f4324bb4f7c402d890bd6b.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/d5278108183232415fc45fe84598aeb7.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/5ad0d6cc4297f79e92a1b19db7f9ccc6.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/08ff71d784574c1f2f0de2beca21faef.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/af65394097d4adf3e767ec2d502a43de.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/15b7961953d77b15344ef45a70d2ce11.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/34a5bbcb48da65893abdc8c765fe9429.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/1b54c09536bd3f3426ccdbc6ee25b251.jpg_170x170q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/dd85d6680c9830ecababc0e53031c7cc.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S379f097753334f2f815308923d3dfb71L.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/34e4b442d8b440de085cef6622423f5e.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/collect/sg/p/e95799d308e6fd53ea29abf18c0ab903.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/Sb04cea1733b44c8281d9145e1801867dQ.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/d540b3c4bbff901b22a56d6a14b80aa1.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/b3af1348df2133ea3236b7c61b485b3f.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/ff40f31b9e18f87fcd9d50c390429d8a.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/7b37057d5c91e9ea62c97fb14f88a874.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/fba763c6367582549670972c9a809a8e.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/da62eed6e0c52d72888471a721be91fe.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S7cb0aadbecb14f8693d4bf7157983c6cM.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/46663f4d701cdacf6f26474312deafd1.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/5be5569437e8e4e16000882a61fd5f20.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/4fcae7f0d2b8b7f397de17a2a35d18df.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/collect/sg/p/5b297d895d5b96a85b03838f1eea22b4.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/0003188b71edf2c72f8c6ee347ad5b26.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S43acc2f29a7b4e9ab5b6753df5e7d648E.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/b54cb160fca949d6811fe99d142cebb9.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S42cd6e61a5d1451fb898043a4047ee44L.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/ad235507f2d5f3c6c262454302e8b1d3.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/d7762d2f9408b473ee33c79698392e75.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/dc9d7d310db45c559e4e3473578564da.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/03f04031be6e3992eba54930306cb8c9.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/8ebb49c32f8002d944b6ea5c9c0408a4.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S7db13eb9b066410bad767cf284c5f68di.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/aecbf4f39cf3126198c491afb403eccc.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/0a3e1cbf4165ffb144ac939fec2ac6ce.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/27080fd42a52b084f8a2c62c9ecdf2de.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S6b662d4d044d42b899895219c29dc28f9.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/9af62b395bf4c1746ac6e347743f7b22.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/a4b68f65caada3592df60d4e0e1420ce.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/adc291a29d17c7742d66868a1ef65e37.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S1d6a37772af9427aa4120cca35621510B.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/90c90d5fcef9dc1ad6c1965ad8af4606.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/ed301a10c797487ea7b752af31943977.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/9d8648212febd2a1ef3a23d6a65b5b0d.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/12fb392c98ac9dd27d7117520f9728ad.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/a80892ee5eb9f5a088f67028ea4ea53b.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S20ff726b56b94c6b86004cfd2c357a2cJ.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/dfb89edc3ebdfa176439ff338ffa9cb1.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/S2c8e885b7bf746ac8d91ad7419a6eeb2g.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/516cffb0fb3e5bd725d27c77fb987a8f.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/g/kf/Sf6d7c8a93bd14215839ca75580eeac36z.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/a568e0dcf0daa127d845b8f1f0796a86.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/c2108b87ef83157d7e67f6c74dae360f.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/76a6ce9d58368254dd29e5c9ebb523e8.jpg_200x200q80.jpg_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/99a97c23db1b632866f93854c92572b7.png_200x200q80.png_.avif",
+        "https://img.drz.lazcdn.com/static/pk/p/34ac1c58a31b289a102931b05382f440.jpg_200x200q80.jpg_.avif"
+      ],
+      "page_url": "https://www.daraz.pk/#?"
+    },
+    {
+      "ID": "NAV-01",
+      "Category": "Navigation",
+      "Test Name": "Nav landmark present",
+      "Result": "FAIL",
+      "Severity": "HIGH",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    },
+    {
+      "ID": "NAV-04",
+      "Category": "Navigation",
+      "Test Name": "Footer landmark present",
+      "Result": "FAIL",
+      "Severity": "MEDIUM",
+      "Detail": "",
+      "Expected": "",
+      "Actual": "",
+      "fix_hint": "",
+      "screenshot": null,
+      "screenshot_coords": null,
+      "Timestamp": "15:04:53"
+    }
+  ],
+  "health_meta": {
+    "score": 85,
+    "grade": "Good",
+    "color": "#1d4ed8",
+    "deductions": [
+      {
+        "category": "Performance",
+        "label": "High performance issues",
+        "points": 3.0,
+        "count": 1
+      },
+      {
+        "category": "Accessibility",
+        "label": "Critical a11y issues",
+        "points": 12.0,
+        "count": 3
+      }
+    ]
+  },
+  "image_issues": [
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://gw.alicdn.com/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/947cfc0e-a6ec-4c42-b0e9-5ca7b9be607c_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/fe892782-8ce2-43c2-af6a-1620ad6a8d73_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/65c2f75d-a2ab-4016-a141-d489df26c761_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/535dd818-e979-4b11-82e2-42e0f220e18f_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/6556c5d1-269b-4416-8021-df3e7f20d7a3_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/be449e1a-83cd-481e-8e39-82fdc345a6d0_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/8e0e2a04-64c3-4b5b-8274-bb719442734e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/289d7ccd-ea37-4042-bf87-77fd0b44ceaf_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/1a982242-3869-4e6b-be7c-fb9ab501e857_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/ffcccb87-b1cd-4cc9-9018-454cf69c18b2_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/8c2b123f-d24e-44d0-8604-297b686a1526_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/252dfa3d-ddb2-4cfb-9e61-dc0b3aaea9eb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/1dfd81b0-b0ac-4e20-a61c-49ff6a68c7cb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/cd3d3612-43ee-47da-b49a-ff03d87ffcb8_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/8c59ed80-afb4-48c9-b1d2-11766f1be63e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x80q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150x150q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150x150q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg_360x360q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/d8078d2550743042f2d813d5884ac01f.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/4d1297db4fd1085366287422dbe9c136.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/963cc6da441d752c274e93b6fbca1667.png_400x400q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/3f5fda338afe10018b9ffce5be9f8ab4.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/d92ee1715a31b155e9ed193458ff554e.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/a72955e693587e2f9c344c8b177b3075.png_400x400q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/fd60558ccf3b4d26d374156a28e4f2de.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/collect/sg/p/d25ad5ced074e5ec8ba47fa355742727.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/bbdb27df9d31919c87874faf7a271b77.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/612e0ba9c881b0e82547943230dfa67e.png_170x170q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/e834cb29bdcaf63862fcdc8d310b05ff.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/8aa5a7a36d531d850dddbd8218864635.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/3608c8e8bfafe78f1e469491eb1a11b5.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/8b7170944580e04517e0c16d6565607d.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/Sfdd16529b41f4324bb4f7c402d890bd6b.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/d5278108183232415fc45fe84598aeb7.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/5ad0d6cc4297f79e92a1b19db7f9ccc6.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/08ff71d784574c1f2f0de2beca21faef.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/af65394097d4adf3e767ec2d502a43de.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/15b7961953d77b15344ef45a70d2ce11.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/34a5bbcb48da65893abdc8c765fe9429.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/1b54c09536bd3f3426ccdbc6ee25b251.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/dd85d6680c9830ecababc0e53031c7cc.png_200x200q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S379f097753334f2f815308923d3dfb71L.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/34e4b442d8b440de085cef6622423f5e.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/collect/sg/p/e95799d308e6fd53ea29abf18c0ab903.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/Sb04cea1733b44c8281d9145e1801867dQ.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/d540b3c4bbff901b22a56d6a14b80aa1.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/b3af1348df2133ea3236b7c61b485b3f.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/ff40f31b9e18f87fcd9d50c390429d8a.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/7b37057d5c91e9ea62c97fb14f88a874.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/fba763c6367582549670972c9a809a8e.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/da62eed6e0c52d72888471a721be91fe.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S7cb0aadbecb14f8693d4bf7157983c6cM.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/46663f4d701cdacf6f26474312deafd1.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/5be5569437e8e4e16000882a61fd5f20.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/4fcae7f0d2b8b7f397de17a2a35d18df.png_200x200q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/collect/sg/p/5b297d895d5b96a85b03838f1eea22b4.png_200x200q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/0003188b71edf2c72f8c6ee347ad5b26.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S43acc2f29a7b4e9ab5b6753df5e7d648E.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/b54cb160fca949d6811fe99d142cebb9.png_200x200q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S42cd6e61a5d1451fb898043a4047ee44L.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/ad235507f2d5f3c6c262454302e8b1d3.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/d7762d2f9408b473ee33c79698392e75.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/dc9d7d310db45c559e4e3473578564da.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/03f04031be6e3992eba54930306cb8c9.png_200x200q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/8ebb49c32f8002d944b6ea5c9c0408a4.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S7db13eb9b066410bad767cf284c5f68di.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/aecbf4f39cf3126198c491afb403eccc.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/0a3e1cbf4165ffb144ac939fec2ac6ce.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/27080fd42a52b084f8a2c62c9ecdf2de.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S6b662d4d044d42b899895219c29dc28f9.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/9af62b395bf4c1746ac6e347743f7b22.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/a4b68f65caada3592df60d4e0e1420ce.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/adc291a29d17c7742d66868a1ef65e37.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S1d6a37772af9427aa4120cca35621510B.png_200x200q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/90c90d5fcef9dc1ad6c1965ad8af4606.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/ed301a10c797487ea7b752af31943977.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/9d8648212febd2a1ef3a23d6a65b5b0d.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/12fb392c98ac9dd27d7117520f9728ad.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/a80892ee5eb9f5a088f67028ea4ea53b.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S20ff726b56b94c6b86004cfd2c357a2cJ.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/dfb89edc3ebdfa176439ff338ffa9cb1.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S2c8e885b7bf746ac8d91ad7419a6eeb2g.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/516cffb0fb3e5bd725d27c77fb987a8f.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/Sf6d7c8a93bd14215839ca75580eeac36z.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/a568e0dcf0daa127d845b8f1f0796a86.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/c2108b87ef83157d7e67f6c74dae360f.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/76a6ce9d58368254dd29e5c9ebb523e8.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/99a97c23db1b632866f93854c92572b7.png_200x200q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/34ac1c58a31b289a102931b05382f440.jpg_200x200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Best Online Shopping App in Pakistan | Get Best Discount, De",
+      "page_url": "https://www.daraz.pk/mobile-apps/",
+      "image_url": "https://img.alicdn.com/imgextra/i1/O1CN01Ie2YnK1JmZ1mL3fY5_!!6000000001071-2-tps-60-60.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Best Online Shopping App in Pakistan | Get Best Discount, De",
+      "page_url": "https://www.daraz.pk/mobile-apps/",
+      "image_url": "https://icms-image.slatic.net/images/ims-web/d19edbfe-4ab9-486f-ba66-b29d80483a50.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Best Online Shopping App in Pakistan | Get Best Discount, De",
+      "page_url": "https://www.daraz.pk/mobile-apps/",
+      "image_url": "https://icms-image.slatic.net/images/ims-web/8f2bd105-9cf3-45ba-af3d-ba979a63cc3c.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Best Online Shopping App in Pakistan | Get Best Discount, De",
+      "page_url": "https://www.daraz.pk/mobile-apps/",
+      "image_url": "https://img.alicdn.com/imgextra/i1/O1CN013ue9Hm1FjZzC0ri2a_!!6000000000523-2-tps-32-32.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Best Online Shopping App in Pakistan | Get Best Discount, De",
+      "page_url": "https://www.daraz.pk/mobile-apps/",
+      "image_url": "https://icms-image.slatic.net/images/ims-web/7a379e2e-4b65-4617-9188-94e0c768cd9d.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Best Online Shopping App in Pakistan | Get Best Discount, De",
+      "page_url": "https://www.daraz.pk/mobile-apps/",
+      "image_url": "https://laz-img-cdn.alicdn.com/images/ims-web/TB18aqePBLoK1RjSZFuXXXn0XXa.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Quick and Easy Daraz Products Returns Explained",
+      "page_url": "https://www.daraz.pk/wow/i/pk/help/how-to-return",
+      "image_url": "https://img.alicdn.com/imgextra/i1/O1CN01Ie2YnK1JmZ1mL3fY5_!!6000000001071-2-tps-60-60.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Quick and Easy Daraz Products Returns Explained",
+      "page_url": "https://www.daraz.pk/wow/i/pk/help/how-to-return",
+      "image_url": "https://icms-image.slatic.net/images/ims-web/d19edbfe-4ab9-486f-ba66-b29d80483a50.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Quick and Easy Daraz Products Returns Explained",
+      "page_url": "https://www.daraz.pk/wow/i/pk/help/how-to-return",
+      "image_url": "https://icms-image.slatic.net/images/ims-web/8f2bd105-9cf3-45ba-af3d-ba979a63cc3c.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Quick and Easy Daraz Products Returns Explained",
+      "page_url": "https://www.daraz.pk/wow/i/pk/help/how-to-return",
+      "image_url": "https://img.alicdn.com/imgextra/i1/O1CN013ue9Hm1FjZzC0ri2a_!!6000000000523-2-tps-32-32.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Quick and Easy Daraz Products Returns Explained",
+      "page_url": "https://www.daraz.pk/wow/i/pk/help/how-to-return",
+      "image_url": "https://icms-image.slatic.net/images/ims-web/7a379e2e-4b65-4617-9188-94e0c768cd9d.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Quick and Easy Daraz Products Returns Explained",
+      "page_url": "https://www.daraz.pk/wow/i/pk/help/how-to-return",
+      "image_url": "https://img.alicdn.com/imgextra/i3/O1CN01qGETx81FsjwtMobCU_!!6000000000543-2-tps-852-598.png",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Quick and Easy Daraz Products Returns Explained",
+      "page_url": "https://www.daraz.pk/wow/i/pk/help/how-to-return",
+      "image_url": "https://laz-img-cdn.alicdn.com/images/ims-web/TB1uqNXG4YaK1RjSZFnXXa80pXa.png",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Quick and Easy Daraz Products Returns Explained",
+      "page_url": "https://www.daraz.pk/wow/i/pk/help/how-to-return",
+      "image_url": "https://laz-img-cdn.alicdn.com/images/ims-web/TB18aqePBLoK1RjSZFuXXXn0XXa.png",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://gw.alicdn.com/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/fe892782-8ce2-43c2-af6a-1620ad6a8d73_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/65c2f75d-a2ab-4016-a141-d489df26c761_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/535dd818-e979-4b11-82e2-42e0f220e18f_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/6556c5d1-269b-4416-8021-df3e7f20d7a3_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/be449e1a-83cd-481e-8e39-82fdc345a6d0_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/8e0e2a04-64c3-4b5b-8274-bb719442734e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/289d7ccd-ea37-4042-bf87-77fd0b44ceaf_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/1a982242-3869-4e6b-be7c-fb9ab501e857_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/ffcccb87-b1cd-4cc9-9018-454cf69c18b2_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/8c2b123f-d24e-44d0-8604-297b686a1526_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/252dfa3d-ddb2-4cfb-9e61-dc0b3aaea9eb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/1dfd81b0-b0ac-4e20-a61c-49ff6a68c7cb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/cd3d3612-43ee-47da-b49a-ff03d87ffcb8_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/8c59ed80-afb4-48c9-b1d2-11766f1be63e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/947cfc0e-a6ec-4c42-b0e9-5ca7b9be607c_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x80q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150x150q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150x150q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg_360x360q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/d8078d2550743042f2d813d5884ac01f.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/4d1297db4fd1085366287422dbe9c136.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/963cc6da441d752c274e93b6fbca1667.png_400x400q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/3f5fda338afe10018b9ffce5be9f8ab4.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/d92ee1715a31b155e9ed193458ff554e.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/a72955e693587e2f9c344c8b177b3075.png_400x400q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/f6db4b765753ad17406fde127c4e2b53.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/008961eca0aa2b169d722477c953cf13.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/a025727c95ec10be6b34c909adf8444e.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/collect/sg/p/502fd6866e5d7569a25d285a656a956e.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/61dad2494621cd3630b7384c9a128128.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/0bbb170c3c7d1a2ff93a0a410074e9fd.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/dd6378e475f1ba5c05df2d209c622c40.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/0262583d35f3d684d7927ed67736dff4.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/f50a601d126a78bac90b7020fb2af1d1.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/1b0a223ae0814ba517bfd4b3e7fbf522.png_170x170q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/b9cac60ca55e4912bb9ef2abb0f8cbca.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/7ff4715783f80dd1707c4ab82a783b6d.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/ba21ce69fca78e801d857ef878fec355.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/c5f8474051c9397bf89247307055973f.png_170x170q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S13c872d6f4ad4ef3a57b9c09abe213b3N.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/87255786bf00059829fc49e16487dde1.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://gw.alicdn.com/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg",
+      "issue": "Empty alt text (not marked decorative)",
+      "description": "alt=\"\" is present but the image is not marked as decorative (role='presentation').",
+      "fix": "Add a meaningful description, or add role='presentation' if purely decorative."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/fe892782-8ce2-43c2-af6a-1620ad6a8d73_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/65c2f75d-a2ab-4016-a141-d489df26c761_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/535dd818-e979-4b11-82e2-42e0f220e18f_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/6556c5d1-269b-4416-8021-df3e7f20d7a3_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/be449e1a-83cd-481e-8e39-82fdc345a6d0_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/8e0e2a04-64c3-4b5b-8274-bb719442734e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/289d7ccd-ea37-4042-bf87-77fd0b44ceaf_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/1a982242-3869-4e6b-be7c-fb9ab501e857_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/ffcccb87-b1cd-4cc9-9018-454cf69c18b2_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/8c2b123f-d24e-44d0-8604-297b686a1526_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/252dfa3d-ddb2-4cfb-9e61-dc0b3aaea9eb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/1dfd81b0-b0ac-4e20-a61c-49ff6a68c7cb_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/cd3d3612-43ee-47da-b49a-ff03d87ffcb8_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/8c59ed80-afb4-48c9-b1d2-11766f1be63e_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/947cfc0e-a6ec-4c42-b0e9-5ca7b9be607c_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x80q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150x150q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150x150q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg_360x360q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/d8078d2550743042f2d813d5884ac01f.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/4d1297db4fd1085366287422dbe9c136.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/963cc6da441d752c274e93b6fbca1667.png_400x400q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/3f5fda338afe10018b9ffce5be9f8ab4.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/d92ee1715a31b155e9ed193458ff554e.jpg_400x400q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/a72955e693587e2f9c344c8b177b3075.png_400x400q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/c19111852023b3ee5bea6a16e9e8b5e5.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/fd60558ccf3b4d26d374156a28e4f2de.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/collect/sg/p/d25ad5ced074e5ec8ba47fa355742727.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/e834cb29bdcaf63862fcdc8d310b05ff.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/8aa5a7a36d531d850dddbd8218864635.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/3608c8e8bfafe78f1e469491eb1a11b5.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/8b7170944580e04517e0c16d6565607d.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/d5278108183232415fc45fe84598aeb7.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/5ad0d6cc4297f79e92a1b19db7f9ccc6.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/ba21ce69fca78e801d857ef878fec355.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/c5f8474051c9397bf89247307055973f.png_170x170q80.png_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/g/kf/S13c872d6f4ad4ef3a57b9c09abe213b3N.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/87255786bf00059829fc49e16487dde1.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/9d35b6d15ff143533783d7b389ea8a3a.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/b85d2612df182354f5146d5d5556ca73.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    },
+    {
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie",
+      "page_url": "https://www.daraz.pk/catalog/",
+      "image_url": "https://img.drz.lazcdn.com/static/pk/p/b63c386d42218d3dc827ce02d20ba79f.jpg_170x170q80.jpg_.avif",
+      "issue": "Missing alt attribute",
+      "description": "The <img> element has no alt attribute. Screen readers cannot describe this image.",
+      "fix": "Add alt=\"Description of image\" to the <img> tag."
+    }
+  ],
+  "link_issues": [],
+  "pages_crawled": [
+    {
+      "url": "https://www.daraz.pk",
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie"
+    },
+    {
+      "url": "https://www.daraz.pk/mobile-apps/",
+      "page_name": "Best Online Shopping App in Pakistan | Get Best Discount, De"
+    },
+    {
+      "url": "https://www.daraz.pk/wow/i/pk/help/how-to-return",
+      "page_name": "Quick and Easy Daraz Products Returns Explained"
+    },
+    {
+      "url": "https://www.daraz.pk/",
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie"
+    },
+    {
+      "url": "https://www.daraz.pk/catalog/",
+      "page_name": "Online Shopping in Pakistan: Fashion, Electronics & Grocerie"
+    }
+  ],
+  "total_images_checked": 266,
+  "total_links_checked": 528
+}

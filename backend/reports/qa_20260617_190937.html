@@ -1,0 +1,505 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SiteSentinel QA Report — https://www.daraz.pk</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --bg: #0D1117; --card: #161B22; --border: #30363D;
+                --text: #C9D1D9; --white: #FFFFFF; --dim: #8B949E;
+                --pass: #238636; --fail: #DA3633; --warn: #D29922;
+                --accent: #3B82F6;
+            }
+            body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 40px; }
+            .container { max-width: 1200px; margin: 0 auto; }
+            .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+            .title h1 { font-weight: 800; color: var(--white); margin: 0; font-size: 28px; }
+            .title p { color: var(--dim); margin: 5px 0 0; font-family: 'JetBrains Mono'; font-size: 14px; }
+            .score-card { background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: 16px; display: flex; align-items: center; gap: 30px; margin-bottom: 40px; }
+            .ring { width: 100px; height: 100px; border-radius: 50%; border: 8px solid var(--border); display: flex; align-items: center; justify-content: center; position: relative; }
+            .ring.score { border-color: var(--pass); }
+            .ring span { font-size: 32px; font-weight: 800; color: var(--white); display: block; line-height: 1; }
+            .meta { flex: 1; }
+            .meta h2 { margin: 0; color: var(--white); font-size: 24px; }
+            .meta p { margin: 5px 0 0; color: var(--dim); }
+            table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+            th { text-align: left; background: #21262D; padding: 15px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--dim); }
+            td { padding: 15px; border-top: 1px solid var(--border); font-size: 14px; }
+            .pass { border-left: 4px solid var(--pass); }
+            .fail { border-left: 4px solid var(--fail); }
+            .badge { padding: 4px 8px; border-radius: 4px; font-size: 10px; font-weight: 800; font-family: 'JetBrains Mono'; text-transform: uppercase; }
+            .badge.critical { background: rgba(218,54,51,0.1); color: #FF7B72; border: 1px solid rgba(218,54,51,0.2); }
+            .badge.high { background: rgba(210,153,34,0.1); color: #D29922; border: 1px solid rgba(210,153,34,0.2); }
+            .badge.medium { background: rgba(59,130,246,0.1); color: #58A6FF; border: 1px solid rgba(59,130,246,0.2); }
+            .badge.low { background: rgba(139,148,158,0.1); color: var(--dim); border: 1px solid var(--border); }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="title">
+                    <h1>SiteSentinel Matrix QA Report</h1>
+                    <p>Target: https://www.daraz.pk • Generated: 2026-06-17T19:09:17.856815</p>
+                </div>
+            </div>
+            
+            <div class="score-card">
+                <div class="ring score"><span>82</span></div>
+                <div class="meta">
+                    <h2>Grade: Good</h2>
+                    <p>Site health based on 36 matrix analysis points.</p>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Severity</th>
+                        <th>Analysis Point</th>
+                        <th>Result</th>
+                        <th>Findings & Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>SEO</strong><br/><small>Title tag present</small></td>
+            <td>PASS</td>
+            <td>
+                Online Shopping in Pakistan: Fashion, Electronics & Groceries - Daraz.pk
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>Meta description present</small></td>
+            <td>PASS</td>
+            <td>
+                Pakistan's Best Online Shopping Store with 15+ Million Products at Resounding Discounts in Karachi, Lahore, Islamabad All Across Pakistan with Cash on Delivery (COD). Pick Your Favorite Mobiles, Appliances, Apparels, & Fashion Accessories on Amazing Deals Exclusively Available at Daraz.pk.
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>Exactly one H1</small></td>
+            <td>PASS</td>
+            <td>
+                Found 1 H1(s)
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>SEO</strong><br/><small>Viewport meta present</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>SEO</strong><br/><small>All images have alt</small></td>
+            <td>FAIL</td>
+            <td>
+                92/116 missing alt
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>HTML lang attribute set</small></td>
+            <td>FAIL</td>
+            <td>
+                lang=''
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>All images have alt text</small></td>
+            <td>FAIL</td>
+            <td>
+                91 missing alt
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Accessibility</strong><br/><small>All form fields labelled</small></td>
+            <td>FAIL</td>
+            <td>
+                4 unlabelled
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Accessibility</strong><br/><small>Skip navigation link</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>TTFB < 600ms</small></td>
+            <td>PASS</td>
+            <td>
+                307ms
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>FCP < 1800ms</small></td>
+            <td>FAIL</td>
+            <td>
+                3600ms
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Performance</strong><br/><small>Full page load < 4s</small></td>
+            <td>FAIL</td>
+            <td>
+                8302ms
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Performance</strong><br/><small>Total page weight < 3MB</small></td>
+            <td>FAIL</td>
+            <td>
+                3717KB
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Security</strong><br/><small>HTTPS enforced</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Security</strong><br/><small>HSTS header present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Security</strong><br/><small>X-Content-Type-Options</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Security</strong><br/><small>Content-Security-Policy</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge pass">PASS</span></td>
+            <td><strong>Links</strong><br/><small>9 links verified</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge pass">PASS</span></td>
+            <td><strong>Console Errors</strong><br/><small>No console errors</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on Desktop (1920×1080) — Chrome</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on MacBook Pro (1440×900) — Safari</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on Generic Laptop (1366×768)</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Responsive</strong><br/><small>No overflow on iPhone 14 Pro (390×844)</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Keyboard</strong><br/><small>Focusable elements present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Keyboard</strong><br/><small>Skip link present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge pass">PASS</span></td>
+            <td><strong>Security</strong><br/><small>No mixed content</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge low">LOW</span></td>
+            <td><strong>Content</strong><br/><small>Word count > 300</small></td>
+            <td>PASS</td>
+            <td>
+                2658 words
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Content</strong><br/><small>No placeholder text</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>Forms</strong><br/><small>Form 1 CSRF</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Typography</strong><br/><small>Base font size ≥ 14px</small></td>
+            <td>FAIL</td>
+            <td>
+                12px
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge critical">CRITICAL</span></td>
+            <td><strong>HTML Quality</strong><br/><small>DOCTYPE declared</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>HTML Quality</strong><br/><small>Charset UTF-8</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="pass">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>HTML Quality</strong><br/><small>Favicon present</small></td>
+            <td>PASS</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Images</strong><br/><small>All images have alt</small></td>
+            <td>FAIL</td>
+            <td>
+                91/116 images missing alt text
+                <div style="margin-top:10px;padding:10px;background:#0a1628;border-radius:8px;border:1px solid rgba(88,166,255,0.15);"><strong style="color:#58A6FF;font-size:12px;">Page:</strong> <a href="https://www.daraz.pk/#?" target="_blank" style="color:#58A6FF;font-size:12px;">https://www.daraz.pk/#?</a><br/><strong style="color:#EF4444;font-size:12px;display:block;margin-top:6px;">Images missing alt text (91):</strong><ul style="margin:6px 0 0;padding-left:18px;list-style:disc;"><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/947cfc0e-a6ec-4c42-b0e9-5ca7b9be607c_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/947cfc0e-a6ec-4c42-b0e9-5ca7b9be607c_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/098a58e1-3f23-4c88-b5f9-a1bddd62b07f_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/098a58e1-3f23-4c88-b5f9-a1bddd62b07f_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/65c2f75d-a2ab-4016-a141-d489df26c761_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/65c2f75d-a2ab-4016-a141-d489df26c761_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/6556c5d1-269b-4416-8021-df3e7f20d7a3_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/6556c5d1-269b-4416-8021-df3e7f20d7a3_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/be449e1a-83cd-481e-8e39-82fdc345a6d0_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/be449e1a-83cd-481e-8e39-82fdc345a6d0_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/535dd818-e979-4b11-82e2-42e0f220e18f_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/535dd818-e979-4b11-82e2-42e0f220e18f_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/25948dd8-a06e-4168-8596-fec8fbd7a24f_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/25948dd8-a06e-4168-8596-fec8fbd7a24f_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/289d7ccd-ea37-4042-bf87-77fd0b44ceaf_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/289d7ccd-ea37-4042-bf87-77fd0b44ceaf_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/1a982242-3869-4e6b-be7c-fb9ab501e857_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/1a982242-3869-4e6b-be7c-fb9ab501e857_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/ffcccb87-b1cd-4cc9-9018-454cf69c18b2_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/ffcccb87-b1cd-4cc9-9018-454cf69c18b2_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/8c2b123f-d24e-44d0-8604-297b686a1526_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/8c2b123f-d24e-44d0-8604-297b686a1526_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/252dfa3d-ddb2-4cfb-9e61-dc0b3aaea9eb_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/252dfa3d-ddb2-4cfb-9e61-dc0b3aaea9eb_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/1dfd81b0-b0ac-4e20-a61c-49ff6a68c7cb_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/1dfd81b0-b0ac-4e20-a61c-49ff6a68c7cb_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/cd3d3612-43ee-47da-b49a-ff03d87ffcb8_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/cd3d3612-43ee-47da-b49a-ff03d87ffcb8_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/8c59ed80-afb4-48c9-b1d2-11766f1be63e_PK-1976-688.jpg_2200x2200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/8c59ed80-afb4-48c9-b1d2-11766f1be63e_PK-1976-688.jpg_2200x2200q80.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x80q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150x150q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150…</a></li><li style="margin-bottom:4px;"><a href="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150x150q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150…</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg_360x360q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.j…</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/01ab6969934fad26e7c9c3fa66dbac97.png_400x400q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/01ab6969934fad26e7c9c3fa66dbac97.png_400x400q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/343302caebaa6308c9fcba7365449aa8.jpg_400x400q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/343302caebaa6308c9fcba7365449aa8.jpg_400x400q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/1ff6700f43286453e28eb42dde99fb2f.png_400x400q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/1ff6700f43286453e28eb42dde99fb2f.png_400x400q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/db31a72512333aa39e6f1b82c1a526a0.jpg_400x400q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/db31a72512333aa39e6f1b82c1a526a0.jpg_400x400q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/b73359b9d4068d60f8674b73f415637d.jpg_400x400q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/b73359b9d4068d60f8674b73f415637d.jpg_400x400q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/06852f87d066ecaf8c29d908a4bb4f31.jpg_400x400q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/06852f87d066ecaf8c29d908a4bb4f31.jpg_400x400q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/52a18cdf357358a4350dbc50f6c47637.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/52a18cdf357358a4350dbc50f6c47637.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/79eee1bb813d5641006f949693e8ddac.png_170x170q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/79eee1bb813d5641006f949693e8ddac.png_170x170q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/d20a7b3e1f95ca41d4eba99407ad3d48.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/d20a7b3e1f95ca41d4eba99407ad3d48.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/collect/sg/p/a6be6128ffe76807bdc01fcf9bf0cd69.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/collect/sg/p/a6be6128ffe76807bdc01fcf9bf0cd69.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/4d895f5fa38d7c50acd12a56441e0c44.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/4d895f5fa38d7c50acd12a56441e0c44.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/c951d3ca4dc1151b5a866b3502315ed1.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/c951d3ca4dc1151b5a866b3502315ed1.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/a8cf5295c870e114ecc4fe21c956f48d.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/a8cf5295c870e114ecc4fe21c956f48d.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/7c086ecbbc237599f255a8a8d1b16ac4.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/7c086ecbbc237599f255a8a8d1b16ac4.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/Sd0286e1145f14c14b0b7be18844c0d79C.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/Sd0286e1145f14c14b0b7be18844c0d79C.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/f5c70af6720f30e9e58bfd327606dda8.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/f5c70af6720f30e9e58bfd327606dda8.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/0dd8fd3fac95fdefade5d52c89a0a85a.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/0dd8fd3fac95fdefade5d52c89a0a85a.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/079b2a67ce6548633d625ceb6c9a41fb.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/079b2a67ce6548633d625ceb6c9a41fb.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/9040967a4d271ece0042f67a6cf8c743.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/9040967a4d271ece0042f67a6cf8c743.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/3c73682a83e6dc189aee196994b65c9b.png_170x170q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/3c73682a83e6dc189aee196994b65c9b.png_170x170q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/c8badbac075d94ea3d7e432ac52ba858.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/c8badbac075d94ea3d7e432ac52ba858.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/97f7a152817cdc172a1ac144e3f8a53a.jpg_170x170q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/97f7a152817cdc172a1ac144e3f8a53a.jpg_170x170q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/626443b22d4681671274b9a6089d1c3b.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/626443b22d4681671274b9a6089d1c3b.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/21f4a956a3f25eb7a7f8dc79e4611196.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/21f4a956a3f25eb7a7f8dc79e4611196.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/S379f097753334f2f815308923d3dfb71L.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/S379f097753334f2f815308923d3dfb71L.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/dd85d6680c9830ecababc0e53031c7cc.png_200x200q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/dd85d6680c9830ecababc0e53031c7cc.png_200x200q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/e7cdb5467937a317aed2275b0f101e89.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/e7cdb5467937a317aed2275b0f101e89.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/097c9c27aed34f02d6242abff76a10fc.png_200x200q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/097c9c27aed34f02d6242abff76a10fc.png_200x200q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/90c90d5fcef9dc1ad6c1965ad8af4606.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/90c90d5fcef9dc1ad6c1965ad8af4606.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/collect/sg/p/e95799d308e6fd53ea29abf18c0ab903.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/collect/sg/p/e95799d308e6fd53ea29abf18c0ab903.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/5f5b3a29b8409d49cc7a4852b317a383.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/5f5b3a29b8409d49cc7a4852b317a383.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/d72c2c0b3a5b0dd7b6ccd2b15fccf38a.png_200x200q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/d72c2c0b3a5b0dd7b6ccd2b15fccf38a.png_200x200q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/Sb5792d9c4c5c49a4aa9c6cbe25ebb8d9s.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/Sb5792d9c4c5c49a4aa9c6cbe25ebb8d9s.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/ff40f31b9e18f87fcd9d50c390429d8a.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/ff40f31b9e18f87fcd9d50c390429d8a.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/a4b68f65caada3592df60d4e0e1420ce.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/a4b68f65caada3592df60d4e0e1420ce.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/S6b662d4d044d42b899895219c29dc28f9.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/S6b662d4d044d42b899895219c29dc28f9.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/S7be63a6c8f3542bbbbecae8ece4bb0067.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/S7be63a6c8f3542bbbbecae8ece4bb0067.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/S7cb0aadbecb14f8693d4bf7157983c6cM.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/S7cb0aadbecb14f8693d4bf7157983c6cM.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/6a7567cacfba303fc94e31fac340042f.png_200x200q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/6a7567cacfba303fc94e31fac340042f.png_200x200q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/ec53a9b2ff3aaf37707d1d2825c466bf.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/ec53a9b2ff3aaf37707d1d2825c466bf.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/5fb7d7940f52e81edfce8552d544db28.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/5fb7d7940f52e81edfce8552d544db28.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/6231f6179695e4ff0b6448d9af51f320.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/6231f6179695e4ff0b6448d9af51f320.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/5b4d722869122d03e0f2b4207ed5bf2b.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/5b4d722869122d03e0f2b4207ed5bf2b.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/b697e8fe74eb88a47447fe44651b54c5.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/b697e8fe74eb88a47447fe44651b54c5.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/cb6a2111fda20d5b79753eec155f7d09.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/cb6a2111fda20d5b79753eec155f7d09.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/51a53b6289e842c0b8be0b4b27c415de.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/51a53b6289e842c0b8be0b4b27c415de.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/aa85b63ea565e4e7be6cf7d07341dfed.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/aa85b63ea565e4e7be6cf7d07341dfed.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/4165cfe6e07f2780bafeec212464f34f.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/4165cfe6e07f2780bafeec212464f34f.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/S71e40e9eb73247ea9bd56ccccd3733f0P.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/S71e40e9eb73247ea9bd56ccccd3733f0P.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/collect/sg/p/5b297d895d5b96a85b03838f1eea22b4.png_200x200q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/collect/sg/p/5b297d895d5b96a85b03838f1eea22b4.png_200x200q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/0003188b71edf2c72f8c6ee347ad5b26.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/0003188b71edf2c72f8c6ee347ad5b26.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/645cafa668666327d4084f0f48b8f481.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/645cafa668666327d4084f0f48b8f481.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/c4e7a32a117e1899a680b18cdfb6ed77.png_200x200q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/c4e7a32a117e1899a680b18cdfb6ed77.png_200x200q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/f3ca0b2ae5f3c7c7f285221f9d69794d.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/f3ca0b2ae5f3c7c7f285221f9d69794d.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/Sd3a8ffd07bd64a65a6cb8f3a9f3c0e7db.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/Sd3a8ffd07bd64a65a6cb8f3a9f3c0e7db.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/Scb71fafdf190403d9284ebb5891a04e7G.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/Scb71fafdf190403d9284ebb5891a04e7G.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/230fa82e9f75a3ad15649c79ef2637dc.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/230fa82e9f75a3ad15649c79ef2637dc.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/Sfc8e7ee85a8e417291367a64f69c00ccs.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/Sfc8e7ee85a8e417291367a64f69c00ccs.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/Sf0bad0b0e227421d8cae017265fe0c91t.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/Sf0bad0b0e227421d8cae017265fe0c91t.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/3ad341d2a48ff0c776587358195ea015.png_200x200q80.png_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/3ad341d2a48ff0c776587358195ea015.png_200x200q80.png_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/S7a635430eedf4abf8c97ee0881420e37y.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/S7a635430eedf4abf8c97ee0881420e37y.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/S5f3c742af4c74acabe311704da421dcdb.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/S5f3c742af4c74acabe311704da421dcdb.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/e20e17055142278f1d8e7179cc1c5754.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/e20e17055142278f1d8e7179cc1c5754.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/Sc6e5ce9336f34a8dbb0afacbb2b00cd5C.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/Sc6e5ce9336f34a8dbb0afacbb2b00cd5C.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/6fd09279f86cdd4b2c366d19f2558219.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/6fd09279f86cdd4b2c366d19f2558219.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/Sf8378c0685cc4a36a05951b01e771d60U.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/Sf8378c0685cc4a36a05951b01e771d60U.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/84276f679a27f15045811530c28af44b.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/84276f679a27f15045811530c28af44b.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/b8cb0267d91cf5577d6a242e6ef99cde.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/b8cb0267d91cf5577d6a242e6ef99cde.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/g/kf/S349a03fd200742ee9a7ea604a8d1338a9.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/g/kf/S349a03fd200742ee9a7ea604a8d1338a9.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/faad640ff129d46fcfb1769865d5c559.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/faad640ff129d46fcfb1769865d5c559.jpg_200x200q80.jpg_.avif</a></li><li style="margin-bottom:4px;"><a href="https://img.drz.lazcdn.com/static/pk/p/34ac1c58a31b289a102931b05382f440.jpg_200x200q80.jpg_.avif" target="_blank" rel="noopener" style="color:#58A6FF;word-break:break-all;font-family:monospace;font-size:11px;">https://img.drz.lazcdn.com/static/pk/p/34ac1c58a31b289a102931b05382f440.jpg_200x200q80.jpg_.avif</a></li></ul></div>
+                <div style="margin-top:8px;padding:8px;background:#071026;border-radius:8px;border:1px solid rgba(255,255,255,0.02);"><strong>Recommended Fix:</strong><div style="margin-top:6px;color:var(--dim);">Add descriptive alt attributes to all <img> tags. Example: <img src='photo.jpg' alt='A clear description of the image'></div></div>
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge high">HIGH</span></td>
+            <td><strong>Navigation</strong><br/><small>Nav landmark present</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+        <tr class="fail">
+            <td><span class="badge medium">MEDIUM</span></td>
+            <td><strong>Navigation</strong><br/><small>Footer landmark present</small></td>
+            <td>FAIL</td>
+            <td>
+                —
+                
+                
+                
+            </td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html>
+    

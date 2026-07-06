@@ -98,11 +98,10 @@ export default function Layout() {
         <aside
           className={`
             flex flex-col flex-shrink-0 bg-card border-r border-bdr overflow-hidden transition-all duration-200
-            fixed md:relative left-0 z-40 md:z-auto w-64
+            fixed md:relative left-0 top-14 bottom-0 md:top-0 md:bottom-auto z-40 md:z-auto w-64
             ${collapsed ? 'md:w-[52px]' : 'md:w-56'}
             ${mobileOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
-          `}
-          style={{ top: 56, bottom: 0 }}>
+          `}>
 
           {/* Collapse toggle — desktop only */}
           <button

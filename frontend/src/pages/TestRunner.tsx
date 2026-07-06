@@ -384,10 +384,10 @@ export default function TestRunner() {
 
   /* ══════════════════════════════════════════════════════════ */
   return (
-    <div className="p-6 max-w-[1600px] mx-auto flex flex-col gap-6 animate-slide-in">
+    <div className="p-3 sm:p-6 max-w-[1600px] mx-auto flex flex-col gap-4 sm:gap-6 animate-slide-in">
 
       {/* Title */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-3 flex-wrap">
         <div>
           <h2 className="font-display font-800 text-[22px] text-white">Test Case Runner</h2>
           <p className="text-[#8B949E] text-[13px] mt-0.5">
@@ -576,7 +576,7 @@ export default function TestRunner() {
 
           {/* Empty state */}
           {stage === 'upload' && (
-            <div className="be-card p-16 flex flex-col items-center justify-center text-center">
+            <div className="be-card p-6 sm:p-16 flex flex-col items-center justify-center text-center">
               <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 text-3xl"
                    style={{ background: 'rgba(245,166,35,0.08)', border: '1px solid rgba(245,166,35,0.2)' }}>
                 📋
@@ -643,7 +643,7 @@ export default function TestRunner() {
               {/* Top accent */}
               <div style={{ height: 3, background: loginFailed ? '#EF4444' : '#F5A623' }} />
               <div className="p-6">
-                <div className="flex items-center gap-3 mb-5">
+                <div className="flex items-center gap-3 mb-5 flex-wrap">
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
                     style={{ background: loginFailed ? 'rgba(239,68,68,0.1)' : 'rgba(245,166,35,0.1)', border: `1px solid ${loginFailed ? 'rgba(239,68,68,0.2)' : 'rgba(245,166,35,0.2)'}` }}

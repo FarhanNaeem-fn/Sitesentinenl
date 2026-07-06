@@ -294,9 +294,9 @@ class UnicornSimulation extends Simulation {
   }
 
   return (
-    <div className="p-5 flex flex-col gap-4">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
       {/* KPI Tiles */}
-      <div className="flex gap-3">
+      <div className="grid grid-cols-2 sm:flex gap-3">
         <KpiTile label="Steps" value={uResult?.steps?.length ?? 0} accent={PUR} />
         <KpiTile label="Passed" value={uResult?.passed ?? 0} accent={GRN} />
         <KpiTile label="Failed" value={uResult?.failed ?? 0} accent={RED} />

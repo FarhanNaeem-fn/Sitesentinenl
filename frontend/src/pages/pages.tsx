@@ -100,8 +100,8 @@ export function LoadTest() {
   }
 
   return (
-    <div className="p-5 flex flex-col gap-4">
-      <div className="flex gap-3">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
+      <div className="grid grid-cols-2 sm:flex gap-3">
         <KpiTile label="Peak RPS"    value={result?.peak_rps??0}            accent={BLU}/>
         <KpiTile label="P50 Latency" value={liveP50?liveP50+'ms':'—'}        accent={GRN}/>
         <KpiTile label="P95 Latency" value={liveP95?liveP95+'ms':'—'}        accent={G}/>
@@ -141,8 +141,8 @@ export function LoadTest() {
         </div>
       </Card>
 
-      <div className="flex gap-4">
-        <div className="flex-1 flex flex-col gap-4">
+      <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex-1 min-w-0 flex flex-col gap-4">
           <Card title="Configuration" accent={BLU}>
             <Input label="Target URL" value={url} onChange={setUrl} placeholder="https://example.com" type="url" className="mb-3" error={urlErr}/>
             <div className="grid grid-cols-3 gap-3">
@@ -151,7 +151,7 @@ export function LoadTest() {
               <Input label="Ramp-Up (sec)"  value={ramp} onChange={setRamp} type="number"/>
             </div>
           </Card>
-          <div className="flex gap-2.5">
+          <div className="flex gap-2.5 flex-wrap">
             <RunButton onClick={run} disabled={!url||running} loading={running} label={running?'Running…':'Run Load Test'} color={BLU}/>
             <StopButton onClick={cancel} disabled={!running}/>
             <GhostBtn onClick={reset} label="Clear"/>
@@ -160,7 +160,7 @@ export function LoadTest() {
         </div>
 
         {/* Live metrics */}
-        <div className="w-48 flex-shrink-0">
+        <div className="lg:w-48 flex-shrink-0">
           <Card title="Live Metrics" accent={BLU}>
             <div className="text-center pb-3 mb-3 border-b border-bdr">
               <FieldLabel text="Req / sec"/>
@@ -240,8 +240,8 @@ export function Pagination() {
     setUrlErr('')
     reset();const{job_id}=await api.pagination({url:targetUrl,total_records:+total,per_page:+pp,id_field:idf});startJob(job_id)}
   return(
-    <div className="p-5 flex flex-col gap-4">
-      <div className="flex gap-3">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
+      <div className="grid grid-cols-2 sm:flex gap-3">
         <KpiTile label="Pages Checked"   value={result?.pages_checked ?? partial?.pages_checked ?? 0} accent={BLU}/>
         <KpiTile label="Records Found"   value={result?.records_found ?? partial?.records_so_far ?? 0} accent={GRN}/>
         <KpiTile label="Duplicates"      value={result?.duplicates ?? partial?.duplicates_so_far ?? 0}    accent={RED}/>
@@ -321,7 +321,7 @@ export function International(){
     setUrlErr('')
     reset();const{job_id}=await api.international({url:targetUrl,locales:sel});startJob(job_id)}
   return(
-    <div className="p-5 flex flex-col gap-4">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
       {(state.status==='running'||state.status==='error'||state.status==='cancelled') && (
         <>
           <ScanStatus title="International QA" status={state.status} progress={state.progress} partial={partial} result={result} accent={PUR}/>
@@ -419,7 +419,7 @@ export function MultiLocation() {
   }
 
   return (
-    <div className="p-5 flex flex-col gap-4">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
       {result && (
         <div className="grid grid-cols-3 gap-3">
           {([
@@ -584,7 +584,7 @@ export function AIFeatures(){
   const[saved,setSaved]=useState(false)
   async function save(){await api.saveAIFeatures(enabled);setSaved(true);setTimeout(()=>setSaved(false),2500)}
   return(
-    <div className="p-5 flex flex-col gap-4">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
       {['Phase 1','Phase 2','Phase 3'].map(phase=>(
         <Card key={phase} title={`AI Modules — ${phase}`} accent={PHASE_COL[phase]}>
           {AI_MODULES.filter(m=>m.b===phase).map(m=>(
@@ -621,7 +621,7 @@ export function UserBaseline(){
     reset();const{job_id}=await api.userBaseline({url:targetUrl,modes});startJob(job_id)}
   const dl=(d:any)=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(d,null,2)],{type:'application/json'}));a.download=`baseline_${Date.now()}.json`;a.click()}
   return(
-    <div className="p-5 flex flex-col gap-4">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
       {(state.status==='running'||state.status==='error'||state.status==='cancelled') && (
         <>
           <ScanStatus title="User Baseline" status={state.status} progress={state.progress} partial={partial} result={result} accent={PUR}/>
@@ -789,7 +789,7 @@ export function Lighthouse(){
   ]
 
   return(
-    <div className="p-5 flex flex-col gap-4">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
 
       {/* Config */}
       <Card title="SuperLighthouse — 7-Module Deep Audit" accent={G} action={<UserGuideButton config={UG_LIGHTHOUSE} color={G}/>}>
@@ -935,18 +935,20 @@ export function Lighthouse(){
           </div>
           {compare&&(
             <Card title="Comparison: Target vs Competitor" accent={G}>
-              <table className="be-table w-full">
-                <thead><tr><th>Metric</th><th>Target</th><th>Competitor</th></tr></thead>
-                <tbody>
-                  {Object.entries(SL_CATS).map(([k,l])=>(
-                    <tr key={k}>
-                      <td style={{color:'#E6EDF3'}}>{l}</td>
-                      <td style={{color:SL_CAT_C[k],fontWeight:700}}>{desktop.scores?.[k]??'—'}</td>
-                      <td style={{color:'#484F58'}}>{compare.desktop?.scores?.[k]??'—'}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="be-table w-full">
+                  <thead><tr><th>Metric</th><th>Target</th><th>Competitor</th></tr></thead>
+                  <tbody>
+                    {Object.entries(SL_CATS).map(([k,l])=>(
+                      <tr key={k}>
+                        <td style={{color:'#E6EDF3'}}>{l}</td>
+                        <td style={{color:SL_CAT_C[k],fontWeight:700}}>{desktop.scores?.[k]??'—'}</td>
+                        <td style={{color:'#484F58'}}>{compare.desktop?.scores?.[k]??'—'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </Card>
           )}
         </>
@@ -966,26 +968,28 @@ export function Lighthouse(){
               <p style={{fontSize:11,color:'#8B949E'}}>HTTPS: <span style={{color:(security.https??false)?GRN:RED}}>{(security.https??false)?'Yes':'No'}</span></p>
             </div>
           </div>
-          <table className="be-table w-full">
-            <thead><tr><th>Header</th><th>Status</th><th>Value</th><th>Importance</th></tr></thead>
-            <tbody>
-              {(security.headers??[]).map((h:any,i:number)=>(
-                <tr key={i}>
-                  <td style={{color:'#E6EDF3',fontFamily:'monospace',fontSize:11}}>{h.name}</td>
-                  <td><span style={{color:h.present?GRN:RED,fontWeight:700,fontSize:11}}>{h.present?'✓ Present':'✗ Missing'}</span></td>
-                  <td style={{fontFamily:'monospace',fontSize:10,color:'#484F58',maxWidth:200,overflow:'hidden',textOverflow:'ellipsis'}}>{h.value||'—'}</td>
-                  <td><span className="be-badge" style={{color:h.severity==='critical'?RED:h.severity==='high'?AMB:G,background:h.severity==='critical'?'rgba(239,68,68,.1)':h.severity==='high'?'rgba(245,158,11,.1)':'rgba(245,166,35,.1)',borderColor:h.severity==='critical'?'rgba(239,68,68,.3)':h.severity==='high'?'rgba(245,158,11,.3)':'rgba(245,166,35,.3)'}}>{h.severity}</span></td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="overflow-x-auto">
+            <table className="be-table w-full">
+              <thead><tr><th>Header</th><th>Status</th><th>Value</th><th>Importance</th></tr></thead>
+              <tbody>
+                {(security.headers??[]).map((h:any,i:number)=>(
+                  <tr key={i}>
+                    <td style={{color:'#E6EDF3',fontFamily:'monospace',fontSize:11}}>{h.name}</td>
+                    <td><span style={{color:h.present?GRN:RED,fontWeight:700,fontSize:11}}>{h.present?'✓ Present':'✗ Missing'}</span></td>
+                    <td style={{fontFamily:'monospace',fontSize:10,color:'#484F58',maxWidth:200,overflow:'hidden',textOverflow:'ellipsis'}}>{h.value||'—'}</td>
+                    <td><span className="be-badge" style={{color:h.severity==='critical'?RED:h.severity==='high'?AMB:G,background:h.severity==='critical'?'rgba(239,68,68,.1)':h.severity==='high'?'rgba(245,158,11,.1)':'rgba(245,166,35,.1)',borderColor:h.severity==='critical'?'rgba(239,68,68,.3)':h.severity==='high'?'rgba(245,158,11,.3)':'rgba(245,166,35,.3)'}}>{h.severity}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </Card>
       )}
 
       {/* ── Accessibility tab ── */}
       {result&&resTab==='a11y'&&(
         <Card title="Deep Accessibility Analysis" accent={GRN}>
-          <div className="flex gap-4 mb-4">
+          <div className="flex flex-wrap gap-4 mb-4">
             <div style={{textAlign:'center',padding:'0 20px'}}>
               <div style={{fontSize:40,fontWeight:900,color:a11y.score>=80?GRN:a11y.score>=60?G:RED}}>{a11y.score??'—'}</div>
               <div style={{fontSize:10,color:'#484F58',textTransform:'uppercase'}}>A11y Score</div>
@@ -1132,8 +1136,8 @@ export function MobileTesting(){
   ].filter(d=>d.value>0)
 
   return(
-    <div className="p-5 flex flex-col gap-4">
-      <div className="flex gap-3">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
+      <div className="grid grid-cols-2 sm:flex gap-3">
         <KpiTile label="Tests Run" value={result?.total??0}   accent={MOB_G}/><KpiTile label="Passed" value={result?.passed??0} accent={GRN}/>
         <KpiTile label="Failed"    value={result?.failed??0}  accent={RED}/> <KpiTile label="Crashes" value={result?.crashes??0} accent={G}/>
       </div>
@@ -1251,7 +1255,7 @@ export function Automation(){
           </button>
         ))}
       </div>
-      <div className="p-5">
+      <div className="p-3 sm:p-5">
         {tab==='suites'&&<SuitesTab/>}{tab==='browser'&&<BrowserTab/>}{tab==='api'&&<ApiTab/>}
         {tab==='regression'&&<RegressionTab/>}{tab==='cicd'&&<CicdTab/>}{tab==='scheduler'&&<SchedulerTab/>}{tab==='reports'&&<ReportsSubTab/>}
       </div>
@@ -1554,7 +1558,7 @@ function ReportsSubTab(){
 }
 
 export function Reports(){
-  return <div className="p-5"><ReportsSubTab/></div>
+  return <div className="p-3 sm:p-5"><ReportsSubTab/></div>
 }
 
 export function AllScans(){
@@ -1601,7 +1605,7 @@ export function AllScans(){
   const avgScore=jobs.length>0?Math.round(jobs.reduce((s,j)=>s+(j.report_score||0),0)/jobs.length):0
 
   if(detail) return (
-    <div className="p-5 flex flex-col gap-4">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <h2 className="font-display font-700 text-lg">Scan Details: {detail.summary.job_id}</h2>
         <GhostBtn onClick={()=>setDetail(null)} label="← Back"/>
@@ -1616,16 +1620,16 @@ export function AllScans(){
       
       {detail.metrics?.by_result && (
         <Card title="Test Results" accent={GRN}>
-          <div className="flex gap-4">
-            <div className="flex-1 p-3 rounded-lg" style={{background:'rgba(34,197,94,0.1)',border:'1px solid rgba(34,197,94,0.2)'}}>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="p-3 rounded-lg" style={{background:'rgba(34,197,94,0.1)',border:'1px solid rgba(34,197,94,0.2)'}}>
               <p className="font-body text-[11px]" style={{color:'#3A3A3A'}}>PASSED</p>
               <p className="font-display font-700 text-[24px]" style={{color:GRN}}>{detail.metrics.by_result.Pass}</p>
             </div>
-            <div className="flex-1 p-3 rounded-lg" style={{background:'rgba(245,166,35,0.1)',border:'1px solid rgba(245,166,35,0.2)'}}>
+            <div className="p-3 rounded-lg" style={{background:'rgba(245,166,35,0.1)',border:'1px solid rgba(245,166,35,0.2)'}}>
               <p className="font-body text-[11px]" style={{color:'#3A3A3A'}}>WARNINGS</p>
               <p className="font-display font-700 text-[24px]" style={{color:G}}>{detail.metrics.by_result.Warn}</p>
             </div>
-            <div className="flex-1 p-3 rounded-lg" style={{background:'rgba(239,68,68,0.1)',border:'1px solid rgba(239,68,68,0.2)'}}>
+            <div className="p-3 rounded-lg" style={{background:'rgba(239,68,68,0.1)',border:'1px solid rgba(239,68,68,0.2)'}}>
               <p className="font-body text-[11px]" style={{color:'#3A3A3A'}}>FAILED</p>
               <p className="font-display font-700 text-[24px]" style={{color:RED}}>{detail.metrics.by_result.Fail}</p>
             </div>
@@ -1667,7 +1671,7 @@ export function AllScans(){
   )
 
   return (
-    <div className="p-5 flex flex-col gap-4">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <h2 className="font-display font-700">All Scans Dashboard</h2>
         <div className="flex gap-2 items-center">
@@ -1746,7 +1750,7 @@ export function History() {
   }
 
   return (
-    <div className="p-5 flex flex-col gap-4">
+    <div className="p-3 sm:p-5 flex flex-col gap-4">
       <div className="flex justify-between items-center">
         <h2 className="font-display font-800 text-[24px] text-white">Scan History</h2>
         <GhostBtn onClick={load} label={loading ? 'Refreshing...' : 'Refresh'} icon="🔄" />

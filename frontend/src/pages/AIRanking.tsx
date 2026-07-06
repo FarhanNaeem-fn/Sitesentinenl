@@ -174,10 +174,10 @@ export function AIRanking() {
   const comps   = result?.competitors ?? []
 
   return (
-    <div className="p-5 flex flex-col gap-4 min-h-full" style={{ background: '#0A0A0A' }}>
+    <div className="p-3 sm:p-5 flex flex-col gap-4 min-h-full" style={{ background: '#0A0A0A' }}>
 
       {/* ── Tab bar ─────────────────────────────────────────────────────── */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 flex-wrap">
         <div className="flex gap-1 p-1 rounded-lg" style={{ background: '#111' }}>
           {(['audit','history'] as const).map(t => (
             <button key={t} onClick={() => { setActiveTab(t); if (t==='history' && !histLoaded) loadHistory() }}
@@ -187,9 +187,9 @@ export function AIRanking() {
             </button>
           ))}
         </div>
-        <div className="flex-1" />
+        <div className="hidden sm:block flex-1" />
         {result && (
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono text-[11px] text-[#484F58]">Overall AI Score</span>
             <span className="font-mono font-800 text-[18px]" style={{ color: scoreColor(result.overall_score) }}>
               {result.overall_score}/100
@@ -337,9 +337,9 @@ export function AIRanking() {
 
                 {/* Bar chart + overall ring */}
                 <Card title="Score Breakdown" accent={BLU}>
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-6 flex-wrap">
                     <ScoreRing score={result.overall_score} size={110} label="Overall" />
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-[180px]">
                       <ResponsiveContainer width="100%" height={180}>
                         <BarChart data={barData} layout="vertical" barSize={10}>
                           <CartesianGrid strokeDasharray="3 3" stroke="#1A1A1A" horizontal={false} />
@@ -372,7 +372,7 @@ export function AIRanking() {
                   ))}
                 </div>
                 <div className="overflow-x-auto">
-                  <table className="w-full text-left border-collapse">
+                  <table className="w-full text-left border-collapse" style={{ minWidth: 640 }}>
                     <thead>
                       <tr className="border-b border-[#1E1E1E]">
                         {['AI Crawler','Owner','Description','Status','Rule'].map(h => (
@@ -489,7 +489,7 @@ export function AIRanking() {
               {comps.length > 0 && (
                 <Card title="Competitor Comparison" accent={BLU}>
                   <div className="overflow-x-auto">
-                    <table className="w-full text-left border-collapse">
+                    <table className="w-full text-left border-collapse" style={{ minWidth: 640 }}>
                       <thead>
                         <tr className="border-b border-[#1E1E1E]">
                           {['URL','Overall','Technical','Content','Trust','Schema'].map(h => (
@@ -532,7 +532,7 @@ export function AIRanking() {
                   <div className="flex flex-col gap-5">
 
                     {/* Verdict + summary */}
-                    <div className="flex items-start gap-4">
+                    <div className="flex items-start gap-4 flex-wrap">
                       {llm.visibility_verdict && (
                         <div className="flex-shrink-0 px-3 py-1.5 rounded-lg font-display font-800 text-[13px]"
                              style={{

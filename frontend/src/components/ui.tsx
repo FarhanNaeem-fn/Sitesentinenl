@@ -276,9 +276,9 @@ export function LogTerminal({ logs, accent = 'var(--pro-orange)', title = 'Outpu
       </div>
 
       {/* ── Toolbar row 1: search + buttons ── */}
-      <div className="flex items-center gap-2 px-3.5 py-1.5 border-b border-[#1E1E1E]"
+      <div className="flex items-center gap-2 px-3.5 py-1.5 border-b border-[#1E1E1E] flex-wrap"
            style={{ background: '#0F1318' }}>
-        <div className="relative flex items-center flex-1" style={{ minWidth: 0 }}>
+        <div className="relative flex items-center flex-1" style={{ minWidth: 90 }}>
           <span className="absolute left-2 text-[#484F58] text-[11px] pointer-events-none select-none">⌕</span>
           <input
             value={search} onChange={e => setSearch(e.target.value)}
@@ -327,8 +327,8 @@ export function LogTerminal({ logs, accent = 'var(--pro-orange)', title = 'Outpu
 
       {/* ── Column headers ── */}
       <div className="flex px-3.5 py-[3px] border-b border-[#1A1A1A]" style={{ background: '#0D1117' }}>
-        {([['#', 38], ['TIME', 64], ['LVL', 44], ['MESSAGE', 'auto']] as [string, number|string][]).map(([h, w]) => (
-          <span key={h} className="font-mono font-700 text-[9px]" style={{
+        {([['#', 38, 'hidden sm:block'], ['TIME', 64, 'hidden xs:block'], ['LVL', 44, ''], ['MESSAGE', 'auto', '']] as [string, number|string, string][]).map(([h, w, cls]) => (
+          <span key={h} className={`font-mono font-700 text-[9px] ${cls}`} style={{
             color: '#484F58',
             width:      typeof w === 'number' ? w : undefined,
             flex:       w === 'auto' ? 1 : 'none',
@@ -363,9 +363,9 @@ export function LogTerminal({ logs, accent = 'var(--pro-orange)', title = 'Outpu
                         : '2px solid transparent',
               borderBottom: isHdr ? '1px solid #1A1A1A' : undefined,
             }}>
-              <span className="font-mono text-[9px] flex-shrink-0 text-right pr-2"
+              <span className="hidden sm:block font-mono text-[9px] flex-shrink-0 text-right pr-2"
                     style={{ width: 38, color: '#2A2A2A', paddingTop: 1 }}>{i + 1}</span>
-              <span className="font-mono text-[10px] flex-shrink-0 text-[#484F58]"
+              <span className="hidden xs:block font-mono text-[10px] flex-shrink-0 text-[#484F58]"
                     style={{ width: 64 }}>{l.ts}</span>
               <span className="font-mono font-700 text-[9px] flex-shrink-0 pt-px"
                     style={{ width: 44, color: LOG_C[l.level] ?? '#8B949E' }}>

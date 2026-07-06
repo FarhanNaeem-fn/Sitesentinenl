@@ -114,7 +114,7 @@ export default function QAScan() {
   const toggle = (k: string) => setChecks(cs => cs.includes(k) ? cs.filter(x => x !== k) : [...cs, k])
 
   return (
-    <div className="p-6 max-w-[1600px] mx-auto flex flex-col gap-6 animate-slide-in">
+    <div className="p-3 sm:p-6 max-w-[1600px] mx-auto flex flex-col gap-4 sm:gap-6 animate-slide-in">
 
       {/* ── LIVE PREVIEW ─────────────────────────────────────────────── */}
       {showPreview && previewFor && (
@@ -149,20 +149,20 @@ export default function QAScan() {
       )}
 
       {/* ── HEADER DASHBOARD ─────────────────────────────────────────── */}
-      <div className="flex gap-6 items-stretch">
-        <div className="be-card p-8 flex items-center justify-center bg-gradient-to-br from-[#161B22] to-[#0D1117]">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 items-stretch">
+        <div className="be-card p-5 sm:p-8 flex items-center justify-center bg-gradient-to-br from-[#161B22] to-[#0D1117]">
           <ScoreRing score={result?.health_score ?? null} size={160} label="Site Health" />
         </div>
 
-        <div className="flex-1 be-card p-6 flex flex-col justify-between">
-          <div className="flex justify-between items-start mb-4">
+        <div className="flex-1 be-card p-4 sm:p-6 flex flex-col justify-between min-w-0">
+          <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
             <h3 className="font-display font-800 text-[18px] text-white">Category Performance</h3>
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap">
               <Badge label={`${result?.pages_scanned ?? 0} Pages`} type="info" />
               <Badge label={`${result?.total_issues ?? partial?.checks_failed ?? 0} Issues`} type={(result?.total_issues ?? partial?.checks_failed ?? 0) > 0 ? 'error' : 'success'} />
             </div>
           </div>
-          <div className="flex flex-wrap gap-8 justify-between">
+          <div className="flex flex-wrap gap-4 sm:gap-8 justify-between">
             {CHECKS.map(c => (
               <CategoryRing
                 key={c.key}
@@ -197,7 +197,7 @@ export default function QAScan() {
               ))}
             </div>
 
-            <div className="flex items-center gap-3 pt-4 border-t border-[#30363D]">
+            <div className="flex items-center gap-3 pt-4 border-t border-[#30363D] flex-wrap">
               <RunButton onClick={run} disabled={!url || running} loading={running} label={running ? 'Analyzing...' : 'Execute Matrix Scan'} />
               <StopButton onClick={cancel} disabled={!running} />
               <GhostBtn onClick={reset} label="Reset" />
@@ -213,7 +213,7 @@ export default function QAScan() {
             <>
               <Card title="Scan Complete" accent="#22C55E">
                 <div className="flex flex-col gap-4 p-2">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 flex-wrap">
                     <div className="w-14 h-14 rounded-full flex items-center justify-center text-2xl"
                          style={{ background: 'rgba(34,197,94,0.1)', border: '1px solid rgba(34,197,94,0.3)' }}>
                       ✅
@@ -300,7 +300,7 @@ export default function QAScan() {
               )}
             </>
           ) : (
-            <div className="be-card p-20 flex flex-col items-center justify-center text-center">
+            <div className="be-card p-8 sm:p-20 flex flex-col items-center justify-center text-center">
               <div className="w-16 h-16 rounded-full bg-[#161B22] flex items-center justify-center mb-4 border border-[#30363D]">
                 <span className="text-2xl">🔍</span>
               </div>

@@ -16,7 +16,7 @@
 /* ── Reset & Base ──────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { font-size: 14px; }
+html { font-size: 14px; -webkit-text-size-adjust: 100%; }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -26,9 +26,35 @@ body {
   margin: 0;
   padding: 0;
   letter-spacing: -0.01em;
+  overflow-x: hidden;
 }
 
 #root { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* ── Mobile responsiveness ──────────────────────────────────────
+   Most of the app was built with fixed multi-column grids that never
+   had a responsive variant applied per-instance. Rather than touching
+   every grid-cols-N usage across every page, collapse them globally
+   below the breakpoints where they'd otherwise overflow/crush content.
+   Explicit responsive classes (sm:/md:/lg:grid-cols-*) are untouched
+   since they compile to different, higher-specificity selectors. ── */
+@media (max-width: 767px) {
+  .grid-cols-3, .grid-cols-4, .grid-cols-5, .grid-cols-6 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 479px) {
+  .grid-cols-2, .grid-cols-3, .grid-cols-4, .grid-cols-5, .grid-cols-6 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* Tables regularly overflow narrow viewports — always allow horizontal
+   scroll inside their own box instead of blowing out the page width. */
+.be-table { min-width: 560px; }
+table { max-width: 100%; }
+
+img, svg, iframe { max-width: 100%; }
 
 /* ── Scrollbars ───────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }

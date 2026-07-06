@@ -1,0 +1,265 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Web_scraping",
+  "timestamp": "2026-07-06T13:46:55.910262",
+  "robots": {
+    "url": "https://en.wikipedia.org/robots.txt",
+    "found": true,
+    "raw": "\ufeff# robots.txt for http://www.wikipedia.org/ and friends\n#\n# Please note: There are a lot of pages on this site, and there are\n# some misbehaved spiders out there that go _way_ too fast. If you're\n# irresponsible, your access to the site may be blocked.\n#\n\n# Observed spamming large amounts of https://en.wikipedia.org/?curid=NNNNNN\n# and ignoring 429 ratelimit responses, claims to respect robots:\n# http://mj12bot.com/\nUser-agent: MJ12bot\nDisallow: /\n\n# advertising-related bots:\nUser-agent: Mediapartners-Google*\nDisallow: /\n\n# Wikipedia work bots:\nUser-agent: IsraBot\nDisallow:\n\nUser-agent: Orthogaffe\nDisallow:\n\n# Crawlers that are kind enough to obey, but which we'd rather not have\n# unless they're feeding search engines.\nUser-agent: UbiCrawler\nDisallow: /\n\nUser-agent: DOC\nDisallow: /\n\nUser-agent: Zao\nDisallow: /\n\n# Some bots are known to be trouble, particularly those designed to copy\n# entire sites. Please obey robots.txt.\nUser-agent: sitecheck.internetseer.com\nDisallow: /\n\nUser-agent: Zealbot\nDisallow: /\n\nUser-agent: MSIECrawler\nDisallow: /\n\nUser-agent: SiteSnagger\nDisallow: /\n\nUser-agent: WebStripper\nDisallow: /\n\nUser-agent: WebCopier\nDisallow: /\n\nUser-agent: Fetch\nDisallow: /\n\nUser-agent: Offline Explorer\nDisallow: /\n\nUser-agent: Teleport\nDisallow: /\n\nUser-agent: TeleportPro\nDisallow: /\n\nUser-agent: WebZIP\nDisallow: /\n\nUser-agent: linko\nDisallow: /\n\nUser-agent: HTTrack\nDisallow: /\n\nUser-agent: Microsoft.URL.Control\nDisallow: /\n\nUser-agent: Xenu\nDisallow: /\n\nUser-agent: larbin\nDisallow: /\n\nUser-agent: libwww\nDisallow: /\n\nUser-agent: ZyBORG\nDisallow: /\n\nUser-agent: Download Ninja\nDisallow: /\n\n# Misbehaving, requests much too fast\nUser-agent: fast\nDisallow: /\n\n# Sorry, wget in its recursive mode is a frequent problem.\n# Please read the man page and use it properly; there is a\n# --wait option you can use to set the delay between hits,\n# for instance.\nUser-agent: wget\nDisallow: /\n\n# The 'grub' distributed client has been *very* poorly behaved.\nUser-agent: grub-client\nDisallow: /\n\n# Doesn't follow robots.txt anyway, but...\nUser-agent: k2spider\nDisallow: /\n\n# Hits many times per second, not acceptable\n# http://www.nameprotect.com/botinfo.html\nUser-agent: NPBot\nDisallow: /\n\n# A capture bot, downloads gazillions of pages with no public benefit\n# http://www.webreaper.net/\nUser-agent: WebReaper\nDisallow: /\n\n# Per their statement, semrushbot respects crawl-delay directives\n# We want them to overall stay within reasonable request rates to\n# the backend (20 rps); keeping in mind that the crawl-delay will\n# be applied by site and not globally by the bot, 5 seconds seem\n# like a reasonable approximation\nUser-agent: SemrushBot\nCrawl-delay: 5\n\n#\n# Friendly, low-speed bots are welcome viewing article pages, but not\n# dynamically-generated pages please.\n#\n# Inktomi's \"Slurp\" can read a minimum delay between hits; if your\n# bot supports such a thing using the 'Crawl-delay' or another\n# instruction, please let us know.\n#\n# There is a special exception for API mobile",
+    "crawler_access": {
+      "GPTBot": "allowed",
+      "ClaudeBot": "allowed",
+      "PerplexityBot": "allowed",
+      "Google-Extended": "allowed",
+      "CCBot": "allowed",
+      "Bytespider": "allowed",
+      "FacebookBot": "allowed",
+      "Applebot": "allowed",
+      "cohere-ai": "allowed",
+      "AI2Bot": "allowed",
+      "anthropic-ai": "allowed",
+      "omgili": "allowed",
+      "Googlebot": "allowed"
+    },
+    "rules_count": 33
+  },
+  "scores": {
+    "technical": 90,
+    "content": 70,
+    "trust": 72,
+    "structured_data": 35,
+    "overall": 74
+  },
+  "checks": {
+    "technical": [
+      {
+        "name": "HTTPS",
+        "passed": true,
+        "pts": 10,
+        "note": "Secure protocol required"
+      },
+      {
+        "name": "Canonical URL",
+        "passed": true,
+        "pts": 8,
+        "note": "Prevents duplicate content"
+      },
+      {
+        "name": "Not noindex",
+        "passed": true,
+        "pts": 7,
+        "note": "Indexing not blocked"
+      },
+      {
+        "name": "Title tag",
+        "passed": true,
+        "pts": 8,
+        "note": "Required for AI citation"
+      },
+      {
+        "name": "Load < 3s",
+        "passed": true,
+        "pts": 7,
+        "note": "Fast response for crawlers"
+      },
+      {
+        "name": "OG tags",
+        "passed": true,
+        "pts": 5,
+        "note": "Rich preview for AI"
+      },
+      {
+        "name": "Meta description",
+        "passed": false,
+        "pts": 5,
+        "note": "Snippet source for AI"
+      }
+    ],
+    "content": [
+      {
+        "name": "Word count 500+",
+        "passed": true,
+        "pts": 12,
+        "note": "Current: 4148 words"
+      },
+      {
+        "name": "Word count 1500+",
+        "passed": true,
+        "pts": 8,
+        "note": "Comprehensive content preferred by AI"
+      },
+      {
+        "name": "H1 tag",
+        "passed": true,
+        "pts": 10,
+        "note": "Primary topic signal"
+      },
+      {
+        "name": "H2 headings",
+        "passed": true,
+        "pts": 8,
+        "note": "Content structure"
+      },
+      {
+        "name": "Meta description",
+        "passed": false,
+        "pts": 8,
+        "note": "AI snippet source"
+      },
+      {
+        "name": "Images with alt",
+        "passed": true,
+        "pts": 6,
+        "note": "Accessible content"
+      },
+      {
+        "name": "FAQ schema",
+        "passed": false,
+        "pts": 10,
+        "note": "High AI citation probability"
+      },
+      {
+        "name": "HowTo schema",
+        "passed": false,
+        "pts": 8,
+        "note": "Instructional content"
+      },
+      {
+        "name": "Article schema",
+        "passed": true,
+        "pts": 7,
+        "note": "Editorial credibility"
+      },
+      {
+        "name": "Lists or tables",
+        "passed": true,
+        "pts": 5,
+        "note": "Structured content"
+      },
+      {
+        "name": "Code examples",
+        "passed": true,
+        "pts": 5,
+        "note": "Technical depth"
+      }
+    ],
+    "trust": [
+      {
+        "name": "HTTPS",
+        "passed": true,
+        "pts": 12,
+        "note": "Trust signal"
+      },
+      {
+        "name": "Author metadata",
+        "passed": true,
+        "pts": 15,
+        "note": "E-E-A-T authorship"
+      },
+      {
+        "name": "Date published",
+        "passed": true,
+        "pts": 12,
+        "note": "Content freshness"
+      },
+      {
+        "name": "Breadcrumbs",
+        "passed": false,
+        "pts": 10,
+        "note": "Site structure clarity"
+      },
+      {
+        "name": "External links",
+        "passed": true,
+        "pts": 8,
+        "note": "Outbound authority refs"
+      },
+      {
+        "name": "OG site name",
+        "passed": false,
+        "pts": 8,
+        "note": "Brand identity"
+      }
+    ],
+    "structured_data": [
+      {
+        "name": "Any schema",
+        "passed": true,
+        "pts": 20,
+        "note": "Structured data present"
+      },
+      {
+        "name": "FAQPage",
+        "passed": false,
+        "pts": 20,
+        "note": "Q&A extraction by AI"
+      },
+      {
+        "name": "HowTo",
+        "passed": false,
+        "pts": 15,
+        "note": "Instructional schema"
+      },
+      {
+        "name": "Article/BlogPost",
+        "passed": true,
+        "pts": 15,
+        "note": "Editorial schema"
+      },
+      {
+        "name": "BreadcrumbList",
+        "passed": false,
+        "pts": 10,
+        "note": "Navigation schema"
+      },
+      {
+        "name": "Organization",
+        "passed": false,
+        "pts": 10,
+        "note": "Entity schema"
+      },
+      {
+        "name": "2+ schema types",
+        "passed": false,
+        "pts": 10,
+        "note": "Rich schema diversity"
+      }
+    ]
+  },
+  "page_data": {
+    "title": "Web scraping - Wikipedia",
+    "meta_description": "",
+    "h1_count": 1,
+    "h2_count": 7,
+    "h3_count": 12,
+    "word_count": 4148,
+    "image_count": 9,
+    "images_with_alt": 7,
+    "links_count": 459,
+    "canonical": "https://en.wikipedia.org/wiki/Web_scraping",
+    "og_tags": {
+      "og:title": "Web scraping - Wikipedia",
+      "og:type": "website"
+    },
+    "schema_types": [
+      "Article"
+    ],
+    "has_faq": false,
+    "has_howto": false,
+    "has_article": true,
+    "internal_links": 356,
+    "external_links": 103,
+    "code_blocks": 1,
+    "tables": 3,
+    "lists": 44,
+    "load_time_ms": 750,
+    "https": true,
+    "robots_meta": "max-image-preview:standard",
+    "structured_data_count": 1,
+    "author": "Contributors to Wikimedia projects",
+    "date_published": "2005-09-17T18:57:30Z",
+    "breadcrumb": false,
+    "error": null
+  },
+  "llm_analysis": null,
+  "audit_id": "air_20260706_134700_368727"
+}

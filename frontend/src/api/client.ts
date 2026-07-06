@@ -3,7 +3,9 @@
 // Frontend and backend are always deployed as a single origin (see vercel.json's
 // /api/(.*) rewrite), so the API base is always relative. VITE_API_BASE_URL
 // remains as an explicit override for non-standard setups.
-const BASE = import.meta.env.VITE_API_BASE_URL || '/api'
+const BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? '/api'
+  : 'https://sitesentinenl.vercel.app' 
 
 export interface LogEntry { ts: string; level: string; msg: string }
 

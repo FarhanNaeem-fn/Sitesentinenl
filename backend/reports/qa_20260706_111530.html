@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QA Audit Report — https://example.com</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+Chart.defaults.color='#8B949E';
+Chart.defaults.borderColor='#21262D';
+Chart.defaults.font.family="'Inter',system-ui,sans-serif";
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ── Reset & Base ── */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0D1117;--bg2:#161B22;--bg3:#1C2128;--bg4:#21262D;
+  --border:#30363D;--border2:#21262D;
+  --text:#C9D1D9;--text2:#8B949E;--text3:#484F58;--white:#F0F6FC;
+  --pass:#22C55E;--high:#F97316;--warn:#F59E0B;--fail:#EF4444;
+  --info:#3B82F6;--pur:#A855F7;--cyan:#06B6D4;
+  --critical:#EF4444;--medium:#F59E0B;--low:#3B82F6;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);
+  line-height:1.6;-webkit-font-smoothing:antialiased;font-size:14px}
+a{color:#58A6FF;text-decoration:none}
+a:hover{text-decoration:underline}
+summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+
+/* ── Layout ── */
+.rpt-wrap{max-width:1240px;margin:0 auto;padding:0 0 60px}
+.rpt-inner{padding:0 40px}
+
+/* ── Top Banner ── */
+.rpt-banner{
+  background:linear-gradient(135deg,#0a0f1a 0%,#0f1523 40%,#131b28 70%,#0d1117 100%);
+  border-bottom:1px solid var(--border);padding:40px 40px 32px;position:relative;overflow:hidden
+}
+.rpt-banner::before{
+  content:'';position:absolute;top:-80px;right:-80px;width:360px;height:360px;
+  background:radial-gradient(circle,rgba(59,130,246,.08) 0%,transparent 70%);pointer-events:none
+}
+.rpt-banner-inner{max-width:1240px;margin:0 auto;display:flex;align-items:flex-start;gap:32px}
+.rpt-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.rpt-brand-dot{width:8px;height:8px;border-radius:50%;background:var(--pass);
+  box-shadow:0 0 8px var(--pass);flex-shrink:0}
+.rpt-brand-name{font-size:11px;font-weight:700;letter-spacing:3px;
+  text-transform:uppercase;color:var(--text3)}
+.rpt-banner h1{font-size:28px;font-weight:900;color:var(--white);line-height:1.2;margin-bottom:8px}
+.rpt-banner-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2);
+  display:flex;flex-wrap:wrap;gap:16px;margin-top:10px}
+.rpt-banner-meta span{color:var(--text)}
+.rpt-banner-right{margin-left:auto;display:flex;gap:20px;align-items:center;flex-shrink:0}
+
+/* ── SVG Score Ring ── */
+.score-ring-svg{display:block}
+.score-ring-val{font-size:30px;font-weight:900;font-family:'Inter',sans-serif}
+.score-ring-sub{font-size:10px;font-family:'Inter',sans-serif;letter-spacing:1px}
+
+/* ── Grade Box ── */
+.grade-box{text-align:center;padding:8px 20px;border-radius:12px;
+  background:var(--bg2);border:1px solid var(--border)}
+.grade-letter{font-size:48px;font-weight:900;line-height:1}
+.grade-label{font-size:9px;text-transform:uppercase;letter-spacing:2px;
+  color:var(--text3);margin-top:2px}
+
+/* ── Status Bar (KPI strip) ── */
+.rpt-kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:1px;background:var(--border2);border-top:1px solid var(--border2)}
+.rpt-kpi{background:var(--bg2);padding:22px 20px 18px;border-top:3px solid transparent;
+  transition:background .15s}
+.rpt-kpi:hover{background:var(--bg3)}
+.rpt-kpi-val{font-size:30px;font-weight:900;color:var(--white);line-height:1;margin-bottom:5px}
+.rpt-kpi-label{font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--text2);margin-bottom:2px}
+.rpt-kpi-sub{font-size:11px;color:var(--text3)}
+
+/* ── Section containers ── */
+.rpt-section{margin:36px 0}
+.rpt-section-hdr{display:flex;align-items:center;gap:12px;margin-bottom:20px;
+  padding-bottom:14px;border-bottom:1px solid var(--border2)}
+.rpt-section-icon{font-size:22px;flex-shrink:0}
+.rpt-section-title{font-size:18px;font-weight:800;color:var(--white)}
+.rpt-section-sub{font-size:12px;color:var(--text2);margin-top:2px}
+.rpt-section-badge{margin-left:auto;font-size:11px;font-weight:700;
+  font-family:'JetBrains Mono',monospace}
+
+/* ── Cards ── */
+.rpt-card{background:var(--bg2);border:1px solid var(--border);
+  border-radius:16px;overflow:hidden;margin-bottom:20px}
+.rpt-card-hdr{padding:16px 22px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:10px;background:var(--bg3)}
+.rpt-card-hdr-icon{font-size:16px;flex-shrink:0}
+.rpt-card-hdr-title{font-size:13px;font-weight:700;color:var(--white);letter-spacing:.02em}
+.rpt-card-body{padding:22px}
+.rpt-card-body-np{padding:0}
+
+/* ── Score Panel (multi-gauge row) ── */
+.rpt-scores-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:16px;padding:24px}
+.rpt-score-item{text-align:center;padding:20px 12px;background:var(--bg3);
+  border-radius:12px;border:1px solid var(--border2)}
+.rpt-score-num{font-size:32px;font-weight:900;line-height:1;margin-bottom:4px}
+.rpt-score-label{font-size:10px;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--text2);font-weight:700}
+.rpt-score-bar{height:4px;background:var(--border);border-radius:2px;
+  margin-top:8px;overflow:hidden}
+.rpt-score-bar-fill{height:100%;border-radius:2px;transition:width .5s}
+
+/* ── Chart containers ── */
+.rpt-charts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  gap:20px;padding:24px}
+.rpt-chart-box{background:var(--bg3);border-radius:12px;border:1px solid var(--border2);
+  padding:20px}
+.rpt-chart-title{font-size:12px;font-weight:700;color:var(--text2);
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+.rpt-chart-wrap{position:relative;height:220px}
+
+/* ── Findings table ── */
+.rpt-table-wrap{overflow-x:auto}
+.rpt-table{width:100%;border-collapse:collapse;font-size:13px}
+.rpt-table th{background:var(--bg);padding:12px 16px;text-align:left;
+  font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--text3);border-bottom:1px solid var(--border);white-space:nowrap;
+  position:sticky;top:0;z-index:1}
+.rpt-table td{padding:12px 16px;border-bottom:1px solid var(--border2);
+  vertical-align:top;color:var(--text)}
+.rpt-table tr:last-child td{border-bottom:none}
+.rpt-table tr:hover td{background:rgba(255,255,255,.015)}
+.rpt-table .sev-bar{width:3px;padding:0}
+.rpt-td-name{color:var(--white);font-weight:600}
+.rpt-td-dim{color:var(--text2);font-size:12px}
+.rpt-td-mono{font-family:'JetBrains Mono',monospace;font-size:11px}
+.rpt-link{color:#58A6FF;text-decoration:none;word-break:break-all}
+.rpt-link:hover{text-decoration:underline}
+.rpt-mono{font-family:'JetBrains Mono',monospace;font-size:11px}
+.rpt-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;border:1px solid}
+.rpt-badge-pass{color:#22C55E;background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3)}
+.rpt-badge-warn{color:#F59E0B;background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.3)}
+.rpt-badge-fail{color:#EF4444;background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.3)}
+
+/* ── Badges ── */
+.badge{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;
+  border-radius:6px;font-size:10px;font-weight:700;border:1px solid;white-space:nowrap;
+  font-family:'Inter',sans-serif;letter-spacing:.02em}
+.badge-pass{color:#22C55E;background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3)}
+.badge-high{color:#F97316;background:rgba(249,115,22,.1);border-color:rgba(249,115,22,.3)}
+.badge-warn{color:#F59E0B;background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.3)}
+.badge-fail,.badge-critical{color:#EF4444;background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.3)}
+.badge-info{color:#3B82F6;background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.3)}
+.badge-purple{color:#A855F7;background:rgba(168,85,247,.1);border-color:rgba(168,85,247,.3)}
+.badge-low{color:#3B82F6;background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.3)}
+
+/* ── Finding cards (expanded view) ── */
+.finding-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:12px}
+.finding-card-hdr{padding:14px 18px;display:flex;align-items:center;gap:12px;
+  background:var(--bg3);cursor:pointer;user-select:none}
+.finding-card[open] .finding-card-hdr{border-bottom:1px solid var(--border)}
+.finding-card-title{font-size:13px;font-weight:700;color:var(--white);flex:1}
+.finding-card-body{padding:18px 20px;display:grid;gap:16px}
+.finding-field label{font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--text3);display:block;margin-bottom:4px}
+.finding-field p{font-size:13px;color:var(--text);line-height:1.65}
+.finding-field code{font-family:'JetBrains Mono',monospace;font-size:11px;
+  background:var(--bg);border:1px solid var(--border2);padding:10px 14px;
+  border-radius:6px;display:block;white-space:pre-wrap;color:#79C0FF;margin-top:6px}
+.finding-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* ── Rec cards ── */
+.rpt-recs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:16px;padding:24px}
+.rpt-rec{background:var(--bg3);border:1px solid var(--border2);border-radius:12px;
+  padding:18px;border-left:3px solid}
+.rpt-rec-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:6px}
+.rpt-rec-body{font-size:12px;color:var(--text2);line-height:1.6}
+.rpt-rec-meta{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.rpt-tag{font-size:10px;padding:2px 8px;border-radius:4px;font-weight:600;
+  background:var(--bg4);color:var(--text3);border:1px solid var(--border2)}
+
+/* ── Crawler access table ── */
+.crawler-allowed{color:var(--pass)}
+.crawler-blocked{color:var(--fail)}
+.crawler-unspecified{color:var(--text3)}
+
+/* ── Progress bar inline ── */
+.inline-bar{height:6px;background:var(--border2);border-radius:3px;
+  overflow:hidden;margin-top:4px;min-width:80px}
+.inline-bar-fill{height:100%;border-radius:3px}
+
+/* ── Collapsible raw data ── */
+.raw-section{background:var(--bg);border:1px solid var(--border2);
+  border-radius:8px;padding:16px 20px;margin-top:12px}
+.raw-section pre{font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:#79C0FF;white-space:pre-wrap;line-height:1.5;max-height:300px;overflow-y:auto}
+
+/* ── Footer ── */
+.rpt-footer{text-align:center;font-size:11px;color:var(--text3);
+  margin-top:60px;padding:24px 40px;border-top:1px solid var(--border2)}
+.rpt-footer a{color:var(--text3)}
+
+/* ── Print ── */
+@media print{
+  body{background:#fff;color:#000}
+  .rpt-banner{background:#f4f6fa;border:1px solid #ddd;border-bottom:2px solid #ccc}
+  .rpt-banner h1,.rpt-brand-name,.rpt-section-title,.rpt-card-hdr-title{color:#000}
+  .rpt-kpi{background:#f9fafb;border:1px solid #e5e7eb}
+  .rpt-card,.finding-card{border:1px solid #ddd}
+  .rpt-card-hdr,.rpt-card-body,.finding-card-hdr,.finding-card-body{background:#f9fafb}
+  .rpt-table th{background:#f0f0f0;color:#555}
+  .rpt-table td{color:#333;border-color:#e0e0e0}
+  .rpt-score-item{background:#f4f4f4}
+  .rpt-chart-box{border:1px solid #ddd}
+  @page{margin:20mm}
+}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .rpt-banner-inner{flex-wrap:wrap}
+  .rpt-inner{padding:0 20px}
+  .rpt-banner{padding:28px 20px 24px}
+  .finding-cols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="rpt-wrap">
+
+<!-- BANNER -->
+<div class="rpt-banner">
+  <div class="rpt-banner-inner">
+    <div style="flex:1;min-width:0">
+      <div class="rpt-brand">
+        <div class="rpt-brand-dot"></div>
+        <div class="rpt-brand-name">SiteSentinel &nbsp;·&nbsp; QA Scan</div>
+      </div>
+      <h1>QA Audit Report — https://example.com</h1>
+      <div class="rpt-banner-meta">
+        <span>Target: <span>https://example.com</span></span>
+        <span>Generated: <span>2026-07-06T11:15:16.792401</span></span>
+      </div>
+    </div>
+    <div class="rpt-banner-right"><svg width="130" height="130" viewBox="0 0 130 130" class="score-ring-svg">
+  <circle cx="65" cy="65" r="50" fill="none" stroke="#21262D" stroke-width="10"/>
+  <circle cx="65" cy="65" r="50" fill="none" stroke="#22C55E" stroke-width="10"
+    stroke-linecap="round" stroke-dasharray="314.16"
+    stroke-dashoffset="0.00" transform="rotate(-90 65 65)"/>
+  <text x="65" y="60" text-anchor="middle" class="score-ring-val"
+    fill="#22C55E" font-family="Inter,sans-serif" font-weight="900" font-size="28">100.0</text>
+  <text x="65" y="79" text-anchor="middle" class="score-ring-sub"
+    fill="#8B949E" font-family="Inter,sans-serif" font-size="10" letter-spacing="1">Quality</text>
+  <text x="65" y="93" text-anchor="middle"
+    fill="#22C55E" font-family="Inter,sans-serif" font-weight="800" font-size="13">Grade A</text>
+</svg></div>
+  </div>
+</div>
+
+<!-- KPI STRIP -->
+<div class='rpt-kpi-strip'><div class="rpt-kpi" style="border-top-color:#22C55E">
+  <div class="rpt-kpi-val" style="color:#22C55E">100.0/100</div>
+  <div class="rpt-kpi-label">Health Score</div>
+  <div class="rpt-kpi-sub">Grade: Excellent</div>
+</div><div class="rpt-kpi" style="border-top-color:#3B82F6">
+  <div class="rpt-kpi-val" style="color:#3B82F6">1</div>
+  <div class="rpt-kpi-label">Pages Scanned</div>
+  <div class="rpt-kpi-sub">internal pages crawled</div>
+</div><div class="rpt-kpi" style="border-top-color:#8B5CF6">
+  <div class="rpt-kpi-val" style="color:#8B5CF6">35</div>
+  <div class="rpt-kpi-label">Tests Run</div>
+  <div class="rpt-kpi-sub">25 passed · 10 failed</div>
+</div><div class="rpt-kpi" style="border-top-color:#22C55E">
+  <div class="rpt-kpi-val" style="color:#22C55E">0</div>
+  <div class="rpt-kpi-label">Image Issues</div>
+  <div class="rpt-kpi-sub">missing alt text</div>
+</div><div class="rpt-kpi" style="border-top-color:#22C55E">
+  <div class="rpt-kpi-val" style="color:#22C55E">0</div>
+  <div class="rpt-kpi-label">Broken Links</div>
+  <div class="rpt-kpi-sub">HTTP errors found</div>
+</div><div class="rpt-kpi" style="border-top-color:#EF4444">
+  <div class="rpt-kpi-val" style="color:#EF4444">10</div>
+  <div class="rpt-kpi-label">Total Issues</div>
+  <div class="rpt-kpi-sub">items to fix</div>
+</div></div>
+
+<!-- CONTENT -->
+<div class="rpt-inner">
+
+<div class="rpt-section">
+  <div class="rpt-section-hdr">
+    <span class="rpt-section-icon">📈</span>
+    <div>
+      <div class="rpt-section-title">Data Visualizations</div>
+      
+    </div>
+    
+  </div>
+  <div class="rpt-charts-grid"><div class="rpt-chart-box">
+  <div class="rpt-chart-title">Test Result Distribution</div>
+  <div class="rpt-chart-wrap"><canvas id="qa_results"></canvas></div>
+</div><div class="rpt-chart-box">
+  <div class="rpt-chart-title">Issues by Type</div>
+  <div class="rpt-chart-wrap"><canvas id="qa_issues"></canvas></div>
+</div></div>
+</div>
+
+<div class="rpt-section">
+  <div class="rpt-section-hdr">
+    <span class="rpt-section-icon">🖼️</span>
+    <div>
+      <div class="rpt-section-title">Image Issues</div>
+      
+    </div>
+    <span class="rpt-section-badge badge badge-info">0</span>
+  </div>
+  <div class="rpt-card"><div class="rpt-card-body"><p style="color:#22C55E;font-weight:600">✓ No image issues detected — all images have proper alt attributes.</p></div></div>
+</div>
+
+<div class="rpt-section">
+  <div class="rpt-section-hdr">
+    <span class="rpt-section-icon">🔗</span>
+    <div>
+      <div class="rpt-section-title">Broken Links</div>
+      
+    </div>
+    <span class="rpt-section-badge badge badge-info">0</span>
+  </div>
+  <div class="rpt-card"><div class="rpt-card-body"><p style="color:#22C55E;font-weight:600">✓ No broken links detected — all links are accessible.</p></div></div>
+</div>
+
+<div class="rpt-section">
+  <div class="rpt-section-hdr">
+    <span class="rpt-section-icon">🔬</span>
+    <div>
+      <div class="rpt-section-title">QA Test Results</div>
+      <div class="rpt-section-sub">25 passed · 10 issues across 13 categories</div>
+    </div>
+    <span class="rpt-section-badge badge badge-info">35</span>
+  </div>
+  <div class="rpt-card"><div class="rpt-card-body-np rpt-table-wrap">
+  <table class="rpt-table"><thead><tr>
+    <th>ID</th><th>Category</th><th>Test Name</th><th style="width:70px">Result</th><th>Severity</th><th>Detail &amp; Fix</th>
+  </tr></thead><tbody><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">SEO-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">SEO</span></td>
+  <td>Title tag present</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#EF4444;font-size:11px;font-weight:700;font-family:monospace">CRITICAL</span></td>
+  <td>Example Domain</td>
+</tr><tr style="border-left:3px solid #EF4444">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">SEO-03</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">SEO</span></td>
+  <td>Meta description present</td>
+  <td style="font-weight:800;color:#EF4444">FAIL</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td>Missing</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">SEO-05</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">SEO</span></td>
+  <td>Exactly one H1</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td>Found 1 H1(s)</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">SEO-12</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">SEO</span></td>
+  <td>Viewport meta present</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#EF4444;font-size:11px;font-weight:700;font-family:monospace">CRITICAL</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">SEO-14</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">SEO</span></td>
+  <td>All images have alt</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td>0/0 missing alt</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">A11Y-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Accessibility</span></td>
+  <td>HTML lang attribute set</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#EF4444;font-size:11px;font-weight:700;font-family:monospace">CRITICAL</span></td>
+  <td>lang=&#x27;en&#x27;</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">A11Y-02</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Accessibility</span></td>
+  <td>All images have alt text</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#EF4444;font-size:11px;font-weight:700;font-family:monospace">CRITICAL</span></td>
+  <td>0 missing alt</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">A11Y-03</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Accessibility</span></td>
+  <td>All form fields labelled</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#EF4444;font-size:11px;font-weight:700;font-family:monospace">CRITICAL</span></td>
+  <td>0 unlabelled</td>
+</tr><tr style="border-left:3px solid #EF4444">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">A11Y-04</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Accessibility</span></td>
+  <td>Skip navigation link</td>
+  <td style="font-weight:800;color:#EF4444">FAIL</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">PERF-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Performance</span></td>
+  <td>TTFB &lt; 600ms</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td>268ms</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">PERF-02</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Performance</span></td>
+  <td>FCP &lt; 1800ms</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td>1608ms</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">PERF-04</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Performance</span></td>
+  <td>Full page load &lt; 4s</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td>1564ms</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">PERF-05</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Performance</span></td>
+  <td>Total page weight &lt; 3MB</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#3B82F6;font-size:11px;font-weight:700;font-family:monospace">MEDIUM</span></td>
+  <td>0KB</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">SEC-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Security</span></td>
+  <td>HTTPS enforced</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#EF4444;font-size:11px;font-weight:700;font-family:monospace">CRITICAL</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #EF4444">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">SEC-02</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Security</span></td>
+  <td>HSTS header present</td>
+  <td style="font-weight:800;color:#EF4444">FAIL</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #EF4444">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">SEC-03</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Security</span></td>
+  <td>X-Content-Type-Options</td>
+  <td style="font-weight:800;color:#EF4444">FAIL</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #EF4444">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">SEC-05</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Security</span></td>
+  <td>Content-Security-Policy</td>
+  <td style="font-weight:800;color:#EF4444">FAIL</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">CON-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Console Errors</span></td>
+  <td>No console errors</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#8B949E;font-size:11px;font-weight:700;font-family:monospace">PASS</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">RESP-desktop</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Responsive</span></td>
+  <td>No overflow on Desktop (1920×1080) — Chrome</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">RESP-mac</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Responsive</span></td>
+  <td>No overflow on MacBook Pro (1440×900) — Safari</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">RESP-laptop</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Responsive</span></td>
+  <td>No overflow on Generic Laptop (1366×768)</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">RESP-mobile</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Responsive</span></td>
+  <td>No overflow on iPhone 14 Pro (390×844)</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">KEY-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Keyboard</span></td>
+  <td>Focusable elements present</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#EF4444;font-size:11px;font-weight:700;font-family:monospace">CRITICAL</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #EF4444">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">KEY-03</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Keyboard</span></td>
+  <td>Skip link present</td>
+  <td style="font-weight:800;color:#EF4444">FAIL</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">MIXED-00</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Security</span></td>
+  <td>No mixed content</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#8B949E;font-size:11px;font-weight:700;font-family:monospace">PASS</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #EF4444">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">CONT-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Content</span></td>
+  <td>Word count &gt; 300</td>
+  <td style="font-weight:800;color:#EF4444">FAIL</td>
+  <td><span style="color:#8B949E;font-size:11px;font-weight:700;font-family:monospace">LOW</span></td>
+  <td>19 words</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">CONT-02</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Content</span></td>
+  <td>No placeholder text</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#3B82F6;font-size:11px;font-weight:700;font-family:monospace">MEDIUM</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">FORM-00</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Forms</span></td>
+  <td>No forms found</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#8B949E;font-size:11px;font-weight:700;font-family:monospace">PASS</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">TYPO-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Typography</span></td>
+  <td>Base font size ≥ 14px</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#3B82F6;font-size:11px;font-weight:700;font-family:monospace">MEDIUM</span></td>
+  <td>16px</td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">HTML-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">HTML Quality</span></td>
+  <td>DOCTYPE declared</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#EF4444;font-size:11px;font-weight:700;font-family:monospace">CRITICAL</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #EF4444">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">HTML-02</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">HTML Quality</span></td>
+  <td>Charset UTF-8</td>
+  <td style="font-weight:800;color:#EF4444">FAIL</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">HTML-03</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">HTML Quality</span></td>
+  <td>Favicon present</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#3B82F6;font-size:11px;font-weight:700;font-family:monospace">MEDIUM</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #22C55E">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">IMG-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Images</span></td>
+  <td>All images have alt</td>
+  <td style="font-weight:800;color:#22C55E">PASS</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td>0/0 images missing alt text</td>
+</tr><tr style="border-left:3px solid #EF4444">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">NAV-01</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Navigation</span></td>
+  <td>Nav landmark present</td>
+  <td style="font-weight:800;color:#EF4444">FAIL</td>
+  <td><span style="color:#F59E0B;font-size:11px;font-weight:700;font-family:monospace">HIGH</span></td>
+  <td></td>
+</tr><tr style="border-left:3px solid #EF4444">
+  <td class="rpt-mono rpt-td-dim" style="font-size:10px">NAV-04</td>
+  <td><span style="display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid rgba(139,92,246,.25)">Navigation</span></td>
+  <td>Footer landmark present</td>
+  <td style="font-weight:800;color:#EF4444">FAIL</td>
+  <td><span style="color:#3B82F6;font-size:11px;font-weight:700;font-family:monospace">MEDIUM</span></td>
+  <td></td>
+</tr></tbody></table>
+</div></div>
+</div>
+
+<div class="rpt-section">
+  <div class="rpt-section-hdr">
+    <span class="rpt-section-icon">💡</span>
+    <div>
+      <div class="rpt-section-title">AI Recommendations</div>
+      <div class="rpt-section-sub">Prioritized action plan — quick wins first</div>
+    </div>
+    
+  </div>
+  <div style="padding:24px 0"><div style="margin-bottom:24px">
+  <div style="font-size:12px;font-weight:700;color:#22C55E;
+    text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px">⚡ Quick Wins</div>
+  <div class="rpt-recs-grid" style="padding:0"><div class="rpt-rec" style="border-left-color:#22C55E">
+  <div class="rpt-rec-title">Fix 3 failing Security test(s)</div>
+  <div class="rpt-rec-body">3 test(s) failed in the Security category. Review each failure for root cause.</div>
+  <div class="rpt-rec-meta">
+    <span class='rpt-tag'>Effort: Low–Medium</span>
+    <span class='rpt-tag'>Impact: Medium</span>
+  </div>
+</div></div>
+</div><div style="margin-bottom:24px">
+  <div style="font-size:12px;font-weight:700;color:#F59E0B;
+    text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px">🔧 Medium Effort</div>
+  <div class="rpt-recs-grid" style="padding:0"><div class="rpt-rec" style="border-left-color:#F59E0B">
+  <div class="rpt-rec-title">Fix 2 failing Navigation test(s)</div>
+  <div class="rpt-rec-body">2 test(s) failed in the Navigation category. Review each failure for root cause.</div>
+  <div class="rpt-rec-meta">
+    <span class='rpt-tag'>Effort: Low–Medium</span>
+    <span class='rpt-tag'>Impact: Medium</span>
+  </div>
+</div><div class="rpt-rec" style="border-left-color:#F59E0B">
+  <div class="rpt-rec-title">Fix 1 failing SEO test(s)</div>
+  <div class="rpt-rec-body">1 test(s) failed in the SEO category. Review each failure for root cause.</div>
+  <div class="rpt-rec-meta">
+    <span class='rpt-tag'>Effort: Low–Medium</span>
+    <span class='rpt-tag'>Impact: Medium</span>
+  </div>
+</div><div class="rpt-rec" style="border-left-color:#F59E0B">
+  <div class="rpt-rec-title">Fix 1 failing Accessibility test(s)</div>
+  <div class="rpt-rec-body">1 test(s) failed in the Accessibility category. Review each failure for root cause.</div>
+  <div class="rpt-rec-meta">
+    <span class='rpt-tag'>Effort: Low–Medium</span>
+    <span class='rpt-tag'>Impact: Medium</span>
+  </div>
+</div><div class="rpt-rec" style="border-left-color:#F59E0B">
+  <div class="rpt-rec-title">Fix 1 failing Keyboard test(s)</div>
+  <div class="rpt-rec-body">1 test(s) failed in the Keyboard category. Review each failure for root cause.</div>
+  <div class="rpt-rec-meta">
+    <span class='rpt-tag'>Effort: Low–Medium</span>
+    <span class='rpt-tag'>Impact: Medium</span>
+  </div>
+</div><div class="rpt-rec" style="border-left-color:#F59E0B">
+  <div class="rpt-rec-title">Fix 1 failing Content test(s)</div>
+  <div class="rpt-rec-body">1 test(s) failed in the Content category. Review each failure for root cause.</div>
+  <div class="rpt-rec-meta">
+    <span class='rpt-tag'>Effort: Low–Medium</span>
+    <span class='rpt-tag'>Impact: Medium</span>
+  </div>
+</div></div>
+</div></div>
+</div>
+
+<div class="rpt-section">
+  <details>
+    <summary class="rpt-section-hdr" style="cursor:pointer">
+      <span class="rpt-section-icon">🗂</span>
+      <div>
+        <div class="rpt-section-title">Raw Scan Data</div>
+        <div class="rpt-section-sub">Click to expand — JSON payload</div>
+      </div>
+    </summary>
+    <div class="raw-section"><pre>{
+  &quot;url&quot;: &quot;https://example.com&quot;,
+  &quot;health_score&quot;: 100.0,
+  &quot;pages_crawled&quot;: 1,
+  &quot;tests&quot;: 35,
+  &quot;passed&quot;: 25,
+  &quot;failed&quot;: 10,
+  &quot;image_issues&quot;: 0,
+  &quot;link_issues&quot;: 0
+}</pre></div>
+  </details>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="rpt-footer">
+  SiteSentinel Matrix Pro &nbsp;·&nbsp; QA Scan Report &nbsp;·&nbsp;
+  https://example.com &nbsp;·&nbsp; 2026-07-06T11:15:16.792401
+</div>
+
+</div><!-- /rpt-wrap -->
+
+<script>
+(function(){
+  var ctx=document.getElementById("qa_results").getContext('2d');
+  new Chart(ctx,{type:'doughnut',data:{
+    labels:["Passed", "Failed"],
+    datasets:[{data:[25, 10],backgroundColor:["#22C55E", "#EF4444"],
+      borderWidth:2,borderColor:'#161B22',hoverBorderColor:'#30363D'}]
+  },options:{responsive:true,maintainAspectRatio:false,
+    cutout:'65%',
+    plugins:{legend:{position:'right',labels:{boxWidth:10,padding:12,color:'#8B949E',font:{size:11}}},
+      tooltip:{callbacks:{label:c=>c.label+': '+c.parsed}}}
+  }});
+})();
+</script>
+<script>
+(function(){
+  var ctx=document.getElementById("qa_issues").getContext('2d');
+  new Chart(ctx,{type:'bar',data:{
+    labels:["Image Issues", "Broken Links", "Failed Tests"],
+    datasets:[{label:"Count",data:[0, 0, 10],
+      backgroundColor:'#3B82F699',borderColor:'#3B82F6',
+      borderWidth:1,borderRadius:4}]
+  },options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:c=>c.parsed.y!==undefined?c.parsed.y+'%':c.parsed.x+'%'}}},
+    scales:{y:{beginAtZero:true,max:100,ticks:{color:'#8B949E',font:{size:10}},grid:{color:'#21262D'}},x:{ticks:{color:'#8B949E',font:{size:10}},grid:{display:false}}}
+  }});
+})();
+</script>
+</body>
+</html>

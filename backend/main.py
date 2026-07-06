@@ -43,3 +43,8 @@ if IS_VERCEL:
     pw_path = os.path.join(os.path.dirname(__file__), "pw-browsers")
     os.environ["PLAYWRIGHT_BROWSERS_PATH"] = pw_path
     log.info(f"Vercel Mode Active — Browser Path: {pw_path}")
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
